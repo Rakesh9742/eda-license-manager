@@ -1,0 +1,1404 @@
+lmstat - Copyright (c) 1989-2019 Flexera. All Rights Reserved.
+Flexible License Manager status on Wed 7/16/2025 14:12
+
+License server status: 5280@yamuna
+    License file(s) on yamuna: /root/clic/LCU2/licADV2:
+
+    yamuna: license server UP (MASTER) v11.19.5
+
+Vendor daemon status (on yamuna):
+
+    cdslmd: UP v11.19.5
+Feature usage info:
+
+Users of 111:  (Total of 2580 licenses issued;  Total of 183 licenses in use)
+
+  "111" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: UHD:PERM
+  floating license
+
+    sos13 narmada :18 (v6.180) (yamuna/5280 6701), start Thu 6/26 16:12
+    sumvnrcl015 g14v2 :7908.0 (v6.180) (yamuna/5280 36303), start Thu 6/26 16:17
+    sos8 narmada :13 (v6.180) (yamuna/5280 45702), start Thu 6/26 16:20
+    shyd2407cl011 g10v4 :6736.0 (v6.180) (yamuna/5280 21809), start Thu 6/26 16:41
+    shyd2410cl028 g14v2 :7934.0 (v6.180) (yamuna/5280 66018), start Thu 6/26 18:56
+    shyd2409cl001 g9v3 :6311 (v6.180) (yamuna/5280 17205), start Thu 6/26 19:11
+    als13 godavari :3075 (v6.180) (yamuna/5280 3013), start Thu 6/26 20:03
+    gs2 yamuna :144 (v6.180) (yamuna/5280 77935), start Fri 6/27 9:10
+    shyd2504cl002 g17v1 :8802.0 (v6.180) (yamuna/5280 85802), start Fri 6/27 9:43
+    shyd2410cl025 g14v2 :7931.0 (v6.180) (yamuna/5280 87005), start Fri 6/27 9:54
+    shyd2501cl003 g8v1 :5712 (v6.180) (yamuna/5280 95003), start Fri 6/27 10:11
+    sos2 narmada narmada:07 (v6.180) (yamuna/5280 90903), start Fri 6/27 10:24
+    shyd2410cl029 g14v2 :7935.0 (v6.180) (yamuna/5280 61608), start Fri 6/27 11:21
+    mdc2 g6v1 :5334 (v6.180) (yamuna/5280 92616), start Sat 6/28 9:37
+    msv3 g8p8 :604 (v6.180) (yamuna/5280 128687), start Sun 7/13 15:57
+    sumvnrcl009 g14v2 :7902.0 (v6.180) (yamuna/5280 36811), start Sat 6/28 23:53
+    shyd2410cl016 g14v2 :7922.0 (v6.180) (yamuna/5280 28704), start Sun 6/29 12:32
+    shyd2502cl004 g16v2 :8605.0 (v6.180) (yamuna/5280 62423), start Mon 6/30 9:55
+    sumvnrcl022 g14v2 :7915.0 (v6.180) (yamuna/5280 64452), start Mon 6/30 9:11
+    shyd2409cl004 g9v3 :6314 (v6.180) (yamuna/5280 100123), start Mon 6/30 10:26
+    shyd2407cl007 g10v4 :6732.0 (v6.180) (yamuna/5280 59039), start Mon 6/30 11:57
+    shyd2410cl031 g14v2 :7936.0 (v6.180) (yamuna/5280 111105), start Mon 6/30 13:10
+    shyd2409cl010 g9v3 :6322 (v6.180) (yamuna/5280 28692), start Mon 6/30 14:50
+    shyd2504cl004 g17v1 :8804.0 (v6.180) (yamuna/5280 9953), start Mon 6/30 16:54
+    shyd2409cl002 g9v3 :6312 (v6.180) (yamuna/5280 81387), start Mon 6/30 20:04
+    shyd2501cl006 g8v1 :5718 (v6.180) (yamuna/5280 64237), start Tue 7/1 18:02
+    shyd2504cl006 g17v1 :8834.0 (v6.180) (yamuna/5280 16516), start Tue 7/1 11:25
+    sumvnrcl020 g14v2 :7913.0 (v6.180) (yamuna/5280 18363), start Tue 7/1 17:09
+    sumvnrcl017 g14v2 :7910.0 (v6.180) (yamuna/5280 93877), start Wed 7/2 6:58
+    shyd2506cl003 g3p3 :1939 (v6.180) (yamuna/5280 37465), start Wed 7/2 9:49
+    shyd2501cl004 g8v2 :5803 (v6.180) (yamuna/5280 8028), start Wed 7/2 11:58
+    ari4 yamuna :62 (v6.180) (yamuna/5280 29400), start Thu 7/3 10:08
+    shyd2407cl006 g10v4 :6731.0 (v6.180) (yamuna/5280 82816), start Wed 7/2 22:17
+    shyd2506cl020 g5p5 :3914 (v6.180) (yamuna/5280 66597), start Thu 7/3 10:30
+    shyd2410cl020 g14v2 :7926.0 (v6.180) (yamuna/5280 107357), start Thu 7/3 10:34
+    sos7 narmada :12 (v6.180) (yamuna/5280 121843), start Thu 7/3 12:28
+    ari6 ganges :1185 (v6.180) (yamuna/5280 103673), start Fri 7/4 14:59
+    shyd2503cl002 g16v2 :8608.0 (v6.180) (yamuna/5280 111404), start Fri 7/4 9:45
+    shyd2506cl013 ganges2 :904 (v6.180) (yamuna/5280 83511), start Fri 7/4 10:42
+    gs7 yamuna :56 (v6.180) (yamuna/5280 16699), start Fri 7/4 12:06
+    gft2 g4p4 :537 (v6.180) (yamuna/5280 109341), start Fri 7/4 12:12
+    xsoc12 g3p3 :1908 (v6.180) (yamuna/5280 20518), start Fri 7/4 15:40
+    shyd2407cl013 g10v4 :6738.0 (v6.180) (yamuna/5280 72541), start Fri 7/4 16:35
+    shyd2503cl003 g16v2 :8609.0 (v6.180) (yamuna/5280 25361), start Sat 7/5 11:58
+    shyd2501cl007 g5v2 :5611 (v6.180) (yamuna/5280 10030), start Sat 7/5 19:44
+    mdc1 g8v1 :5701 (v6.180) (yamuna/5280 37574), start Sat 7/5 21:06
+    sumvnrcl007 g14v1 :7730.0 (v6.180) (yamuna/5280 104039), start Tue 7/15 14:37
+    shyd2410cl026 g14v2 :7932.0 (v6.180) (yamuna/5280 2665), start Sun 7/6 14:25
+    gft4 g4v2 :2008 (v6.180) (yamuna/5280 110794), start Mon 7/7 7:34
+    shyd2409cl006 g9v3 :6316 (v6.180) (yamuna/5280 32827), start Mon 7/7 8:25
+    sph16 g6p6 :5108 (v6.180) (yamuna/5280 51113), start Mon 7/7 10:31
+    sph9 g11v1 :6915 (v6.180) (yamuna/5280 72191), start Mon 7/7 14:25
+    sumvnrcl003 g14v1 :7726.0 (v6.180) (yamuna/5280 39798), start Mon 7/7 17:11
+    sumvnrcl016 g14v2 :7909.0 (v6.180) (yamuna/5280 33121), start Mon 7/7 14:37
+    sumvnrcl023 g14v2 :7916.0 (v6.180) (yamuna/5280 34322), start Mon 7/7 15:42
+    sumvnrcl001 g14v1 :7724.0 (v6.180) (yamuna/5280 31908), start Sat 7/12 21:58
+    sos1 narmada narmada:06 (v6.180) (yamuna/5280 68753), start Mon 7/7 16:55
+    sph4 g11v1 :6910 (v6.180) (yamuna/5280 39618), start Mon 7/7 17:08
+    sumvnrcl006 g14v1 :7729.0 (v6.180) (yamuna/5280 66315), start Mon 7/7 17:09
+    shyd2409cl013 g9v3 :6324 (v6.180) (yamuna/5280 105342), start Mon 7/7 21:45
+    shyd2506cl029 g8v1 :5716 (v6.180) (yamuna/5280 113274), start Wed 7/9 12:31
+    shyd2410cl032 g14v2 :7937.0 (v6.180) (yamuna/5280 40291), start Tue 7/8 13:38
+    sumvnrcl011 g14v2 :7904.0 (v6.180) (yamuna/5280 124164), start Sat 7/12 20:10
+    prameela indus :1665 (v6.180) (yamuna/5280 123330), start Tue 7/8 16:32
+    shyd2504cl005 g17v1 :8805.0 (v6.180) (yamuna/5280 102456), start Wed 7/9 10:13
+    ari1 ganges :1291 (v6.180) (yamuna/5280 130329), start Wed 7/9 12:47
+    sph11 g11v1 :6917 (v6.180) (yamuna/5280 115548), start Wed 7/9 18:07
+    shyd2506cl016 g5p5 :3903 (v6.180) (yamuna/5280 54595), start Thu 7/10 11:38
+    shyd2501cl005 g8v2 :5804 (v6.180) (yamuna/5280 127892), start Thu 7/10 9:58
+    spt5 g6v1 :5307 (v6.180) (yamuna/5280 76468), start Thu 7/10 11:32
+    shyd2506cl026 g10v1 :6406.0 (v6.180) (yamuna/5280 103704), start Thu 7/10 11:57
+    shyd2506cl011 ganges2 :902 (v6.180) (yamuna/5280 121936), start Thu 7/10 12:01
+    shyd2506cl024 g9v1 :6013 (v6.180) (yamuna/5280 41355), start Thu 7/10 12:01
+    shyd2506cl017 g5p5 :3904 (v6.180) (yamuna/5280 27733), start Thu 7/10 12:02
+    shyd2506cl028 g10v1 :6446.0 (v6.180) (yamuna/5280 102307), start Thu 7/10 12:18
+    test_session g6v1 :5314 (v6.180) (yamuna/5280 83757), start Thu 7/10 15:07
+    sumvnrcl005 g14v1 :7728.0 (v6.180) (yamuna/5280 114705), start Sun 7/13 12:12
+    shyd2406cl013 g10v2 :6543.0 (v6.180) (yamuna/5280 130202), start Thu 7/10 15:52
+    shyd2506cl012 ganges2 :903 (v6.180) (yamuna/5280 134949), start Thu 7/10 21:18
+    smts7 g5p5 :3923 (v6.180) (yamuna/5280 68239), start Fri 7/11 8:56
+    shyd2412cl001 g8v1 :5705 (v6.180) (yamuna/5280 109122), start Fri 7/11 9:40
+    shyd2502cl005 g16v2 :8606.0 (v6.180) (yamuna/5280 90892), start Fri 7/11 9:47
+    sph2 g11v1 :6908 (v6.180) (yamuna/5280 88927), start Fri 7/11 10:26
+    shyd2412cl004 g8v1 :5709 (v6.180) (yamuna/5280 101605), start Fri 7/11 12:04
+    shyd2410cl023 g14v2 :7929.0 (v6.180) (yamuna/5280 88359), start Sun 7/13 20:46
+    sos11 narmada :16 (v6.180) (yamuna/5280 93609), start Fri 7/11 12:33
+    shyd2412cl003 g8v1 :5702 (v6.180) (yamuna/5280 87876), start Fri 7/11 12:48
+    shyd2409cl015 g9v3 :6325 (v6.180) (yamuna/5280 112459), start Fri 7/11 14:15
+    xsoc1 g2v1 :1430 (v6.180) (yamuna/5280 48178), start Fri 7/11 15:04
+    mdc5 g6p6 :5115 (v6.180) (yamuna/5280 53243), start Fri 7/11 15:07
+    xsoc2 g2v1 :1431 (v6.180) (yamuna/5280 25915), start Fri 7/11 15:13
+    xsoc3 g2v1 :1445 (v6.180) (yamuna/5280 104470), start Fri 7/11 15:34
+    sumvnrcl019 g14v2 :7912.0 (v6.180) (yamuna/5280 131610), start Fri 7/11 15:48
+    shyd2506cl018 g5p5 :3905 (v6.180) (yamuna/5280 43561), start Fri 7/11 17:28
+    shyd2501cl002 g8v1 :5714 (v6.180) (yamuna/5280 65780), start Fri 7/11 17:35
+    shyd2506cl009 g2v1 :1412 (v6.180) (yamuna/5280 117963), start Fri 7/11 21:29
+    gs6 yamuna :140 (v6.180) (yamuna/5280 39444), start Tue 7/15 9:40
+    shyd2407cl005 g10v4 :6730.0 (v6.180) (yamuna/5280 117471), start Sat 7/12 15:26
+    shyd2501cl009 g5v2 :5613 (v6.180) (yamuna/5280 112836), start Sat 7/12 22:04
+    msv4 g8p8 :605 (v6.180) (yamuna/5280 53485), start Sun 7/13 16:00
+    xsoc10 g3p3 :1906 (v6.180) (yamuna/5280 122464), start Sun 7/13 17:39
+    sblr2502cl006 g5p5 :3927 (v6.180) (yamuna/5280 7613), start Sun 7/13 19:32
+    shyd2409cl009 g9v3 :6318 (v6.180) (yamuna/5280 66432), start Sun 7/13 21:27
+    gft3 g4v2 :2007 (v6.180) (yamuna/5280 116364), start Sun 7/13 23:05
+    techr1 yamuna :88 (v6.180) (yamuna/5280 57607), start Mon 7/14 9:44
+    msv2 g8p8 :603 (v6.180) (yamuna/5280 115056), start Tue 7/15 10:34
+    sph12 g11v1 :6918 (v6.180) (yamuna/5280 69142), start Mon 7/14 10:49
+    gs4 yamuna :151 (v6.180) (yamuna/5280 6147), start Tue 7/15 11:17
+    sumvnrcl004 g14v1 :7727.0 (v6.180) (yamuna/5280 104604), start Mon 7/14 14:08
+    shyd2409cl016 g9v3 :6326 (v6.180) (yamuna/5280 102596), start Mon 7/14 15:10
+    msv1 g8p8 :602 (v6.180) (yamuna/5280 15524), start Mon 7/14 15:41
+    msv5 g8p8 :606 (v6.180) (yamuna/5280 14104), start Mon 7/14 16:00
+    xsoc9 g3p3 :1905 (v6.180) (yamuna/5280 23677), start Mon 7/14 16:32
+    shyd2503cl005 g16v2 :8611.0 (v6.180) (yamuna/5280 126697), start Mon 7/14 18:06
+    xsoc6 g3p3 :1930 (v6.180) (yamuna/5280 19420), start Mon 7/14 19:19
+    xsoc7 g3p3 :1933 (v6.180) (yamuna/5280 100347), start Mon 7/14 20:46
+    xsoc11 g3p3 :1907 (v6.180) (yamuna/5280 122999), start Mon 7/14 21:24
+    mdc6 g6v1 :5319 (v6.180) (yamuna/5280 132290), start Mon 7/14 21:44
+    gft1 g4p4 :534 (v6.180) (yamuna/5280 113340), start Tue 7/15 9:33
+    spt4 g6v1 :5306 (v6.180) (yamuna/5280 120547), start Tue 7/15 9:39
+    shyd2503cl001 g16v2 :8607.0 (v6.180) (yamuna/5280 61773), start Tue 7/15 9:49
+    sumvnrcl002 g14v1 :7725.0 (v6.180) (yamuna/5280 30063), start Tue 7/15 9:52
+    shyd2504cl007 g17v1 :8807.0 (v6.180) (yamuna/5280 127922), start Tue 7/15 9:52
+    sph7 g11v1 :6913 (v6.180) (yamuna/5280 49921), start Tue 7/15 10:08
+    sph13 g6p6 :5104 (v6.180) (yamuna/5280 35676), start Tue 7/15 11:36
+    ari5 ganges :1135 (v6.180) (yamuna/5280 10944), start Tue 7/15 11:50
+    gs5 yamuna :167 (v6.180) (yamuna/5280 52308), start Tue 7/15 12:08
+    ari2 ganges :1254 (v6.180) (yamuna/5280 68823), start Tue 7/15 12:09
+    shyd2506cl022 g9v1 :6010 (v6.180) (yamuna/5280 127528), start Tue 7/15 12:12
+    shyd2504cl001 g17v1 :8801.0 (v6.180) (yamuna/5280 45041), start Tue 7/15 12:21
+    xsoc4 g2v1 :1446 (v6.180) (yamuna/5280 101531), start Tue 7/15 13:56
+    sblr2502cl005 g5p5 :3926 (v6.180) (yamuna/5280 56691), start Tue 7/15 14:13
+    shyd2506cl010 g2v1 :1413 (v6.180) (yamuna/5280 31618), start Tue 7/15 15:23
+    sph5 g11v1 :6911 (v6.180) (yamuna/5280 85077), start Tue 7/15 15:24
+    shyd2506cl007 g2v1 :1410 (v6.180) (yamuna/5280 49625), start Tue 7/15 16:21
+    shyd2506cl023 g9v1 :6012 (v6.180) (yamuna/5280 6309), start Tue 7/15 16:41
+    sph8 g11v1 :6914 (v6.180) (yamuna/5280 98390), start Tue 7/15 17:06
+    shyd2506cl025 g9v1 :6014 (v6.180) (yamuna/5280 114008), start Tue 7/15 17:42
+    shyd2506cl008 g2v1 :1411 (v6.180) (yamuna/5280 74416), start Tue 7/15 18:48
+    sph17 g6p6 :5110 (v6.180) (yamuna/5280 137102), start Tue 7/15 18:57
+    sos18 narmada :23 (v6.180) (yamuna/5280 60893), start Tue 7/15 20:16
+    shyd2506cl031 ganges :1112 (v6.180) (yamuna/5280 110958), start Wed 7/16 6:38
+    sph6 g11v1 :6912 (v6.180) (yamuna/5280 14782), start Wed 7/16 8:37
+    sumvnrcl012 g14v2 :7905.0 (v6.180) (yamuna/5280 70551), start Wed 7/16 8:40
+    xsoc8 g3p3 :1904 (v6.180) (yamuna/5280 84000), start Wed 7/16 9:07
+    xsoc13 g3p3 :1919 (v6.180) (yamuna/5280 99331), start Wed 7/16 9:09
+    shyd2506cl001 g3p3 :1937 (v6.180) (yamuna/5280 64997), start Wed 7/16 9:13
+    shyd2506cl014 ganges2 :905 (v6.180) (yamuna/5280 30284), start Wed 7/16 9:15
+    shyd2506cl015 ganges2 :906 (v6.180) (yamuna/5280 132341), start Wed 7/16 9:19
+    shyd2506cl006 g2v1 :1405 (v6.180) (yamuna/5280 88024), start Wed 7/16 9:23
+    shyd2506cl004 g3p3 :1940 (v6.180) (yamuna/5280 13330), start Wed 7/16 9:24
+    shyd2410cl018 g14v2 :7924.0 (v6.180) (yamuna/5280 135431), start Wed 7/16 9:26
+    sumvnrcl013 g14v2 :7906.0 (v6.180) (yamuna/5280 54051), start Wed 7/16 9:33
+    shyd2506cl002 g3p3 :1938 (v6.180) (yamuna/5280 29760), start Wed 7/16 9:33
+    btslc3 indus :1619 (v6.180) (yamuna/5280 91550), start Wed 7/16 9:34
+    sos12 narmada :17 (v6.180) (yamuna/5280 117508), start Wed 7/16 9:38
+    shyd2502cl003 g16v2 :8604.0 (v6.180) (yamuna/5280 5470), start Wed 7/16 9:38
+    shyd2504cl010 g17v1 :8816.0 (v6.180) (yamuna/5280 18206), start Wed 7/16 9:42
+    sos15 narmada :20 (v6.180) (yamuna/5280 11385), start Wed 7/16 9:46
+    suresh g9v1 :6008 (v6.180) (yamuna/5280 13262), start Wed 7/16 9:48
+    shyd2503cl004 g16v2 :8610.0 (v6.180) (yamuna/5280 71716), start Wed 7/16 9:57
+    shyd2504cl003 g17v1 :8803.0 (v6.180) (yamuna/5280 13937), start Wed 7/16 9:58
+    shyd2501cl010 g5v2 :5614 (v6.180) (yamuna/5280 34811), start Wed 7/16 10:02
+    pcrao godavari :3067 (v6.180) (yamuna/5280 56979), start Wed 7/16 10:03
+    shyd2412cl002 g5v2 :5602 (v6.180) (yamuna/5280 5924), start Wed 7/16 10:04
+    shyd2502cl002 g16v2 :8603.0 (v6.180) (yamuna/5280 112232), start Wed 7/16 10:05
+    mdc4 g6p6 :5114 (v6.180) (yamuna/5280 80548), start Wed 7/16 10:07
+    xsoc5 g5p5 :3910 (v6.180) (yamuna/5280 54422), start Wed 7/16 10:13
+    ksm1 g3p3 :1942 (v6.180) (yamuna/5280 30790), start Wed 7/16 10:20
+    smts6 g5p5 :3922 (v6.180) (yamuna/5280 38761), start Wed 7/16 10:27
+    sblr2502cl003 g5p5 :3941 (v6.180) (yamuna/5280 72880), start Wed 7/16 10:27
+    mdc3 g6v1 :5335 (v6.180) (yamuna/5280 104900), start Wed 7/16 10:31
+    sumvnrcl008 g14v2 :7901.0 (v6.180) (yamuna/5280 120487), start Wed 7/16 10:33
+    shyd2506cl005 g3p3 :1941 (v6.180) (yamuna/5280 19076), start Wed 7/16 12:50
+    sph15 g6p6 :5106 (v6.180) (yamuna/5280 23519), start Wed 7/16 13:53
+    sumvnrcl014 g14v2 :7907.0 (v6.180) (yamuna/5280 66273), start Wed 7/16 13:56
+    gs1 yamuna :143 (v6.180) (yamuna/5280 36910), start Wed 7/16 13:58
+    sumvnrcl010 g14v2 :7903.0 (v6.180) (yamuna/5280 86138), start Wed 7/16 14:03
+    gehani sbvvcn04 sbvvlh02.chipextech.local:7819 (v6.180) (yamuna/5280 132427), start Wed 7/16 14:04
+    sph14 g6p6 :5105 (v6.180) (yamuna/5280 17381), start Wed 7/16 14:07
+    kusuma sbvvcn13.chipextech.local sbvvlh02.chipextech.local:7814 (v6.180) (yamuna/5280 114342), start Wed 7/16 14:08
+    rdnt13 g5v1 :5525 (v6.180) (yamuna/5280 61509), start Wed 7/16 14:11
+    adithya sbvvcn07 sbvvlh02.chipextech.local:7809 (v6.180) (yamuna/5280 7940), start Wed 7/16 14:12
+
+Users of 206:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of 21060:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of 21400:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of 32_28nm_to_10nm:  (Total of 460 licenses issued;  Total of 0 licenses in use)
+
+Users of 940:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of 945:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of AMS_Designer_Link:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of AMS_environment:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of AMS_utilities:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Affirma_sim_analysis_env:  (Total of 1260 licenses issued;  Total of 7 licenses in use)
+
+  "Affirma_sim_analysis_env" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: UHD:PERM
+  floating license
+
+    elns01 ganges2 :954 (v15.200) (yamuna/5280 107734), start Fri 7/4 11:36
+    mvn1 g2v2 :1502 (v15.200) (yamuna/5280 135986), start Wed 7/16 12:37
+    chandan sbvvcn19 sbvvlh02.chipextech.local:7804 (v15.200) (yamuna/5280 62710), start Wed 7/16 14:02
+    vinay sbvvcn19 sbvvlh01.chipextech.local:7740 (v15.200) (yamuna/5280 110673), start Wed 7/16 14:02
+    meghanak sbvvcn20 sbvvlh02.chipextech.local:7805 (v15.200) (yamuna/5280 32390), start Wed 7/16 14:02
+    pavan sbvvcn20 sbvvlh02.chipextech.local:7820 (v15.200) (yamuna/5280 39374), start Wed 7/16 14:02
+    monisr sbvvcn20 sbvvlh02.chipextech.local:7828 (v15.200) (yamuna/5280 138781), start Wed 7/16 14:11
+
+Users of COSLITE_ACCESS:  (Total of 1 license issued;  Total of 1 license in use)
+
+  "COSLITE_ACCESS" v1.0, vendor: cdslmd, expiry: 07-jun-2026
+  vendor_string: S:PERM
+  floating license
+
+    sumvnrcl022 g14v2 :7915.0 (v1.000) (yamuna/5280 119438), start Tue 7/1 11:59
+
+Users of Cadence_Analytics_Developer:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of Cadence_Analytics_Streaming:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of Conformal_ECO_GXL:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Conformal_Low_Power:  (Total of 260 licenses issued;  Total of 5 licenses in use)
+
+  "Conformal_Low_Power" v24.2, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    spt2 g8v1 :5730 (v24.100) (yamuna/5280 120222), start Fri 7/4 12:25
+    spt2 g8v1 :5730 (v24.100) (yamuna/5280 28878), start Wed 7/9 14:19
+    spt2 g8v1 :5730 (v24.100) (yamuna/5280 10806), start Tue 7/15 17:00
+    spt1 g6v1 :5328 (v24.100) (yamuna/5280 93399), start Wed 7/16 9:03
+    spt1 g6v1 :5328 (v24.100) (yamuna/5280 963), start Wed 7/16 10:12
+
+Users of DFM_Core_Technology:  (Total of 920 licenses issued;  Total of 0 licenses in use)
+
+Users of Encounter_C:  (Total of 460 licenses issued;  Total of 0 licenses in use)
+
+Users of Genus_CPU_Opt:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Genus_Low_Power_Opt:  (Total of 260 licenses issued;  Total of 1 license in use)
+
+  "Genus_Low_Power_Opt" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    spt2 g8v1 :5730 (v21.100) (yamuna/5280 138249), start Fri 7/11 15:25
+
+Users of Genus_Physical_Opt:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Genus_Synthesis:  (Total of 260 licenses issued;  Total of 136 licenses in use)
+
+  "Genus_Synthesis" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    sumvnrpd033 g14v1 :7718.0 (v21.100) (yamuna/5280 50207), start Thu 6/26 16:22
+    sumvnrpd009 g14v3 :8003.0 (v21.100) (yamuna/5280 50709), start Thu 6/26 16:23
+    sumvnrpd006 g14v1 :7739.0 (v21.100) (yamuna/5280 52703), start Thu 6/26 16:24
+    sumvnrpd006 g14v1 :7739.0 (v21.100) (yamuna/5280 58416), start Thu 6/26 16:34
+    sumjune23pd371 g5p5 :3946 (v21.100) (yamuna/5280 23310), start Thu 6/26 16:35
+    sumvnrpd008 g14v3 :8002.0 (v21.100) (yamuna/5280 63312), start Thu 6/26 16:43
+    sumvnrpd008 g14v3 :8002.0 (v21.100) (yamuna/5280 63806), start Thu 6/26 16:43
+    sumvnrpd026 g14v1 :7711.0 (v21.100) (yamuna/5280 57440), start Thu 6/26 17:24
+    sumvnrpd021 g14v1 :7706.0 (v21.100) (yamuna/5280 67821), start Thu 6/26 17:28
+    sumvnrpd022 g14v1 :7707.0 (v21.100) (yamuna/5280 74904), start Thu 6/26 17:34
+    sumvnrpd022 g14v1 :7707.0 (v21.100) (yamuna/5280 59821), start Thu 6/26 17:34
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 75103), start Thu 6/26 17:44
+    shyd2403pd011 indus :1603 (v21.100) (yamuna/5280 74117), start Thu 6/26 18:36
+    shyd2403pd011 indus :1603 (v21.100) (yamuna/5280 4250), start Thu 6/26 18:36
+    shyd2403pd011 indus :1603 (v21.100) (yamuna/5280 18727), start Thu 6/26 18:36
+    shyd2503pd003 g16v3 :8728.0 (v21.100) (yamuna/5280 69336), start Thu 6/26 20:51
+    shyd2503pd003 g16v3 :8728.0 (v21.100) (yamuna/5280 9618), start Thu 6/26 21:01
+    shyd2503pd028 g17v1 :8809.0 (v21.100) (yamuna/5280 81802), start Fri 6/27 9:21
+    shyd2503pd028 g17v1 :8809.0 (v21.100) (yamuna/5280 81901), start Fri 6/27 9:21
+    shyd2503pd028 g17v1 :8809.0 (v21.100) (yamuna/5280 82001), start Fri 6/27 9:21
+    sumvnrpd029 g14v1 :7714.0 (v21.100) (yamuna/5280 11940), start Fri 6/27 14:10
+    sumvnrpd020 g14v1 :7705.0 (v21.100) (yamuna/5280 97458), start Fri 6/27 17:14
+    sumvnrpd019 g14v1 :7704.0 (v21.100) (yamuna/5280 50425), start Fri 6/27 17:24
+    shyd2405pd028 g2v2 :1514 (v21.100) (yamuna/5280 92514), start Fri 6/27 21:56
+    sumvnrpd032 g14v1 :7717.0 (v21.100) (yamuna/5280 72404), start Sun 6/29 23:38
+    sumvnrpd012 g14v3 :8006.0 (v21.100) (yamuna/5280 63219), start Mon 6/30 6:42
+    sumvnrpd014 g14v3 :8008.0 (v21.100) (yamuna/5280 106208), start Mon 6/30 10:39
+    shyd2503pd028 g17v1 :8809.0 (v21.100) (yamuna/5280 92432), start Mon 6/30 17:11
+    sumjune23pd371 g5p5 :3946 (v21.100) (yamuna/5280 113543), start Mon 6/30 21:32
+    sumvnrpd032 g14v1 :7717.0 (v21.100) (yamuna/5280 101064), start Tue 7/1 17:33
+    sumvnrpd034 g14v2 :7918.0 (v21.100) (yamuna/5280 42466), start Wed 7/2 10:20
+    sumvnrpd034 g14v2 :7918.0 (v21.100) (yamuna/5280 125313), start Wed 7/2 10:29
+    shyd2503pd009 g16v3 :8734.0 (v21.100) (yamuna/5280 59128), start Wed 7/2 10:55
+    shyd2503pd010 g16v3 :8735.0 (v21.100) (yamuna/5280 12509), start Wed 7/2 11:04
+    shyd2503pd022 g8p8 :626 (v21.100) (yamuna/5280 34715), start Wed 7/2 11:55
+    sumvnrpd026 g14v1 :7711.0 (v21.100) (yamuna/5280 116733), start Wed 7/2 14:46
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 99781), start Wed 7/2 16:35
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 67985), start Wed 7/2 18:00
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 32908), start Thu 7/3 4:27
+    shyd2503pd027 ganges :1134 (v21.100) (yamuna/5280 118307), start Thu 7/3 10:55
+    sumjune23pd371 g5p5 :3946 (v21.100) (yamuna/5280 109773), start Fri 7/4 11:12
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 48004), start Mon 7/7 10:15
+    shyd2503pd014 g15v2 :8426.0 (v21.100) (yamuna/5280 43689), start Mon 7/7 11:06
+    shyd2503pd021 g8p8 :620 (v21.100) (yamuna/5280 61010), start Mon 7/7 12:26
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 116565), start Mon 7/7 12:36
+    sumvnrpd032 g14v1 :7717.0 (v21.100) (yamuna/5280 1090), start Mon 7/7 15:05
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 83015), start Mon 7/7 16:42
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 14924), start Mon 7/7 16:53
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 67787), start Tue 7/8 9:04
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 121721), start Tue 7/8 9:05
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 42329), start Tue 7/8 9:08
+    shyd2407pd038 g11p11 :6838 (v21.100) (yamuna/5280 115955), start Tue 7/8 9:12
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 117252), start Tue 7/8 9:13
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 62580), start Tue 7/8 9:16
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 72018), start Tue 7/8 9:18
+    shyd2403pd011 indus :1603 (v21.100) (yamuna/5280 128104), start Tue 7/8 10:49
+    shyd2403pd011 indus :1603 (v21.100) (yamuna/5280 110547), start Tue 7/8 11:06
+    shyd2503pd015 g15v2 :8427.0 (v21.100) (yamuna/5280 2054), start Tue 7/8 11:44
+    shyd2503pd009 g16v3 :8734.0 (v21.100) (yamuna/5280 83262), start Wed 7/9 10:12
+    shyd2503pd022 g8p8 :626 (v21.100) (yamuna/5280 101117), start Wed 7/9 11:16
+    shyd2406pd005 g10v1 :6405 (v21.100) (yamuna/5280 15698), start Wed 7/9 12:13
+    sumvnrpd019 g14v1 :7704.0 (v21.100) (yamuna/5280 47279), start Thu 7/10 9:02
+    shyd2406pd011 g10v1 :6411.0 (v21.100) (yamuna/5280 33966), start Thu 7/10 9:30
+    shyd2502pd012 g15v3 :8212.0 (v21.100) (yamuna/5280 98129), start Thu 7/10 10:27
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 103983), start Thu 7/10 10:48
+    shyd2503pd021 g8p8 :620 (v21.100) (yamuna/5280 127602), start Thu 7/10 10:50
+    shyd2503pd027 ganges :1134 (v21.100) (yamuna/5280 106441), start Thu 7/10 10:53
+    shyd2503pd003 g16v3 :8728.0 (v21.100) (yamuna/5280 96948), start Thu 7/10 10:55
+    shyd2503pd042 kaveriv2 :5906 (v21.100) (yamuna/5280 15215), start Thu 7/10 10:56
+    shyd2502pd012 g15v3 :8212.0 (v21.100) (yamuna/5280 13532), start Thu 7/10 11:06
+    shyd2503pd022 g8p8 :626 (v21.100) (yamuna/5280 130484), start Thu 7/10 11:11
+    shyd2503pd009 g16v3 :8734.0 (v21.100) (yamuna/5280 63412), start Thu 7/10 11:18
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 65370), start Thu 7/10 11:26
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 9246), start Thu 7/10 11:49
+    summar23pd268 indus :1612 (v21.100) (yamuna/5280 117727), start Thu 7/10 12:48
+    shyd2407pd038 g11p11 :6838 (v21.100) (yamuna/5280 51590), start Thu 7/10 15:45
+    shyd2503pd042 kaveriv2 :5906 (v21.100) (yamuna/5280 41973), start Thu 7/10 21:20
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 71008), start Fri 7/11 9:30
+    shyd2503pd027 ganges :1134 (v21.100) (yamuna/5280 89331), start Fri 7/11 11:29
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 2100), start Fri 7/11 11:29
+    shyd2503pd046 g5v2 :5615 (v21.100) (yamuna/5280 90323), start Fri 7/11 11:32
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 94309), start Fri 7/11 11:47
+    shyd2502pd012 g15v3 :8212.0 (v21.100) (yamuna/5280 46442), start Fri 7/11 11:54
+    shyd2503pd002 g16v3 :8727.0 (v21.100) (yamuna/5280 116063), start Fri 7/11 11:54
+    shyd2503pd003 g16v3 :8728.0 (v21.100) (yamuna/5280 136901), start Fri 7/11 12:01
+    shyd2503pd023 g8p8 :632 (v21.100) (yamuna/5280 19870), start Fri 7/11 12:10
+    shyd2503pd018 g15v2 :8430.0 (v21.100) (yamuna/5280 105055), start Fri 7/11 12:29
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 77594), start Fri 7/11 12:36
+    shyd2502pd007 g15v3 :8207.0 (v21.100) (yamuna/5280 94651), start Fri 7/11 14:35
+    shyd2503pd010 g16v3 :8735.0 (v21.100) (yamuna/5280 103575), start Fri 7/11 15:20
+    spt2 g8v1 :5730 (v21.100) (yamuna/5280 105134), start Fri 7/11 15:23
+    shyd2407pd019 g11p11 :6819 (v21.100) (yamuna/5280 21371), start Fri 7/11 19:51
+    shyd2407pd036 g11p11 :6836 (v21.100) (yamuna/5280 119270), start Sat 7/12 8:56
+    sumvnrpd027 g14v1 :7712.0 (v21.100) (yamuna/5280 61364), start Sat 7/12 18:26
+    shyd2407pd019 g11p11 :6819 (v21.100) (yamuna/5280 25215), start Sat 7/12 19:26
+    shyd2405pd025 g2v1 :1440 (v21.100) (yamuna/5280 89509), start Sun 7/13 10:08
+    shyd2407pd019 g11p11 :6819 (v21.100) (yamuna/5280 55495), start Sun 7/13 12:19
+    shyd2503pd042 kaveriv2 :5906 (v21.100) (yamuna/5280 25712), start Sun 7/13 13:56
+    shyd2503pd042 kaveriv2 :5906 (v21.100) (yamuna/5280 80710), start Sun 7/13 14:27
+    shyd2503pd014 g15v2 :8426.0 (v21.100) (yamuna/5280 132920), start Mon 7/14 9:34
+    shyd2503pd046 g5v2 :5615 (v21.100) (yamuna/5280 121450), start Mon 7/14 9:49
+    shyd2503pd015 g15v2 :8427.0 (v21.100) (yamuna/5280 106574), start Mon 7/14 9:51
+    shyd2503pd026 ganges :1121 (v21.100) (yamuna/5280 12720), start Mon 7/14 9:57
+    shyd2503pd046 g5v2 :5615 (v21.100) (yamuna/5280 47472), start Mon 7/14 9:59
+    shyd2503pd044 g2v1 :1404 (v21.100) (yamuna/5280 74656), start Mon 7/14 10:03
+    shyd2503pd014 g15v2 :8426.0 (v21.100) (yamuna/5280 129056), start Mon 7/14 10:04
+    shyd2503pd021 g8p8 :620 (v21.100) (yamuna/5280 37293), start Mon 7/14 10:07
+    shyd2503pd044 g2v1 :1404 (v21.100) (yamuna/5280 1621), start Mon 7/14 10:14
+    shyd2503pd042 kaveriv2 :5906 (v21.100) (yamuna/5280 20649), start Mon 7/14 10:23
+    shyd2502pd007 g15v3 :8207.0 (v21.100) (yamuna/5280 21516), start Mon 7/14 10:33
+    shyd2503pd042 kaveriv2 :5906 (v21.100) (yamuna/5280 19919), start Mon 7/14 10:35
+    shyd2503pd044 g2v1 :1404 (v21.100) (yamuna/5280 98770), start Mon 7/14 10:37
+    shyd2503pd009 g16v3 :8734.0 (v21.100) (yamuna/5280 134045), start Mon 7/14 10:42
+    shyd2503pd022 g8p8 :626 (v21.100) (yamuna/5280 17504), start Mon 7/14 10:43
+    shyd2502pd007 g15v3 :8207.0 (v21.100) (yamuna/5280 34520), start Mon 7/14 10:49
+    shyd2502pd007 g15v3 :8207.0 (v21.100) (yamuna/5280 89968), start Mon 7/14 10:54
+    shyd2503pd018 g15v2 :8430.0 (v21.100) (yamuna/5280 119084), start Mon 7/14 11:01
+    shyd2503pd022 g8p8 :626 (v21.100) (yamuna/5280 102291), start Mon 7/14 11:04
+    shyd2503pd042 kaveriv2 :5906 (v21.100) (yamuna/5280 96743), start Mon 7/14 11:18
+    shyd2503pd002 g16v3 :8727.0 (v21.100) (yamuna/5280 60558), start Mon 7/14 16:53
+    shyd2407pd040 g11p11 :6840 (v21.100) (yamuna/5280 12698), start Mon 7/14 19:06
+    shyd2503pd021 g8p8 :620 (v21.100) (yamuna/5280 60038), start Tue 7/15 9:01
+    shyd2503pd003 g16v3 :8728.0 (v21.100) (yamuna/5280 109859), start Tue 7/15 9:01
+    shyd2503pd027 ganges :1134 (v21.100) (yamuna/5280 43712), start Tue 7/15 9:31
+    shyd2503pd007 g16v3 :8732.0 (v21.100) (yamuna/5280 45638), start Tue 7/15 9:39
+    shyd2503pd046 g5v2 :5615 (v21.100) (yamuna/5280 50603), start Tue 7/15 9:56
+    shyd2503pd046 g5v2 :5615 (v21.100) (yamuna/5280 18912), start Tue 7/15 10:16
+    shyd2503pd008 g16v3 :8733.0 (v21.100) (yamuna/5280 97236), start Tue 7/15 10:22
+    shyd2503pd008 g16v3 :8733.0 (v21.100) (yamuna/5280 111238), start Tue 7/15 10:37
+    shyd2503pd029 g17v1 :8810.0 (v21.100) (yamuna/5280 56073), start Tue 7/15 11:42
+    shyd2503pd008 g16v3 :8733.0 (v21.100) (yamuna/5280 82346), start Tue 7/15 11:48
+    shyd2503pd008 g16v3 :8733.0 (v21.100) (yamuna/5280 79711), start Tue 7/15 20:21
+    shyd2503pd018 g15v2 :8430.0 (v21.100) (yamuna/5280 88839), start Wed 7/16 9:47
+    shyd2503pd028 g17v1 :8809.0 (v21.100) (yamuna/5280 76774), start Wed 7/16 10:19
+    shyd2503pd023 g8p8 :632 (v21.100) (yamuna/5280 76377), start Wed 7/16 10:21
+    shyd2409pd051 g12v3 :7502.0 (v21.100) (yamuna/5280 30182), start Wed 7/16 13:55
+
+Users of Innovus_20nm_Opt:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Innovus_7nm_Opt:  (Total of 260 licenses issued;  Total of 6 licenses in use)
+
+  "Innovus_7nm_Opt" v23.1, vendor: cdslmd, expiry: 07-jun-2026
+  vendor_string: J:PERM
+  floating license
+
+    shyd2409pd001 g12v1 :7301.0 (v21.100) (yamuna/5280 30804), start Fri 7/4 11:46
+    shyd2407pd038 g11p11 :6838 (v21.100) (yamuna/5280 36602), start Wed 7/9 23:23
+    shyd2406pd013 g10v1 :6413.0 (v21.100) (yamuna/5280 31405), start Sat 7/12 13:48
+    shyd2406pd013 g10v1 :6413.0 (v21.100) (yamuna/5280 20185), start Sat 7/12 14:32
+    shyd2406pd013 g10v1 :6413.0 (v21.100) (yamuna/5280 98028), start Mon 7/14 15:11
+    shyd2407pd030 g11p11 :6830 (v21.100) (yamuna/5280 63769), start Tue 7/15 13:10
+
+Users of Innovus_C:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Innovus_Hier_Opt:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Innovus_Impl_System:  (Total of 260 licenses issued;  Total of 152 licenses in use)
+
+  "Innovus_Impl_System" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    sumoct22pd156 g4p4 :519 (v21.100) (yamuna/5280 16306), start Thu 6/26 16:14
+    shyd2410pd006 indus :1622 (v21.100) (yamuna/5280 26402), start Thu 6/26 16:15
+    shyd2410pd012 g4v2 :2011 (v21.100) (yamuna/5280 27902), start Thu 6/26 16:15
+    shyd2409pd066 g12v3 :7517.0 (v21.100) (yamuna/5280 29101), start Thu 6/26 16:16
+    shyd2402pd023 g9v2 :6223 (v21.100) (yamuna/5280 31501), start Thu 6/26 16:16
+    btslc8 g3p3 :1911 (v21.100) (yamuna/5280 31701), start Thu 6/26 16:16
+    shyd2409pd036 g12v2 :7419.0 (v21.100) (yamuna/5280 32602), start Thu 6/26 16:16
+    shyd2410pd023 g4p4 :530 (v21.100) (yamuna/5280 34002), start Thu 6/26 16:16
+    shyd2404pd021 ganges2 :955 (v21.100) (yamuna/5280 34401), start Thu 6/26 16:16
+    shyd2410pd021 g4p4 :553 (v21.100) (yamuna/5280 34203), start Thu 6/26 16:17
+    shyd2410pd021 g4p4 :553 (v21.100) (yamuna/5280 34901), start Thu 6/26 16:17
+    shyd2410pd008 indus :1625 (v21.100) (yamuna/5280 35903), start Thu 6/26 16:17
+    shyd2410pd005 indus :1615 (v21.100) (yamuna/5280 36401), start Thu 6/26 16:17
+    shyd2409pd037 g12v2 :7420.0 (v21.100) (yamuna/5280 35411), start Thu 6/26 16:17
+    shyd2402pd014 g9v2 :6214 (v21.100) (yamuna/5280 36103), start Thu 6/26 16:17
+    shyd2404pd021 ganges2 :955 (v21.100) (yamuna/5280 35708), start Thu 6/26 16:17
+    shyd2409pd037 g12v2 :7420.0 (v21.100) (yamuna/5280 42901), start Thu 6/26 16:18
+    shyd2409pd066 g12v3 :7517.0 (v21.100) (yamuna/5280 42806), start Thu 6/26 16:19
+    shyd2409pd066 g12v3 :7517.0 (v21.100) (yamuna/5280 47509), start Thu 6/26 16:21
+    shyd2409pd047 g12v2 :7430.0 (v21.100) (yamuna/5280 47904), start Thu 6/26 16:21
+    shyd2402pd014 g9v2 :6214 (v21.100) (yamuna/5280 49406), start Thu 6/26 16:21
+    shyd2409pd032 g12v1 :7332.0 (v21.100) (yamuna/5280 84105), start Sat 6/28 17:21
+    shyd2405pd034 g3p3 :1946 (v21.100) (yamuna/5280 71963), start Mon 6/30 11:25
+    shyd2409pd001 g12v1 :7301.0 (v21.100) (yamuna/5280 72387), start Tue 7/1 12:18
+    shyd2409pd001 g12v1 :7301.0 (v21.100) (yamuna/5280 77205), start Tue 7/1 13:24
+    sumvnrpd009 g14v3 :8003.0 (v21.100) (yamuna/5280 90543), start Thu 7/3 0:51
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 111825), start Thu 7/3 14:35
+    sumvnrpd009 g14v3 :8003.0 (v21.100) (yamuna/5280 95870), start Thu 7/3 15:35
+    shyd2409pd001 g12v1 :7301.0 (v21.100) (yamuna/5280 102906), start Fri 7/4 11:45
+    shyd2406pd022 g10v1 :6422.0 (v21.100) (yamuna/5280 73665), start Sat 7/5 21:35
+    shyd2404pd012 ganges2 :939 (v21.100) (yamuna/5280 21272), start Mon 7/7 10:02
+    shyd2409pd020 g12v1 :7320.0 (v21.100) (yamuna/5280 8346), start Mon 7/7 10:38
+    shyd2406pd011 g10v1 :6411.0 (v21.100) (yamuna/5280 71204), start Mon 7/7 12:23
+    shyd2409pd011 g12v1 :7311.0 (v21.100) (yamuna/5280 106687), start Mon 7/7 12:39
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 108504), start Mon 7/7 14:20
+    sumvnrpd022 g14v1 :7707.0 (v21.100) (yamuna/5280 12132), start Mon 7/7 14:42
+    btslc7 g3p3 :1910 (v21.100) (yamuna/5280 108214), start Mon 7/7 14:42
+    sumvnrpd014 g14v3 :8008.0 (v21.100) (yamuna/5280 118048), start Mon 7/7 16:02
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 3636), start Mon 7/7 21:35
+    shyd2406pd051 g10v2 :6511 (v21.100) (yamuna/5280 119183), start Tue 7/8 7:23
+    obs1 indus :1658 (v21.100) (yamuna/5280 94777), start Tue 7/8 15:03
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 48321), start Tue 7/8 16:17
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 96663), start Tue 7/8 16:19
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 85657), start Tue 7/8 16:27
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 48256), start Tue 7/8 16:52
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 54357), start Tue 7/8 17:02
+    shyd2403pd011 indus :1603 (v21.100) (yamuna/5280 22336), start Wed 7/9 9:44
+    shyd2406pd027 g10v1 :6427.0 (v21.100) (yamuna/5280 105439), start Wed 7/9 10:48
+    sumvnrpd029 g14v1 :7714.0 (v21.100) (yamuna/5280 3346), start Wed 7/9 14:30
+    sumvnrpd029 g14v1 :7714.0 (v21.100) (yamuna/5280 26597), start Wed 7/9 17:24
+    shyd2407pd038 g11p11 :6838 (v21.100) (yamuna/5280 75373), start Wed 7/9 17:55
+    shyd2407pd038 g11p11 :6838 MultiCPU (v21.100) (yamuna/5280 128738), start Wed 7/9 18:09, 3 licenses
+    shyd2407pd038 g11p11 :6838 MultiCPU (v21.100) (yamuna/5280 61469), start Wed 7/9 18:17, 4 licenses
+    shyd2407pd038 g11p11 :6838 (v21.100) (yamuna/5280 82521), start Wed 7/9 18:25
+    shyd2406pd027 g10v1 :6427.0 (v21.100) (yamuna/5280 108346), start Wed 7/9 20:17
+    sumjune23pd371 g5p5 :3946 (v21.100) (yamuna/5280 52696), start Wed 7/9 23:06
+    shyd2407pd038 g11p11 :6838 MultiCPU (v21.100) (yamuna/5280 63160), start Wed 7/9 23:49, 7 licenses
+    shyd2406pd037 g10v1 :6437.0 (v21.100) (yamuna/5280 51406), start Thu 7/10 10:17
+    shyd2407pd028 g11p11 :6828 (v21.100) (yamuna/5280 92807), start Thu 7/10 11:00
+    shyd2409pd059 g12v3 :7510 (v21.100) (yamuna/5280 25551), start Thu 7/10 12:40
+    santosh g5p5 :3919 (v21.100) (yamuna/5280 40956), start Thu 7/10 14:23
+    santosh g5p5 :3919 MultiCPU (v21.100) (yamuna/5280 79586), start Thu 7/10 14:32
+    sindhud godavari :3065 (v21.100) (yamuna/5280 38665), start Thu 7/10 14:35
+    shyd2404pd012 ganges2 :939 (v21.100) (yamuna/5280 5211), start Thu 7/10 15:29
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 29210), start Thu 7/10 16:33
+    sumvnrpd011 g14v3 :8005.0 (v21.100) (yamuna/5280 118211), start Thu 7/10 17:26
+    sumvnrpd011 g14v3 :8005.0 (v21.100) (yamuna/5280 111693), start Thu 7/10 18:02
+    sumjune23pd371 g5p5 :3946 (v21.100) (yamuna/5280 111390), start Thu 7/10 18:06
+    sumvnrpd019 g14v1 :7704.0 (v21.100) (yamuna/5280 24787), start Thu 7/10 18:17
+    shyd2407pd032 g11p11 :6832 (v21.100) (yamuna/5280 123184), start Fri 7/11 10:17
+    shyd2407pd038 g11p11 :6838 (v21.100) (yamuna/5280 18467), start Fri 7/11 11:55
+    shyd2407pd038 g11p11 :6838 (v21.100) (yamuna/5280 111081), start Fri 7/11 12:52
+    shyd2409pd059 g12v3 :7510.0 (v21.100) (yamuna/5280 124361), start Fri 7/11 14:36
+    shyd2409pd059 g12v3 :7510.0 MultiCPU (v21.100) (yamuna/5280 115621), start Fri 7/11 16:19, 3 licenses
+    shyd2407pd005 g11p11 :6805 (v21.100) (yamuna/5280 128024), start Fri 7/11 16:36
+    shyd2406pd013 g10v1 :6413.0 (v21.100) (yamuna/5280 83147), start Sat 7/12 14:31
+    shyd2407pd018 g11p11 :6818 (v21.100) (yamuna/5280 7755), start Sat 7/12 21:47
+    shyd2406pd038 g10v1 :6438.0 (v21.100) (yamuna/5280 75483), start Sun 7/13 11:01
+    shyd2402pd027 g9v2 :6227 (v21.100) (yamuna/5280 134832), start Sun 7/13 17:04
+    shyd2402pd027 g9v2 :6227 MultiCPU (v21.100) (yamuna/5280 84891), start Sun 7/13 17:10, 4 licenses
+    shyd2406pd021 g10v1 :6421.0 (v21.100) (yamuna/5280 110330), start Sun 7/13 18:12
+    sumvnrpd006 g14v1 :7739.0 (v21.100) (yamuna/5280 134240), start Sun 7/13 20:03
+    shyd2407pd035 g11p11 :6835 (v21.100) (yamuna/5280 117007), start Mon 7/14 9:24
+    sumvnrpd020 g14v1 :7705.0 (v21.100) (yamuna/5280 49517), start Mon 7/14 13:56
+    sumvnrpd014 g14v3 :8008.0 (v21.100) (yamuna/5280 112666), start Mon 7/14 14:34
+    sumvnrpd027 g14v1 :7712.0 (v21.100) (yamuna/5280 95231), start Mon 7/14 17:34
+    sumvnrpd004 g14v1 :7737.0 (v21.100) (yamuna/5280 16473), start Mon 7/14 17:35
+    sumvnrpd033 g14v1 :7718.0 (v21.100) (yamuna/5280 132154), start Mon 7/14 17:36
+    sumvnrpd015 g14v3 :8009.0 (v21.100) (yamuna/5280 43983), start Mon 7/14 17:38
+    sumvnrpd001 g14v1 :7734.0 (v21.100) (yamuna/5280 34171), start Mon 7/14 17:42
+    sumvnrpd007 g14v1 :7740.0 (v21.100) (yamuna/5280 32044), start Mon 7/14 17:47
+    sumvnrpd024 g14v1 :7709.0 (v21.100) (yamuna/5280 137906), start Mon 7/14 17:54
+    shyd2407pd030 g11p11 :6830 (v21.100) (yamuna/5280 3901), start Mon 7/14 19:37
+    shyd2406pd013 g10v1 :6413.0 MultiCPU (v21.100) (yamuna/5280 11495), start Mon 7/14 20:44, 3 licenses
+    sumvnrpd008 g14v3 :8002.0 (v21.100) (yamuna/5280 2734), start Mon 7/14 20:56
+    sumvnrpd018 g14v1 :7703.0 (v21.100) (yamuna/5280 53333), start Mon 7/14 21:20
+    elns04 g4v1 :1718 (v21.100) (yamuna/5280 81052), start Tue 7/15 10:35
+    btslc8 g3p3 :1911 (v21.100) (yamuna/5280 101324), start Tue 7/15 10:50
+    shyd2407pd030 g11p11 :6830 (v21.100) (yamuna/5280 38064), start Tue 7/15 12:55
+    shyd2407pd038 g11p11 :6838 (v21.100) (yamuna/5280 21926), start Tue 7/15 13:11
+    shyd2409pd052 g12v3 :7503.0 (v21.100) (yamuna/5280 1300), start Tue 7/15 14:19
+    sumvnrpd034 g14v2 :7918.0 (v21.100) (yamuna/5280 15997), start Tue 7/15 14:35
+    sumvnrpd022 g14v1 :7707.0 (v21.100) (yamuna/5280 87324), start Tue 7/15 14:47
+    elns04 g4v1 :1718 (v21.100) (yamuna/5280 52263), start Tue 7/15 14:49
+    sumvnrpd034 g14v2 :7918.0 (v21.100) (yamuna/5280 133383), start Tue 7/15 14:58
+    shyd2407pd007 g11p11 :6807 (v21.100) (yamuna/5280 80159), start Tue 7/15 15:02
+    sumvnrpd034 g14v2 :7918.0 (v21.100) (yamuna/5280 126402), start Tue 7/15 15:08
+    sumvnrpd022 g14v1 :7707.0 (v21.100) (yamuna/5280 39056), start Tue 7/15 15:09
+    sumvnrpd030 g14v1 :7715.0 (v21.100) (yamuna/5280 32258), start Tue 7/15 15:26
+    sumvnrpd023 g14v1 :7708.0 (v21.100) (yamuna/5280 80842), start Tue 7/15 16:22
+    sumvnrpd021 g14v1 :7706.0 (v21.100) (yamuna/5280 92998), start Tue 7/15 17:20
+    sumvnrpd025 g14v1 :7710.0 (v21.100) (yamuna/5280 133779), start Tue 7/15 17:22
+    shyd2407pd036 g11p11 :6836 (v21.100) (yamuna/5280 76867), start Tue 7/15 21:57
+    sumvnrpd026 g14v1 :7711.0 (v21.100) (yamuna/5280 75823), start Tue 7/15 22:56
+    sumjune23pd371 g5p5 :3946 (v21.100) (yamuna/5280 44683), start Tue 7/15 23:14
+    sumvnrpd027 g14v1 :7712.0 (v21.100) (yamuna/5280 104278), start Wed 7/16 8:35
+    sumvnrpd002 g14v1 :7735.0 (v21.100) (yamuna/5280 94006), start Wed 7/16 10:25
+    sumoct22pd108 ganges2 :911 (v21.100) (yamuna/5280 44793), start Wed 7/16 12:38
+    sumvnrpd012 g14v3 :8006.0 (v21.100) (yamuna/5280 79800), start Wed 7/16 12:40
+    sumvnrpd013 g14v3 :8007.0 (v21.100) (yamuna/5280 97093), start Wed 7/16 12:40
+    sumvnrpd009 g14v3 :8003.0 (v21.100) (yamuna/5280 112048), start Wed 7/16 12:40
+    smts1 g6v1 :5324 (v21.100) (yamuna/5280 89840), start Wed 7/16 12:40
+    sumvnrpd032 g14v1 :7717.0 (v21.100) (yamuna/5280 20204), start Wed 7/16 12:40
+    sumvnrpd003 g14v1 :7736.0 (v21.100) (yamuna/5280 28942), start Wed 7/16 12:40
+    sumvnrpd019 g14v1 :7704.0 (v21.100) (yamuna/5280 69243), start Wed 7/16 12:40
+    sumvnrpd029 g14v1 :7714.0 (v21.100) (yamuna/5280 118845), start Wed 7/16 12:40
+    shyd2409pd066 g12v3 :7517.0 (v21.100) (yamuna/5280 89791), start Wed 7/16 12:40
+    shyd2406pd013 g10v1 :6413.0 (v21.100) (yamuna/5280 11291), start Wed 7/16 12:42
+    shyd2406pd013 g10v1 :6413.0 (v21.100) (yamuna/5280 104846), start Wed 7/16 12:42
+    bharath yamuna :134 (v21.100) (yamuna/5280 26223), start Wed 7/16 13:58
+    sumvnrpd028 g14v1 :7713.0 (v21.100) (yamuna/5280 47399), start Wed 7/16 14:02
+    elns09 g2v1 :1408 (v21.100) (yamuna/5280 123560), start Wed 7/16 14:04
+    elns08 g2v1 :1407 (v21.100) (yamuna/5280 123406), start Wed 7/16 14:08
+    pcm4 g3p3 :1960 (v21.100) (yamuna/5280 92029), start Wed 7/16 14:10
+
+Users of Innovus_MS_Opt:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Integrated_Metrics_Center:  (Total of 800 licenses issued;  Total of 0 licenses in use)
+
+Users of Joules_RTL_Power:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of LEAPFROG-CV:  (Total of 600 licenses issued;  Total of 0 licenses in use)
+
+Users of Liberate_Client:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Liberate_MX_Client:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Liberate_MX_Server:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Liberate_Server:  (Total of 200 licenses issued;  Total of 1 license in use)
+
+  "Liberate_Server" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    sph8 g11v1 :6914 (yamuna/5280 40041), start Tue 7/15 11:45
+
+Users of Modus_DFT_Opt:  (Total of 260 licenses issued;  Total of 1 license in use)
+
+  "Modus_DFT_Opt" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    spt2 g8v1 :5730 (v21.100) (yamuna/5280 5179), start Fri 7/11 16:05
+
+Users of Modus_PMBIST_Opt:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Modus_common_ui:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_16nm:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_DRC:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_DesignReview:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_DesignReview_Layout:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_DesignReview_Mask:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_LVS:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_Quickview:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_RV:  (Total of 1300 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_UI:  (Total of 1300 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_advdrc:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_advlvs:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_dfmfill:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_int:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_mpt:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Pegasus_perc:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Phys_Ver_Sys_Adv_Ana_Opt:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Phys_Ver_Sys_Adv_Device:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Phys_Ver_Sys_Const_Validator:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Phys_Ver_Sys_DRC_XL:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Phys_Ver_Sys_Design_Ana:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Phys_Ver_Sys_LVS_XL:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Phys_Ver_Sys_Prog_ERC:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Phys_Ver_Sys_Results_Mgr:  (Total of 600 licenses issued;  Total of 0 licenses in use)
+
+Users of Phys_Ver_Sys_Results_Viewer:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of QRC_Advanced_Analysis:  (Total of 460 licenses issued;  Total of 0 licenses in use)
+
+Users of QRC_Advanced_Modeling:  (Total of 460 licenses issued;  Total of 0 licenses in use)
+
+Users of QRC_Advanced_Modeling_20:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of QRC_Advanced_Node_Modeling:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_CH_SL:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_GDSII:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_GL1:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_HITACHI:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_JEOL:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_LAFF:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_MEBES:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_OA:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_OASIS:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_SemiP10:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of QuickView_TOSHIBA:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Spectre_AMSD_Lk:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Spectre_XPS:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Spectre_char_opt:  (Total of 2000 licenses issued;  Total of 0 licenses in use)
+
+Users of Stratus_FloatingPoint:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Stratus_HLS_L:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Stratus_HLS_XL:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Stratus_IDE:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Tempus_Timing_Signoff_TSO:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of Tempus_Timing_Signoff_XL:  (Total of 260 licenses issued;  Total of 1 license in use)
+
+  "Tempus_Timing_Signoff_XL" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    shyd2403pd008 narmada :71 (v22.100) (yamuna/5280 57113), start Sat 7/5 11:45
+
+Users of VDS_POWER:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of VDS_TIMING:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Variety_Client:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Variety_Server:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Virtuoso_ADE_Assembler:  (Total of 200 licenses issued;  Total of 15 licenses in use)
+
+  "Virtuoso_ADE_Assembler" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: UHD:PERM
+  floating license
+
+    sumvnrcl022 g14v2 :7915.0 (v6.180) (yamuna/5280 22490), start Mon 6/30 9:11
+    ari4 yamuna :62 (v6.180) (yamuna/5280 79119), start Thu 7/3 10:08
+    gs7 yamuna :56 (v6.180) (yamuna/5280 23075), start Fri 7/4 14:49
+    sumvnrcl015 g14v2 :7908.0 (v6.180) (yamuna/5280 2815), start Fri 7/4 15:00
+    mdc2 g6v1 :5334 (v6.180) (yamuna/5280 420), start Sat 7/5 10:19
+    ari6 ganges :1185 (v6.180) (yamuna/5280 33007), start Tue 7/8 22:34
+    sumvnrcl023 g14v2 :7916.0 (v6.180) (yamuna/5280 118421), start Mon 7/7 15:42
+    sph4 g11v1 :6910 (v6.180) (yamuna/5280 122640), start Mon 7/7 17:09
+    sumvnrcl017 g14v2 :7910.0 (v6.180) (yamuna/5280 61115), start Tue 7/8 15:33
+    sph7 g11v1 :6913 (v6.180) (yamuna/5280 80478), start Tue 7/15 10:58
+    mdc5 g6p6 :5115 (v6.180) (yamuna/5280 70004), start Tue 7/15 16:58
+    sph6 g11v1 :6912 (v6.180) (yamuna/5280 33284), start Wed 7/16 8:38
+    sph5 g11v1 :6911 (v6.180) (yamuna/5280 37738), start Wed 7/16 10:23
+    ari5 ganges :1135 (v6.180) (yamuna/5280 60910), start Wed 7/16 10:32
+    gehani sbvvcn04 sbvvlh02.chipextech.local:7819 (v6.180) (yamuna/5280 103336), start Wed 7/16 14:04
+
+Users of Virtuoso_Acceler_Parallel_sc:  (Total of 200 licenses issued;  Total of 1 license in use)
+
+  "Virtuoso_Acceler_Parallel_sc" v24.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    vishals sbvvcn09 sbvvlh02.chipextech.local:7824 (v21.100) (yamuna/5280 97564), start Wed 7/16 14:02
+
+Users of Virtuoso_Adv_Node_Framework:  (Total of 600 licenses issued;  Total of 183 licenses in use)
+
+  "Virtuoso_Adv_Node_Framework" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: UHD:PERM
+  floating license
+
+    sos13 narmada :18 (v20.100) (yamuna/5280 6801), start Thu 6/26 16:12
+    sumvnrcl015 g14v2 :7908.0 (v20.100) (yamuna/5280 36505), start Thu 6/26 16:17
+    sos8 narmada :13 (v20.100) (yamuna/5280 45302), start Thu 6/26 16:20
+    shyd2407cl011 g10v4 :6736.0 (v20.100) (yamuna/5280 20919), start Thu 6/26 16:41
+    shyd2410cl028 g14v2 :7934.0 (v20.100) (yamuna/5280 819), start Thu 6/26 18:56
+    shyd2409cl001 g9v3 :6311 (v20.100) (yamuna/5280 51605), start Thu 6/26 19:11
+    als13 godavari :3075 (v20.100) (yamuna/5280 37308), start Thu 6/26 20:03
+    gs2 yamuna :144 (v20.100) (yamuna/5280 81220), start Fri 6/27 9:10
+    shyd2504cl002 g17v1 :8802.0 (v20.100) (yamuna/5280 85902), start Fri 6/27 9:43
+    shyd2410cl025 g14v2 :7931.0 (v20.100) (yamuna/5280 87101), start Fri 6/27 9:54
+    shyd2501cl003 g8v1 :5712 (v20.100) (yamuna/5280 90407), start Fri 6/27 10:11
+    sos2 narmada narmada:07 (v20.100) (yamuna/5280 52176), start Fri 6/27 10:24
+    shyd2410cl029 g14v2 :7935.0 (v20.100) (yamuna/5280 61206), start Fri 6/27 11:21
+    mdc2 g6v1 :5334 (v20.100) (yamuna/5280 49039), start Sat 6/28 9:37
+    msv3 g8p8 :604 (v20.100) (yamuna/5280 44103), start Sun 7/13 15:57
+    sumvnrcl009 g14v2 :7902.0 (v20.100) (yamuna/5280 20483), start Sat 6/28 23:53
+    shyd2410cl016 g14v2 :7922.0 (v20.100) (yamuna/5280 29309), start Sun 6/29 12:32
+    shyd2502cl004 g16v2 :8605.0 (v20.100) (yamuna/5280 95906), start Mon 6/30 9:55
+    sumvnrcl022 g14v2 :7915.0 (v20.100) (yamuna/5280 102146), start Mon 6/30 9:11
+    shyd2409cl004 g9v3 :6314 (v20.100) (yamuna/5280 49867), start Mon 6/30 10:26
+    shyd2407cl007 g10v4 :6732.0 (v20.100) (yamuna/5280 13759), start Mon 6/30 11:57
+    shyd2410cl031 g14v2 :7936.0 (v20.100) (yamuna/5280 70707), start Mon 6/30 13:10
+    shyd2409cl010 g9v3 :6322 (v20.100) (yamuna/5280 70914), start Mon 6/30 14:50
+    shyd2504cl004 g17v1 :8804.0 (v20.100) (yamuna/5280 115111), start Mon 6/30 16:54
+    shyd2409cl002 g9v3 :6312 (v20.100) (yamuna/5280 57591), start Mon 6/30 20:04
+    shyd2501cl006 g8v1 :5718 (v20.100) (yamuna/5280 8476), start Tue 7/1 18:02
+    shyd2504cl006 g17v1 :8834.0 (v20.100) (yamuna/5280 80247), start Tue 7/1 11:25
+    sumvnrcl020 g14v2 :7913.0 (v20.100) (yamuna/5280 55524), start Tue 7/1 17:09
+    sumvnrcl017 g14v2 :7910.0 (v20.100) (yamuna/5280 113125), start Wed 7/2 6:58
+    shyd2506cl003 g3p3 :1939 (v20.100) (yamuna/5280 111559), start Wed 7/2 9:49
+    shyd2501cl004 g8v2 :5803 (v20.100) (yamuna/5280 100461), start Wed 7/2 11:58
+    ari4 yamuna :62 (v20.100) (yamuna/5280 55138), start Thu 7/3 10:08
+    shyd2407cl006 g10v4 :6731.0 (v20.100) (yamuna/5280 28484), start Wed 7/2 22:17
+    shyd2506cl020 g5p5 :3914 (v20.100) (yamuna/5280 53165), start Thu 7/3 10:30
+    shyd2410cl020 g14v2 :7926.0 (v20.100) (yamuna/5280 104584), start Thu 7/3 10:34
+    sos7 narmada :12 (v20.100) (yamuna/5280 33489), start Thu 7/3 12:28
+    ari6 ganges :1185 (v20.100) (yamuna/5280 2373), start Fri 7/4 14:59
+    shyd2503cl002 g16v2 :8608.0 (v20.100) (yamuna/5280 124857), start Fri 7/4 9:45
+    shyd2506cl013 ganges2 :904 (v20.100) (yamuna/5280 42733), start Fri 7/4 10:42
+    gs7 yamuna :56 (v20.100) (yamuna/5280 64056), start Fri 7/4 12:06
+    gft2 g4p4 :537 (v20.100) (yamuna/5280 112545), start Fri 7/4 12:12
+    xsoc12 g3p3 :1908 (v20.100) (yamuna/5280 85277), start Fri 7/4 15:40
+    shyd2407cl013 g10v4 :6738.0 (v20.100) (yamuna/5280 125229), start Fri 7/4 16:35
+    shyd2503cl003 g16v2 :8609.0 (v20.100) (yamuna/5280 52590), start Sat 7/5 11:58
+    shyd2501cl007 g5v2 :5611 (v20.100) (yamuna/5280 77332), start Sat 7/5 19:44
+    mdc1 g8v1 :5701 (v20.100) (yamuna/5280 75595), start Sat 7/5 21:06
+    sumvnrcl007 g14v1 :7730.0 (v20.100) (yamuna/5280 639), start Tue 7/15 14:37
+    shyd2410cl026 g14v2 :7932.0 (v20.100) (yamuna/5280 8613), start Sun 7/6 14:25
+    gft4 g4v2 :2008 (v20.100) (yamuna/5280 126704), start Mon 7/7 7:34
+    shyd2409cl006 g9v3 :6316 (v20.100) (yamuna/5280 1866), start Mon 7/7 8:25
+    sph16 g6p6 :5108 (v20.100) (yamuna/5280 27204), start Mon 7/7 10:31
+    sph9 g11v1 :6915 (v20.100) (yamuna/5280 115762), start Mon 7/7 14:25
+    sumvnrcl003 g14v1 :7726.0 (v20.100) (yamuna/5280 46178), start Mon 7/7 17:11
+    sumvnrcl016 g14v2 :7909.0 (v20.100) (yamuna/5280 80323), start Mon 7/7 14:37
+    sumvnrcl023 g14v2 :7916.0 (v20.100) (yamuna/5280 71890), start Mon 7/7 15:42
+    sumvnrcl001 g14v1 :7724.0 (v20.100) (yamuna/5280 79085), start Sat 7/12 21:58
+    sos1 narmada narmada:06 (v20.100) (yamuna/5280 60375), start Mon 7/7 16:55
+    sph4 g11v1 :6910 (v20.100) (yamuna/5280 48522), start Mon 7/7 17:08
+    sumvnrcl006 g14v1 :7729.0 (v20.100) (yamuna/5280 74818), start Mon 7/7 17:09
+    shyd2409cl013 g9v3 :6324 (v20.100) (yamuna/5280 28343), start Mon 7/7 21:45
+    shyd2506cl029 g8v1 :5716 (v20.100) (yamuna/5280 130714), start Wed 7/9 12:31
+    shyd2410cl032 g14v2 :7937.0 (v20.100) (yamuna/5280 87731), start Tue 7/8 13:38
+    sumvnrcl011 g14v2 :7904.0 (v20.100) (yamuna/5280 86837), start Sat 7/12 20:10
+    prameela indus :1665 (v20.100) (yamuna/5280 1161), start Tue 7/8 16:32
+    shyd2504cl005 g17v1 :8805.0 (v20.100) (yamuna/5280 3228), start Wed 7/9 10:13
+    ari1 ganges :1291 (v20.100) (yamuna/5280 10762), start Wed 7/9 12:47
+    sph11 g11v1 :6917 (v20.100) (yamuna/5280 31224), start Wed 7/9 18:07
+    shyd2506cl016 g5p5 :3903 (v20.100) (yamuna/5280 69414), start Thu 7/10 11:38
+    shyd2501cl005 g8v2 :5804 (v20.100) (yamuna/5280 124442), start Thu 7/10 9:58
+    spt5 g6v1 :5307 (v20.100) (yamuna/5280 27558), start Thu 7/10 11:32
+    shyd2506cl026 g10v1 :6406.0 (v20.100) (yamuna/5280 56443), start Thu 7/10 11:57
+    shyd2506cl011 ganges2 :902 (v20.100) (yamuna/5280 43164), start Thu 7/10 12:01
+    shyd2506cl024 g9v1 :6013 (v20.100) (yamuna/5280 106366), start Thu 7/10 12:01
+    shyd2506cl017 g5p5 :3904 (v20.100) (yamuna/5280 78086), start Thu 7/10 12:02
+    shyd2506cl028 g10v1 :6446.0 (v20.100) (yamuna/5280 94402), start Thu 7/10 12:18
+    test_session g6v1 :5314 (v20.100) (yamuna/5280 43894), start Thu 7/10 15:07
+    sumvnrcl005 g14v1 :7728.0 (v20.100) (yamuna/5280 56776), start Sun 7/13 12:12
+    shyd2406cl013 g10v2 :6543.0 (v20.100) (yamuna/5280 110134), start Thu 7/10 15:52
+    shyd2506cl012 ganges2 :903 (v20.100) (yamuna/5280 65063), start Thu 7/10 21:18
+    smts7 g5p5 :3923 (v20.100) (yamuna/5280 134582), start Fri 7/11 8:56
+    shyd2412cl001 g8v1 :5705 (v20.100) (yamuna/5280 54625), start Fri 7/11 9:40
+    shyd2502cl005 g16v2 :8606.0 (v20.100) (yamuna/5280 74074), start Fri 7/11 9:47
+    sph2 g11v1 :6908 (v20.100) (yamuna/5280 57805), start Fri 7/11 10:26
+    shyd2412cl004 g8v1 :5709 (v20.100) (yamuna/5280 18082), start Fri 7/11 12:04
+    shyd2410cl023 g14v2 :7929.0 (v20.100) (yamuna/5280 137516), start Sun 7/13 20:46
+    sos11 narmada :16 (v20.100) (yamuna/5280 15866), start Fri 7/11 12:33
+    shyd2412cl003 g8v1 :5702 (v20.100) (yamuna/5280 106949), start Fri 7/11 12:48
+    shyd2409cl015 g9v3 :6325 (v20.100) (yamuna/5280 14017), start Fri 7/11 14:15
+    xsoc1 g2v1 :1430 (v20.100) (yamuna/5280 45524), start Fri 7/11 15:04
+    mdc5 g6p6 :5115 (v20.100) (yamuna/5280 107245), start Fri 7/11 15:07
+    xsoc2 g2v1 :1431 (v20.100) (yamuna/5280 23720), start Fri 7/11 15:13
+    xsoc3 g2v1 :1445 (v20.100) (yamuna/5280 2518), start Fri 7/11 15:34
+    sumvnrcl019 g14v2 :7912.0 (v20.100) (yamuna/5280 14497), start Fri 7/11 15:48
+    shyd2506cl018 g5p5 :3905 (v20.100) (yamuna/5280 81566), start Fri 7/11 17:28
+    shyd2501cl002 g8v1 :5714 (v20.100) (yamuna/5280 68546), start Fri 7/11 17:35
+    shyd2506cl009 g2v1 :1412 (v20.100) (yamuna/5280 118795), start Fri 7/11 21:29
+    gs6 yamuna :140 (v20.100) (yamuna/5280 17157), start Tue 7/15 9:40
+    shyd2407cl005 g10v4 :6730.0 (v20.100) (yamuna/5280 131504), start Sat 7/12 15:26
+    shyd2501cl009 g5v2 :5613 (v20.100) (yamuna/5280 97784), start Sat 7/12 22:04
+    msv4 g8p8 :605 (v20.100) (yamuna/5280 50585), start Sun 7/13 16:00
+    xsoc10 g3p3 :1906 (v20.100) (yamuna/5280 23203), start Sun 7/13 17:39
+    sblr2502cl006 g5p5 :3927 (v20.100) (yamuna/5280 90006), start Sun 7/13 19:32
+    shyd2409cl009 g9v3 :6318 (v20.100) (yamuna/5280 96559), start Sun 7/13 21:27
+    gft3 g4v2 :2007 (v20.100) (yamuna/5280 4464), start Sun 7/13 23:05
+    techr1 yamuna :88 (v20.100) (yamuna/5280 91108), start Mon 7/14 9:44
+    msv2 g8p8 :603 (v20.100) (yamuna/5280 100578), start Tue 7/15 10:34
+    sph12 g11v1 :6918 (v20.100) (yamuna/5280 114514), start Mon 7/14 10:49
+    gs4 yamuna :151 (v20.100) (yamuna/5280 43036), start Tue 7/15 11:17
+    sumvnrcl004 g14v1 :7727.0 (v20.100) (yamuna/5280 53951), start Mon 7/14 14:08
+    shyd2409cl016 g9v3 :6326 (v20.100) (yamuna/5280 4520), start Mon 7/14 15:10
+    msv1 g8p8 :602 (v20.100) (yamuna/5280 138528), start Mon 7/14 15:41
+    msv5 g8p8 :606 (v20.100) (yamuna/5280 129490), start Mon 7/14 16:00
+    xsoc9 g3p3 :1905 (v20.100) (yamuna/5280 77143), start Mon 7/14 16:32
+    shyd2503cl005 g16v2 :8611.0 (v20.100) (yamuna/5280 62687), start Mon 7/14 18:06
+    xsoc6 g3p3 :1930 (v20.100) (yamuna/5280 104153), start Mon 7/14 19:19
+    xsoc7 g3p3 :1933 (v20.100) (yamuna/5280 122781), start Mon 7/14 20:46
+    xsoc11 g3p3 :1907 (v20.100) (yamuna/5280 77866), start Mon 7/14 21:24
+    mdc6 g6v1 :5319 (v20.100) (yamuna/5280 29578), start Mon 7/14 21:44
+    gft1 g4p4 :534 (v20.100) (yamuna/5280 25447), start Tue 7/15 9:33
+    spt4 g6v1 :5306 (v20.100) (yamuna/5280 76111), start Tue 7/15 9:39
+    shyd2503cl001 g16v2 :8607.0 (v20.100) (yamuna/5280 135597), start Tue 7/15 9:49
+    sumvnrcl002 g14v1 :7725.0 (v20.100) (yamuna/5280 132749), start Tue 7/15 9:52
+    shyd2504cl007 g17v1 :8807.0 (v20.100) (yamuna/5280 21132), start Tue 7/15 9:52
+    sph7 g11v1 :6913 (v20.100) (yamuna/5280 31070), start Tue 7/15 10:08
+    sph13 g6p6 :5104 (v20.100) (yamuna/5280 86274), start Tue 7/15 11:36
+    ari5 ganges :1135 (v20.100) (yamuna/5280 40485), start Tue 7/15 11:50
+    gs5 yamuna :167 (v20.100) (yamuna/5280 123861), start Tue 7/15 12:08
+    ari2 ganges :1254 (v20.100) (yamuna/5280 21406), start Tue 7/15 12:09
+    shyd2506cl022 g9v1 :6010 (v20.100) (yamuna/5280 71418), start Tue 7/15 12:12
+    shyd2504cl001 g17v1 :8801.0 (v20.100) (yamuna/5280 7131), start Tue 7/15 12:21
+    xsoc4 g2v1 :1446 (v20.100) (yamuna/5280 76029), start Tue 7/15 13:56
+    sblr2502cl005 g5p5 :3926 (v20.100) (yamuna/5280 39179), start Tue 7/15 14:13
+    shyd2506cl010 g2v1 :1413 (v20.100) (yamuna/5280 29893), start Tue 7/15 15:23
+    sph5 g11v1 :6911 (v20.100) (yamuna/5280 22938), start Tue 7/15 15:24
+    shyd2506cl007 g2v1 :1410 (v20.100) (yamuna/5280 125569), start Tue 7/15 16:21
+    shyd2506cl023 g9v1 :6012 (v20.100) (yamuna/5280 88511), start Tue 7/15 16:41
+    sph8 g11v1 :6914 (v20.100) (yamuna/5280 19760), start Tue 7/15 17:06
+    shyd2506cl025 g9v1 :6014 (v20.100) (yamuna/5280 52930), start Tue 7/15 17:42
+    shyd2506cl008 g2v1 :1411 (v20.100) (yamuna/5280 68323), start Tue 7/15 18:48
+    sph17 g6p6 :5110 (v20.100) (yamuna/5280 64107), start Tue 7/15 18:57
+    sos18 narmada :23 (v20.100) (yamuna/5280 95554), start Tue 7/15 20:16
+    shyd2506cl031 ganges :1112 (v20.100) (yamuna/5280 10418), start Wed 7/16 6:38
+    sph6 g11v1 :6912 (v20.100) (yamuna/5280 48886), start Wed 7/16 8:37
+    sumvnrcl012 g14v2 :7905.0 (v20.100) (yamuna/5280 45472), start Wed 7/16 8:40
+    xsoc8 g3p3 :1904 (v20.100) (yamuna/5280 20860), start Wed 7/16 9:07
+    xsoc13 g3p3 :1919 (v20.100) (yamuna/5280 105949), start Wed 7/16 9:09
+    shyd2506cl001 g3p3 :1937 (v20.100) (yamuna/5280 69907), start Wed 7/16 9:13
+    shyd2506cl014 ganges2 :905 (v20.100) (yamuna/5280 57036), start Wed 7/16 9:15
+    shyd2506cl015 ganges2 :906 (v20.100) (yamuna/5280 98566), start Wed 7/16 9:19
+    shyd2506cl006 g2v1 :1405 (v20.100) (yamuna/5280 4926), start Wed 7/16 9:23
+    shyd2506cl004 g3p3 :1940 (v20.100) (yamuna/5280 78897), start Wed 7/16 9:24
+    shyd2410cl018 g14v2 :7924.0 (v20.100) (yamuna/5280 90730), start Wed 7/16 9:26
+    sumvnrcl013 g14v2 :7906.0 (v20.100) (yamuna/5280 135386), start Wed 7/16 9:33
+    shyd2506cl002 g3p3 :1938 (v20.100) (yamuna/5280 53891), start Wed 7/16 9:33
+    btslc3 indus :1619 (v20.100) (yamuna/5280 101223), start Wed 7/16 9:34
+    sos12 narmada :17 (v20.100) (yamuna/5280 18823), start Wed 7/16 9:38
+    shyd2502cl003 g16v2 :8604.0 (v20.100) (yamuna/5280 24258), start Wed 7/16 9:38
+    shyd2504cl010 g17v1 :8816.0 (v20.100) (yamuna/5280 71144), start Wed 7/16 9:42
+    sos15 narmada :20 (v20.100) (yamuna/5280 70231), start Wed 7/16 9:46
+    suresh g9v1 :6008 (v20.100) (yamuna/5280 130830), start Wed 7/16 9:48
+    shyd2503cl004 g16v2 :8610.0 (v20.100) (yamuna/5280 108986), start Wed 7/16 9:57
+    shyd2504cl003 g17v1 :8803.0 (v20.100) (yamuna/5280 78941), start Wed 7/16 9:58
+    shyd2501cl010 g5v2 :5614 (v20.100) (yamuna/5280 7409), start Wed 7/16 10:02
+    pcrao godavari :3067 (v20.100) (yamuna/5280 21778), start Wed 7/16 10:03
+    shyd2412cl002 g5v2 :5602 (v20.100) (yamuna/5280 39956), start Wed 7/16 10:04
+    shyd2502cl002 g16v2 :8603.0 (v20.100) (yamuna/5280 55083), start Wed 7/16 10:05
+    mdc4 g6p6 :5114 (v20.100) (yamuna/5280 103434), start Wed 7/16 10:07
+    xsoc5 g5p5 :3910 (v20.100) (yamuna/5280 77440), start Wed 7/16 10:13
+    ksm1 g3p3 :1942 (v20.100) (yamuna/5280 95349), start Wed 7/16 10:20
+    smts6 g5p5 :3922 (v20.100) (yamuna/5280 43233), start Wed 7/16 10:27
+    sblr2502cl003 g5p5 :3941 (v20.100) (yamuna/5280 22121), start Wed 7/16 10:27
+    mdc3 g6v1 :5335 (v20.100) (yamuna/5280 75061), start Wed 7/16 10:31
+    sumvnrcl008 g14v2 :7901.0 (v20.100) (yamuna/5280 6030), start Wed 7/16 10:33
+    shyd2506cl005 g3p3 :1941 (v20.100) (yamuna/5280 117855), start Wed 7/16 12:50
+    sph15 g6p6 :5106 (v20.100) (yamuna/5280 184), start Wed 7/16 13:53
+    sumvnrcl014 g14v2 :7907.0 (v20.100) (yamuna/5280 62293), start Wed 7/16 13:56
+    gs1 yamuna :143 (v20.100) (yamuna/5280 85593), start Wed 7/16 13:58
+    sumvnrcl010 g14v2 :7903.0 (v20.100) (yamuna/5280 131332), start Wed 7/16 14:03
+    gehani sbvvcn04 sbvvlh02.chipextech.local:7819 (v20.100) (yamuna/5280 54917), start Wed 7/16 14:04
+    sph14 g6p6 :5105 (v20.100) (yamuna/5280 14650), start Wed 7/16 14:07
+    kusuma sbvvcn13.chipextech.local sbvvlh02.chipextech.local:7814 (v20.100) (yamuna/5280 81720), start Wed 7/16 14:08
+    rdnt13 g5v1 :5525 (v20.100) (yamuna/5280 129149), start Wed 7/16 14:11
+    adithya sbvvcn07 sbvvlh02.chipextech.local:7809 (v20.100) (yamuna/5280 93206), start Wed 7/16 14:12
+
+Users of Virtuoso_Adv_Node_Opt_Layout:  (Total of 200 licenses issued;  Total of 60 licenses in use)
+
+  "Virtuoso_Adv_Node_Opt_Layout" v23.1, vendor: cdslmd, expiry: 07-jun-2026
+  vendor_string: UHD:PERM
+  floating license
+
+    sos13 narmada :18 (v20.100) (yamuna/5280 6901), start Thu 6/26 16:12
+    shyd2502cl004 g16v2 :8605.0 (v20.100) (yamuna/5280 93033), start Mon 6/30 9:54
+    shyd2501cl004 g8v2 :5803 (v20.100) (yamuna/5280 373), start Thu 7/3 12:30
+    gft2 g4p4 :537 (v20.100) (yamuna/5280 94268), start Wed 7/9 11:23
+    shyd2410cl026 g14v2 :7932.0 (v20.100) (yamuna/5280 37119), start Sun 7/6 14:25
+    sumvnrcl009 g14v2 :7902.0 (v20.100) (yamuna/5280 121694), start Mon 7/7 17:10
+    shyd2407cl006 g10v4 :6731.0 (v20.100) (yamuna/5280 93408), start Mon 7/7 22:13
+    shyd2410cl032 g14v2 :7937.0 (v20.100) (yamuna/5280 93707), start Tue 7/8 13:42
+    shyd2410cl020 g14v2 :7926.0 (v20.100) (yamuna/5280 15394), start Wed 7/9 8:25
+    sph11 g11v1 :6917 (v20.100) (yamuna/5280 115814), start Wed 7/9 18:10
+    shyd2501cl005 g8v2 :5804 (v20.100) (yamuna/5280 24550), start Thu 7/10 9:59
+    sumvnrcl006 g14v1 :7729.0 (v20.100) (yamuna/5280 66792), start Thu 7/10 15:30
+    xsoc12 g3p3 :1908 (v20.100) (yamuna/5280 101827), start Thu 7/10 15:52
+    shyd2406cl013 g10v2 :6543.0 (v20.100) (yamuna/5280 121318), start Thu 7/10 15:56
+    shyd2410cl023 g14v2 :7929.0 (v20.100) (yamuna/5280 78313), start Sun 7/13 20:48
+    xsoc3 g2v1 :1445 (v20.100) (yamuna/5280 72776), start Fri 7/11 16:08
+    mdc5 g6p6 :5115 (v20.100) (yamuna/5280 88445), start Fri 7/11 16:18
+    sph9 g11v1 :6915 (v20.100) (yamuna/5280 94592), start Sat 7/12 7:38
+    xsoc1 g2v1 :1430 (v20.100) (yamuna/5280 13145), start Sat 7/12 9:40
+    shyd2407cl005 g10v4 :6730.0 (v20.100) (yamuna/5280 98976), start Sat 7/12 20:41
+    gft3 g4v2 :2007 (v20.100) (yamuna/5280 130048), start Sun 7/13 23:08
+    xsoc10 g3p3 :1906 (v20.100) (yamuna/5280 57254), start Mon 7/14 9:44
+    sumvnrcl004 g14v1 :7727.0 (v20.100) (yamuna/5280 26006), start Mon 7/14 14:09
+    xsoc2 g2v1 :1431 (v20.100) (yamuna/5280 25157), start Mon 7/14 15:49
+    sos11 narmada :16 (v20.100) (yamuna/5280 51945), start Mon 7/14 16:10
+    sos1 narmada narmada:06 (v20.100) (yamuna/5280 73764), start Mon 7/14 16:28
+    xsoc11 g3p3 :1907 (v20.100) (yamuna/5280 49251), start Mon 7/14 21:26
+    mdc6 g6v1 :5319 (v20.100) (yamuna/5280 32780), start Mon 7/14 21:48
+    shyd2407cl011 g10v4 :6736.0 (v20.100) (yamuna/5280 74370), start Tue 7/15 7:08
+    gft1 g4p4 :534 (v20.100) (yamuna/5280 45841), start Tue 7/15 9:33
+    sumvnrcl002 g14v1 :7725.0 (v20.100) (yamuna/5280 17440), start Tue 7/15 9:52
+    als13 godavari :3075 (v20.100) (yamuna/5280 25016), start Tue 7/15 10:28
+    spt4 g6v1 :5306 (v20.100) (yamuna/5280 78762), start Tue 7/15 11:20
+    ari2 ganges :1254 (v20.100) (yamuna/5280 62373), start Tue 7/15 12:14
+    gft4 g4v2 :2008 (v20.100) (yamuna/5280 69829), start Tue 7/15 12:37
+    sos8 narmada :13 (v20.100) (yamuna/5280 105852), start Tue 7/15 13:36
+    sumvnrcl007 g14v1 :7730.0 (v20.100) (yamuna/5280 21031), start Tue 7/15 14:39
+    sumvnrcl005 g14v1 :7728.0 (v20.100) (yamuna/5280 136437), start Tue 7/15 15:25
+    sumvnrcl001 g14v1 :7724.0 (v20.100) (yamuna/5280 94152), start Tue 7/15 15:25
+    sos7 narmada :12 (v20.100) (yamuna/5280 29063), start Tue 7/15 15:36
+    sos18 narmada :23 (v20.100) (yamuna/5280 9864), start Tue 7/15 20:17
+    sumvnrcl012 g14v2 :7905.0 (v20.100) (yamuna/5280 40155), start Wed 7/16 8:41
+    xsoc6 g3p3 :1930 (v20.100) (yamuna/5280 36044), start Wed 7/16 9:00
+    xsoc13 g3p3 :1919 (v20.100) (yamuna/5280 84570), start Wed 7/16 9:11
+    xsoc9 g3p3 :1905 (v20.100) (yamuna/5280 113735), start Wed 7/16 9:25
+    sumvnrcl013 g14v2 :7906.0 (v20.100) (yamuna/5280 48913), start Wed 7/16 9:35
+    sos15 narmada :20 (v20.100) (yamuna/5280 42631), start Wed 7/16 9:53
+    xsoc8 g3p3 :1904 (v20.100) (yamuna/5280 121022), start Wed 7/16 10:00
+    mdc4 g6p6 :5114 (v20.100) (yamuna/5280 18607), start Wed 7/16 10:12
+    xsoc4 g2v1 :1446 (v20.100) (yamuna/5280 135283), start Wed 7/16 10:14
+    xsoc7 g3p3 :1933 (v20.100) (yamuna/5280 30406), start Wed 7/16 10:27
+    smts6 g5p5 :3922 (v20.100) (yamuna/5280 108086), start Wed 7/16 10:29
+    techr1 yamuna :88 (v20.100) (yamuna/5280 129926), start Wed 7/16 12:52
+    ksm1 g3p3 :1942 (v20.100) (yamuna/5280 92109), start Wed 7/16 13:16
+    sph15 g6p6 :5106 (v20.100) (yamuna/5280 135843), start Wed 7/16 13:56
+    sumvnrcl014 g14v2 :7907.0 (v20.100) (yamuna/5280 17892), start Wed 7/16 13:57
+    sumvnrcl010 g14v2 :7903.0 (v20.100) (yamuna/5280 99092), start Wed 7/16 14:04
+    sumvnrcl008 g14v2 :7901.0 (v20.100) (yamuna/5280 117662), start Wed 7/16 14:04
+    sph14 g6p6 :5105 (v20.100) (yamuna/5280 26692), start Wed 7/16 14:08
+    sos12 narmada :17 (v20.100) (yamuna/5280 11739), start Wed 7/16 14:10
+
+Users of Virtuoso_DRC_Opt:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Virtuoso_Digital_Implem:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Virtuoso_Layout_Suite_EXL:  (Total of 200 licenses issued;  Total of 16 licenses in use)
+
+  "Virtuoso_Layout_Suite_EXL" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: UHD:PERM
+  floating license
+
+    sumvnrcl009 g14v2 :7902.0 (v20.100) (yamuna/5280 26880), start Sat 6/28 23:53
+    xsoc12 g3p3 :1908 (v20.100) (yamuna/5280 137342), start Thu 7/10 15:52
+    shyd2406cl013 g10v2 :6543.0 (v20.100) (yamuna/5280 58340), start Thu 7/10 15:56
+    xsoc3 g2v1 :1445 (v20.100) (yamuna/5280 137727), start Fri 7/11 16:08
+    xsoc1 g2v1 :1430 (v20.100) (yamuna/5280 73385), start Sat 7/12 9:40
+    shyd2410cl020 g14v2 :7926.0 (v20.100) (yamuna/5280 45235), start Sun 7/13 19:40
+    shyd2409cl002 g9v3 :6312 (v20.100) (yamuna/5280 126098), start Sun 7/13 20:14
+    xsoc10 g3p3 :1906 (v20.100) (yamuna/5280 68912), start Mon 7/14 9:44
+    xsoc2 g2v1 :1431 (v20.100) (yamuna/5280 96324), start Mon 7/14 15:49
+    msv4 g8p8 :605 (v20.100) (yamuna/5280 46746), start Tue 7/15 10:25
+    msv5 g8p8 :606 (v20.100) (yamuna/5280 19552), start Tue 7/15 10:55
+    spt4 g6v1 :5306 (v20.100) (yamuna/5280 67009), start Tue 7/15 11:20
+    msv2 g8p8 :603 (v20.100) (yamuna/5280 3561), start Tue 7/15 15:53
+    xsoc9 g3p3 :1905 (v20.100) (yamuna/5280 30561), start Wed 7/16 9:30
+    xsoc13 g3p3 :1919 (v20.100) (yamuna/5280 22561), start Wed 7/16 9:31
+    xsoc4 g2v1 :1446 (v20.100) (yamuna/5280 77659), start Wed 7/16 10:14
+
+Users of Virtuoso_Layout_Suite_GXL:  (Total of 5520 licenses issued;  Total of 582 licenses in use)
+
+  "Virtuoso_Layout_Suite_GXL" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    shyd2409cl001 g9v3 :6311 VLS_GXL (v6.180) (yamuna/5280 75713), start Thu 6/26 19:11, 4 licenses
+    shyd2409cl001 g9v3 :6311 Module_Generator (v6.180) (yamuna/5280 77003), start Thu 6/26 19:11, 2 licenses
+    shyd2410cl016 g14v2 :7922.0 VLS_GXL (v6.180) (yamuna/5280 97385), start Sun 6/29 12:32, 4 licenses
+    shyd2502cl004 g16v2 :8605.0 VLS_GXL (v6.180) (yamuna/5280 46021), start Mon 6/30 9:54, 4 licenses
+    shyd2407cl007 g10v4 :6732.0 VLS_GXL (v6.180) (yamuna/5280 1413), start Mon 6/30 11:57, 4 licenses
+    gs2 yamuna :144 VLS_GXL (v6.180) (yamuna/5280 106707), start Mon 6/30 14:02, 4 licenses
+    shyd2409cl010 g9v3 :6322 VLS_GXL (v6.180) (yamuna/5280 99835), start Mon 6/30 14:51, 4 licenses
+    shyd2504cl006 g17v1 :8834.0 VLS_GXL (v6.180) (yamuna/5280 16295), start Tue 7/1 11:27, 4 licenses
+    sos13 narmada :18 VLS_GXL (v6.180) (yamuna/5280 91615), start Tue 7/1 17:18, 4 licenses
+    gs2 yamuna :144 Module_Generator (v6.180) (yamuna/5280 16909), start Wed 7/2 9:49, 2 licenses
+    shyd2504cl002 g17v1 :8802.0 VLS_GXL (v6.180) (yamuna/5280 3118), start Wed 7/2 12:24, 4 licenses
+    shyd2407cl006 g10v4 :6731.0 VLS_GXL (v6.180) (yamuna/5280 41819), start Wed 7/2 22:17, 4 licenses
+    shyd2503cl002 g16v2 :8608.0 VLS_GXL (v6.180) (yamuna/5280 24035), start Fri 7/4 12:33, 4 licenses
+    shyd2407cl013 g10v4 :6738.0 VLS_GXL (v6.180) (yamuna/5280 97998), start Fri 7/4 18:30, 4 licenses
+    shyd2410cl026 g14v2 :7932.0 VLS_GXL (v6.180) (yamuna/5280 9373), start Sun 7/6 14:25, 4 licenses
+    shyd2410cl026 g14v2 :7932.0 VLS_GXL (v6.180) (yamuna/5280 102084), start Sun 7/6 14:46, 4 licenses
+    shyd2410cl026 g14v2 :7932.0 VLS_GXL (v6.180) (yamuna/5280 82965), start Sun 7/6 14:56, 4 licenses
+    shyd2409cl006 g9v3 :6316 VLS_GXL (v6.180) (yamuna/5280 5641), start Mon 7/7 8:25, 4 licenses
+    shyd2501cl003 g8v1 :5712 VLS_GXL (v6.180) (yamuna/5280 95699), start Mon 7/7 11:10, 4 licenses
+    shyd2504cl002 g17v1 :8802.0 Module_Generator (v6.180) (yamuna/5280 5771), start Mon 7/7 11:29, 2 licenses
+    shyd2502cl004 g16v2 :8605.0 VLS_GXL (v6.180) (yamuna/5280 110088), start Mon 7/7 12:54, 4 licenses
+    shyd2407cl011 g10v4 :6736.0 VLS_GXL (v6.180) (yamuna/5280 42232), start Mon 7/7 14:50, 4 licenses
+    shyd2506cl003 g3p3 :1939 VLS_GXL (v6.180) (yamuna/5280 123034), start Mon 7/7 15:59, 4 licenses
+    sumvnrcl009 g14v2 :7902.0 VLS_GXL (v6.180) (yamuna/5280 93588), start Mon 7/7 17:10, 4 licenses
+    sumvnrcl009 g14v2 :7902.0 VLS_GXL (v6.180) (yamuna/5280 26901), start Mon 7/7 17:14, 4 licenses
+    shyd2407cl006 g10v4 :6731.0 VLS_GXL (v6.180) (yamuna/5280 114853), start Mon 7/7 22:13, 4 licenses
+    sumvnrcl006 g14v1 :7729.0 VLS_GXL (v6.180) (yamuna/5280 125744), start Tue 7/8 9:16, 4 licenses
+    shyd2502cl004 g16v2 :8605.0 Module_Generator (v6.180) (yamuna/5280 11108), start Tue 7/8 10:16, 2 licenses
+    shyd2410cl032 g14v2 :7937.0 VLS_GXL (v6.180) (yamuna/5280 44335), start Tue 7/8 13:42, 4 licenses
+    shyd2504cl002 g17v1 :8802.0 Concurrent_Layout (v6.180) (yamuna/5280 84781), start Wed 7/9 10:29, 4 licenses
+    gft2 g4p4 :537 VLS_GXL (v6.180) (yamuna/5280 33837), start Wed 7/9 11:23, 4 licenses
+    gft2 g4p4 :537 VLS_GXL (v6.180) (yamuna/5280 101955), start Wed 7/9 15:05, 4 licenses
+    sph11 g11v1 :6917 VLS_GXL (v6.180) (yamuna/5280 50311), start Wed 7/9 18:10, 4 licenses
+    shyd2501cl007 g5v2 :5611 VLS_GXL (v6.180) (yamuna/5280 130531), start Thu 7/10 9:49, 4 licenses
+    shyd2501cl005 g8v2 :5804 VLS_GXL (v6.180) (yamuna/5280 47753), start Thu 7/10 11:36, 4 licenses
+    sumvnrcl006 g14v1 :7729.0 VLS_GXL (v6.180) (yamuna/5280 132553), start Thu 7/10 15:30, 4 licenses
+    shyd2506cl017 g5p5 :3904 VLS_GXL (v6.180) (yamuna/5280 54707), start Thu 7/10 19:23, 4 licenses
+    shyd2506cl017 g5p5 :3904 Floorplanning (v6.180) (yamuna/5280 31332), start Thu 7/10 23:15, 4 licenses
+    shyd2412cl004 g8v1 :5709 VLS_GXL (v6.180) (yamuna/5280 125978), start Fri 7/11 12:06, 4 licenses
+    shyd2506cl011 ganges2 :902 VLS_GXL (v6.180) (yamuna/5280 21662), start Fri 7/11 12:24, 4 licenses
+    shyd2410cl029 g14v2 :7935.0 VLS_GXL (v6.180) (yamuna/5280 128855), start Fri 7/11 15:51, 4 licenses
+    mdc5 g6p6 :5115 VLS_GXL (v6.180) (yamuna/5280 87248), start Fri 7/11 16:18, 4 licenses
+    sph9 g11v1 :6915 VLS_GXL (v6.180) (yamuna/5280 60769), start Sat 7/12 7:38, 4 licenses
+    shyd2409cl015 g9v3 :6325 VLS_GXL (v6.180) (yamuna/5280 64671), start Sat 7/12 9:47, 4 licenses
+    shyd2502cl005 g16v2 :8606.0 VLS_GXL (v6.180) (yamuna/5280 22721), start Sun 7/13 9:57, 4 licenses
+    shyd2502cl005 g16v2 :8606.0 Module_Generator (v6.180) (yamuna/5280 137249), start Sun 7/13 11:41, 2 licenses
+    shyd2502cl005 g16v2 :8606.0 Concurrent_Layout (v6.180) (yamuna/5280 133505), start Sun 7/13 12:06, 4 licenses
+    shyd2501cl002 g8v1 :5714 VLS_GXL (v6.180) (yamuna/5280 24676), start Sun 7/13 12:19, 4 licenses
+    sumvnrcl011 g14v2 :7904.0 VLS_GXL (v6.180) (yamuna/5280 74733), start Sun 7/13 16:36, 4 licenses
+    sblr2502cl006 g5p5 :3927 VLS_GXL (v6.180) (yamuna/5280 109948), start Sun 7/13 19:32, 4 licenses
+    sblr2502cl006 g5p5 :3927 Module_Generator (v6.180) (yamuna/5280 30374), start Sun 7/13 20:18, 2 licenses
+    shyd2410cl023 g14v2 :7929.0 VLS_GXL (v6.180) (yamuna/5280 119669), start Sun 7/13 20:48, 4 licenses
+    sumvnrcl005 g14v1 :7728.0 VLS_GXL (v6.180) (yamuna/5280 86979), start Sun 7/13 21:04, 4 licenses
+    sumvnrcl005 g14v1 :7728.0 Module_Generator (v6.180) (yamuna/5280 129809), start Sun 7/13 21:20, 2 licenses
+    shyd2409cl009 g9v3 :6318 VLS_GXL (v6.180) (yamuna/5280 12384), start Sun 7/13 21:28, 4 licenses
+    shyd2501cl006 g8v1 :5718 VLS_GXL (v6.180) (yamuna/5280 124640), start Mon 7/14 10:59, 4 licenses
+    shyd2501cl006 g8v1 :5718 Concurrent_Layout (v6.180) (yamuna/5280 123277), start Mon 7/14 10:59, 4 licenses
+    sumvnrcl004 g14v1 :7727.0 VLS_GXL (v6.180) (yamuna/5280 48787), start Mon 7/14 14:09, 4 licenses
+    shyd2409cl016 g9v3 :6326 VLS_GXL (v6.180) (yamuna/5280 64577), start Mon 7/14 15:47, 4 licenses
+    sos11 narmada :16 VLS_GXL (v6.180) (yamuna/5280 15759), start Mon 7/14 16:10, 4 licenses
+    shyd2407cl013 g10v4 :6738.0 VLS_GXL (v6.180) (yamuna/5280 103274), start Mon 7/14 16:26, 4 licenses
+    sos1 narmada narmada:06 VLS_GXL (v6.180) (yamuna/5280 138869), start Mon 7/14 16:28, 4 licenses
+    sumvnrcl011 g14v2 :7904.0 Module_Generator (v6.180) (yamuna/5280 9155), start Mon 7/14 16:52, 2 licenses
+    sph2 g11v1 :6908 VLS_GXL (v6.180) (yamuna/5280 139734), start Mon 7/14 17:08, 4 licenses
+    spt5 g6v1 :5307 VLS_GXL (v6.180) (yamuna/5280 81466), start Mon 7/14 17:14, 4 licenses
+    xsoc11 g3p3 :1907 VLS_GXL (v6.180) (yamuna/5280 72657), start Mon 7/14 21:26, 4 licenses
+    shyd2407cl011 g10v4 :6736.0 VLS_GXL (v6.180) (yamuna/5280 131267), start Tue 7/15 7:08, 4 licenses
+    gft1 g4p4 :534 VLS_GXL (v6.180) (yamuna/5280 45146), start Tue 7/15 9:33, 4 licenses
+    shyd2501cl009 g5v2 :5613 VLS_GXL (v6.180) (yamuna/5280 138158), start Tue 7/15 9:48, 4 licenses
+    sumvnrcl002 g14v1 :7725.0 VLS_GXL (v6.180) (yamuna/5280 89186), start Tue 7/15 9:52, 4 licenses
+    als13 godavari :3075 VLS_GXL (v6.180) (yamuna/5280 120306), start Tue 7/15 10:28, 4 licenses
+    test_session g6v1 :5314 VLS_GXL (v6.180) (yamuna/5280 18173), start Tue 7/15 10:36, 4 licenses
+    sph13 g6p6 :5104 VLS_GXL (v6.180) (yamuna/5280 67493), start Tue 7/15 11:42, 4 licenses
+    shyd2506cl029 g8v1 :5716 VLS_GXL (v6.180) (yamuna/5280 127016), start Tue 7/15 11:51, 4 licenses
+    msv3 g8p8 :604 VLS_GXL (v6.180) (yamuna/5280 87946), start Tue 7/15 11:54, 4 licenses
+    shyd2506cl022 g9v1 :6010 VLS_GXL (v6.180) (yamuna/5280 51007), start Tue 7/15 12:14, 4 licenses
+    ari2 ganges :1254 VLS_GXL (v6.180) (yamuna/5280 117121), start Tue 7/15 12:14, 4 licenses
+    sos8 narmada :13 VLS_GXL (v6.180) (yamuna/5280 23816), start Tue 7/15 13:36, 4 licenses
+    gs5 yamuna :167 VLS_GXL (v6.180) (yamuna/5280 130142), start Tue 7/15 13:43, 4 licenses
+    gs6 yamuna :140 VLS_GXL (v6.180) (yamuna/5280 116917), start Tue 7/15 13:50, 4 licenses
+    gs6 yamuna :140 Module_Generator (v6.180) (yamuna/5280 28287), start Tue 7/15 13:53, 2 licenses
+    sumvnrcl007 g14v1 :7730.0 VLS_GXL (v6.180) (yamuna/5280 101733), start Tue 7/15 14:39, 4 licenses
+    gft4 g4v2 :2008 VLS_GXL (v6.180) (yamuna/5280 109457), start Tue 7/15 14:51, 4 licenses
+    mdc6 g6v1 :5319 VLS_GXL (v6.180) (yamuna/5280 116816), start Tue 7/15 14:52, 4 licenses
+    prameela indus :1665 VLS_GXL (v6.180) (yamuna/5280 4644), start Tue 7/15 14:53, 4 licenses
+    shyd2407cl005 g10v4 :6730.0 VLS_GXL (v6.180) (yamuna/5280 84368), start Tue 7/15 15:02, 4 licenses
+    sumvnrcl005 g14v1 :7728.0 VLS_GXL (v6.180) (yamuna/5280 119804), start Tue 7/15 15:25, 4 licenses
+    sumvnrcl001 g14v1 :7724.0 VLS_GXL (v6.180) (yamuna/5280 59244), start Tue 7/15 15:25, 4 licenses
+    gft3 g4v2 :2007 VLS_GXL (v6.180) (yamuna/5280 36281), start Tue 7/15 15:28, 4 licenses
+    shyd2506cl010 g2v1 :1413 VLS_GXL (v6.180) (yamuna/5280 7899), start Tue 7/15 15:33, 4 licenses
+    sos7 narmada :12 VLS_GXL (v6.180) (yamuna/5280 80692), start Tue 7/15 15:36, 4 licenses
+    shyd2506cl025 g9v1 :6014 VLS_GXL (v6.180) (yamuna/5280 19607), start Tue 7/15 17:49, 4 licenses
+    shyd2501cl004 g8v2 :5803 VLS_GXL (v6.180) (yamuna/5280 124032), start Tue 7/15 17:56, 4 licenses
+    shyd2506cl008 g2v1 :1411 VLS_GXL (v6.180) (yamuna/5280 58195), start Tue 7/15 18:50, 4 licenses
+    sph17 g6p6 :5110 VLS_GXL (v6.180) (yamuna/5280 95752), start Tue 7/15 19:02, 4 licenses
+    sumvnrcl007 g14v1 :7730.0 VLS_GXL (v6.180) (yamuna/5280 136276), start Tue 7/15 19:02, 4 licenses
+    shyd2506cl024 g9v1 :6013 VLS_GXL (v6.180) (yamuna/5280 51354), start Tue 7/15 19:32, 4 licenses
+    shyd2506cl009 g2v1 :1412 VLS_GXL (v6.180) (yamuna/5280 109257), start Tue 7/15 20:44, 4 licenses
+    sumvnrcl007 g14v1 :7730.0 VLS_GXL (v6.180) (yamuna/5280 44843), start Tue 7/15 21:03, 4 licenses
+    gft2 g4p4 :537 VLS_GXL (v6.180) (yamuna/5280 101417), start Tue 7/15 21:05, 4 licenses
+    shyd2506cl023 g9v1 :6012 VLS_GXL (v6.180) (yamuna/5280 11040), start Tue 7/15 21:40, 4 licenses
+    shyd2503cl005 g16v2 :8611.0 VLS_GXL (v6.180) (yamuna/5280 108821), start Tue 7/15 22:23, 4 licenses
+    shyd2506cl026 g10v1 :6406.0 VLS_GXL (v6.180) (yamuna/5280 118612), start Tue 7/15 23:18, 4 licenses
+    shyd2506cl031 ganges :1112 VLS_GXL (v6.180) (yamuna/5280 99466), start Wed 7/16 6:38, 4 licenses
+    sumvnrcl012 g14v2 :7905.0 VLS_GXL (v6.180) (yamuna/5280 38570), start Wed 7/16 8:41, 4 licenses
+    xsoc6 g3p3 :1930 VLS_GXL (v6.180) (yamuna/5280 17668), start Wed 7/16 9:00, 4 licenses
+    shyd2506cl015 ganges2 :906 VLS_GXL (v6.180) (yamuna/5280 286), start Wed 7/16 9:21, 4 licenses
+    shyd2506cl007 g2v1 :1410 VLS_GXL (v6.180) (yamuna/5280 8121), start Wed 7/16 9:21, 4 licenses
+    shyd2506cl006 g2v1 :1405 VLS_GXL (v6.180) (yamuna/5280 24123), start Wed 7/16 9:23, 4 licenses
+    shyd2506cl006 g2v1 :1405 Concurrent_Layout (v6.180) (yamuna/5280 136399), start Wed 7/16 9:23, 4 licenses
+    shyd2506cl004 g3p3 :1940 VLS_GXL (v6.180) (yamuna/5280 52475), start Wed 7/16 9:30, 4 licenses
+    shyd2506cl028 g10v1 :6446.0 VLS_GXL (v6.180) (yamuna/5280 13631), start Wed 7/16 9:30, 4 licenses
+    shyd2504cl007 g17v1 :8807.0 VLS_GXL (v6.180) (yamuna/5280 71577), start Wed 7/16 9:32, 4 licenses
+    shyd2504cl006 g17v1 :8834.0 VLS_GXL (v6.180) (yamuna/5280 67599), start Wed 7/16 9:35, 4 licenses
+    sumvnrcl013 g14v2 :7906.0 VLS_GXL (v6.180) (yamuna/5280 31169), start Wed 7/16 9:35, 4 licenses
+    shyd2506cl016 g5p5 :3903 VLS_GXL (v6.180) (yamuna/5280 73201), start Wed 7/16 9:38, 4 licenses
+    shyd2504cl010 g17v1 :8816.0 VLS_GXL (v6.180) (yamuna/5280 129336), start Wed 7/16 9:44, 4 licenses
+    sos15 narmada :20 VLS_GXL (v6.180) (yamuna/5280 73106), start Wed 7/16 9:53, 4 licenses
+    xsoc8 g3p3 :1904 VLS_GXL (v6.180) (yamuna/5280 124260), start Wed 7/16 10:00, 4 licenses
+    shyd2506cl013 ganges2 :904 VLS_GXL (v6.180) (yamuna/5280 88166), start Wed 7/16 10:05, 4 licenses
+    shyd2410cl018 g14v2 :7924.0 VLS_GXL (v6.180) (yamuna/5280 41707), start Wed 7/16 10:05, 4 licenses
+    shyd2506cl025 g9v1 :6014 VLS_GXL (v6.180) (yamuna/5280 73977), start Wed 7/16 10:07, 4 licenses
+    shyd2504cl004 g17v1 :8804.0 VLS_GXL (v6.180) (yamuna/5280 29628), start Wed 7/16 10:07, 4 licenses
+    mdc4 g6p6 :5114 VLS_GXL (v6.180) (yamuna/5280 50062), start Wed 7/16 10:12, 4 licenses
+    shyd2503cl003 g16v2 :8609.0 VLS_GXL (v6.180) (yamuna/5280 69766), start Wed 7/16 10:14, 4 licenses
+    mdc5 g6p6 :5115 VLS_GXL (v6.180) (yamuna/5280 91731), start Wed 7/16 10:16, 4 licenses
+    pcrao godavari :3067 VLS_GXL (v6.180) (yamuna/5280 70670), start Wed 7/16 10:19, 4 licenses
+    sos13 narmada :18 VLS_GXL (v6.180) (yamuna/5280 65862), start Wed 7/16 10:24, 4 licenses
+    shyd2502cl003 g16v2 :8604.0 VLS_GXL (v6.180) (yamuna/5280 100071), start Wed 7/16 10:24, 4 licenses
+    sblr2502cl005 g5p5 :3926 VLS_GXL (v6.180) (yamuna/5280 86493), start Wed 7/16 10:25, 4 licenses
+    xsoc7 g3p3 :1933 VLS_GXL (v6.180) (yamuna/5280 108774), start Wed 7/16 10:27, 4 licenses
+    smts6 g5p5 :3922 VLS_GXL (v6.180) (yamuna/5280 22251), start Wed 7/16 10:29, 4 licenses
+    shyd2412cl003 g8v1 :5702 VLS_GXL (v6.180) (yamuna/5280 84453), start Wed 7/16 10:30, 4 licenses
+    sos18 narmada :23 VLS_GXL (v6.180) (yamuna/5280 54844), start Wed 7/16 12:41, 4 licenses
+    shyd2506cl005 g3p3 :1941 VLS_GXL (v6.180) (yamuna/5280 9466), start Wed 7/16 12:50, 4 licenses
+    sos12 narmada :17 VLS_GXL (v6.180) (yamuna/5280 74217), start Wed 7/16 12:51, 4 licenses
+    shyd2506cl014 ganges2 :905 VLS_GXL (v6.180) (yamuna/5280 53565), start Wed 7/16 12:52, 4 licenses
+    techr1 yamuna :88 VLS_GXL (v6.180) (yamuna/5280 15077), start Wed 7/16 12:52, 4 licenses
+    shyd2506cl012 ganges2 :903 VLS_GXL (v6.180) (yamuna/5280 70461), start Wed 7/16 12:57, 4 licenses
+    ksm1 g3p3 :1942 VLS_GXL (v6.180) (yamuna/5280 97689), start Wed 7/16 13:16, 4 licenses
+    sumvnrcl008 g14v2 :7901.0 VLS_GXL (v6.180) (yamuna/5280 133643), start Wed 7/16 13:22, 4 licenses
+    sumvnrcl001 g14v1 :7724.0 VLS_GXL (v6.180) (yamuna/5280 73029), start Wed 7/16 13:54, 4 licenses
+    sumvnrcl001 g14v1 :7724.0 Module_Generator (v6.180) (yamuna/5280 68658), start Wed 7/16 13:55, 2 licenses
+    sph15 g6p6 :5106 VLS_GXL (v6.180) (yamuna/5280 128954), start Wed 7/16 13:56, 4 licenses
+    sumvnrcl014 g14v2 :7907.0 VLS_GXL (v6.180) (yamuna/5280 721), start Wed 7/16 13:57, 4 licenses
+    gs5 yamuna :167 Module_Generator (v6.180) (yamuna/5280 128283), start Wed 7/16 13:58, 2 licenses
+    sumvnrcl010 g14v2 :7903.0 VLS_GXL (v6.180) (yamuna/5280 62984), start Wed 7/16 14:04, 4 licenses
+    sumvnrcl008 g14v2 :7901.0 VLS_GXL (v6.180) (yamuna/5280 86344), start Wed 7/16 14:04, 4 licenses
+    gs4 yamuna :151 VLS_GXL (v6.180) (yamuna/5280 104754), start Wed 7/16 14:04, 4 licenses
+    sph14 g6p6 :5105 VLS_GXL (v6.180) (yamuna/5280 78651), start Wed 7/16 14:08, 4 licenses
+    kusuma sbvvcn13.chipextech.local sbvvlh02.chipextech.local:7814 VLS_GXL (v6.180) (yamuna/5280 100633), start Wed 7/16 14:08, 4 licenses
+
+Users of Virtuoso_QRC_Extraction_XL:  (Total of 460 licenses issued;  Total of 0 licenses in use)
+
+Users of Virtuoso_Schematic_Editor_XL:  (Total of 200 licenses issued;  Total of 137 licenses in use)
+
+  "Virtuoso_Schematic_Editor_XL" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: UHD:PERM
+  floating license
+
+    shyd2407cl011 g10v4 :6736.0 (v6.180) (yamuna/5280 30679), start Sun 7/6 21:00
+    shyd2409cl001 g9v3 :6311 (v6.180) (yamuna/5280 50912), start Thu 6/26 19:11
+    shyd2504cl002 g17v1 :8802.0 (v6.180) (yamuna/5280 70360), start Fri 6/27 9:46
+    sos13 narmada :18 (v6.180) (yamuna/5280 65633), start Fri 6/27 14:21
+    mdc2 g6v1 :5334 (v6.180) (yamuna/5280 88639), start Sat 6/28 9:48
+    shyd2410cl016 g14v2 :7922.0 (v6.180) (yamuna/5280 52006), start Sun 6/29 12:32
+    shyd2502cl004 g16v2 :8605.0 (v6.180) (yamuna/5280 42099), start Mon 6/30 9:54
+    shyd2407cl007 g10v4 :6732.0 (v6.180) (yamuna/5280 27823), start Mon 6/30 11:57
+    gs2 yamuna :144 (v6.180) (yamuna/5280 91951), start Mon 6/30 12:51
+    shyd2409cl010 g9v3 :6322 (v6.180) (yamuna/5280 58220), start Mon 6/30 14:51
+    sumvnrcl020 g14v2 :7913.0 (v6.180) (yamuna/5280 7542), start Tue 7/1 17:09
+    ari4 yamuna :62 (v6.180) (yamuna/5280 1543), start Thu 7/3 10:08
+    shyd2407cl006 g10v4 :6731.0 (v6.180) (yamuna/5280 89494), start Wed 7/2 22:17
+    sumvnrcl009 g14v2 :7902.0 (v6.180) (yamuna/5280 56884), start Tue 7/8 14:20
+    shyd2501cl006 g8v1 :5718 (v6.180) (yamuna/5280 66821), start Thu 7/3 11:48
+    ari6 ganges :1185 (v6.180) (yamuna/5280 58020), start Thu 7/10 17:06
+    gft2 g4p4 :537 (v6.180) (yamuna/5280 122198), start Wed 7/9 11:19
+    gs7 yamuna :56 (v6.180) (yamuna/5280 123969), start Fri 7/4 14:45
+    shyd2407cl013 g10v4 :6738.0 (v6.180) (yamuna/5280 10573), start Fri 7/4 16:38
+    sumvnrcl007 g14v1 :7730.0 (v6.180) (yamuna/5280 86029), start Tue 7/15 14:39
+    shyd2410cl026 g14v2 :7932.0 (v6.180) (yamuna/5280 91424), start Sun 7/6 14:25
+    shyd2409cl006 g9v3 :6316 (v6.180) (yamuna/5280 124795), start Mon 7/7 8:25
+    sumvnrcl016 g14v2 :7909.0 (v6.180) (yamuna/5280 105584), start Mon 7/7 14:40
+    sumvnrcl023 g14v2 :7916.0 (v6.180) (yamuna/5280 97891), start Mon 7/7 15:42
+    sph4 g11v1 :6910 (v6.180) (yamuna/5280 19248), start Mon 7/7 17:09
+    shyd2501cl003 g8v1 :5712 (v6.180) (yamuna/5280 37906), start Tue 7/8 12:19
+    shyd2506cl029 g8v1 :5716 (v6.180) (yamuna/5280 50809), start Wed 7/9 12:40
+    shyd2506cl003 g3p3 :1939 (v6.180) (yamuna/5280 90102), start Wed 7/9 11:49
+    ari1 ganges :1291 (v6.180) (yamuna/5280 113434), start Wed 7/9 12:48
+    sph11 g11v1 :6917 (v6.180) (yamuna/5280 129263), start Wed 7/9 18:10
+    shyd2501cl007 g5v2 :5611 (v6.180) (yamuna/5280 133445), start Thu 7/10 9:49
+    shyd2501cl005 g8v2 :5804 (v6.180) (yamuna/5280 17784), start Thu 7/10 11:36
+    shyd2506cl017 g5p5 :3904 (v6.180) (yamuna/5280 96080), start Thu 7/10 12:03
+    spt5 g6v1 :5307 (v6.180) (yamuna/5280 55830), start Thu 7/10 13:51
+    sumvnrcl006 g14v1 :7729.0 (v6.180) (yamuna/5280 82739), start Thu 7/10 15:30
+    sumvnrcl001 g14v1 :7724.0 (v6.180) (yamuna/5280 120899), start Tue 7/15 15:25
+    shyd2406cl013 g10v2 :6543.0 (v6.180) (yamuna/5280 98848), start Thu 7/10 15:56
+    sumvnrcl015 g14v2 :7908.0 (v6.180) (yamuna/5280 137842), start Thu 7/10 17:16
+    shyd2506cl011 ganges2 :902 (v6.180) (yamuna/5280 22601), start Thu 7/10 23:08
+    smts7 g5p5 :3923 (v6.180) (yamuna/5280 29917), start Fri 7/11 10:47
+    shyd2410cl023 g14v2 :7929.0 (v6.180) (yamuna/5280 138605), start Sun 7/13 20:48
+    xsoc2 g2v1 :1431 (v6.180) (yamuna/5280 122330), start Fri 7/11 15:15
+    sumvnrcl019 g14v2 :7912.0 (v6.180) (yamuna/5280 103056), start Fri 7/11 15:50
+    shyd2410cl029 g14v2 :7935.0 (v6.180) (yamuna/5280 119711), start Fri 7/11 15:51
+    mdc5 g6p6 :5115 (v6.180) (yamuna/5280 41457), start Fri 7/11 18:48
+    sph9 g11v1 :6915 (v6.180) (yamuna/5280 54215), start Fri 7/11 18:49
+    xsoc1 g2v1 :1430 (v6.180) (yamuna/5280 40817), start Sat 7/12 9:39
+    shyd2409cl015 g9v3 :6325 (v6.180) (yamuna/5280 4145), start Sat 7/12 9:47
+    sumvnrcl011 g14v2 :7904.0 (v6.180) (yamuna/5280 583), start Mon 7/14 21:14
+    shyd2501cl009 g5v2 :5613 (v6.180) (yamuna/5280 76517), start Sat 7/12 22:25
+    sumvnrcl017 g14v2 :7910.0 (v6.180) (yamuna/5280 56203), start Sun 7/13 2:53
+    sumvnrcl022 g14v2 :7915.0 (v6.180) (yamuna/5280 77777), start Sun 7/13 3:22
+    shyd2501cl002 g8v1 :5714 (v6.180) (yamuna/5280 17047), start Sun 7/13 18:19
+    xsoc12 g3p3 :1908 (v6.180) (yamuna/5280 67217), start Sun 7/13 19:35
+    shyd2410cl020 g14v2 :7926.0 (v6.180) (yamuna/5280 78591), start Sun 7/13 19:39
+    shyd2409cl009 g9v3 :6318 (v6.180) (yamuna/5280 120941), start Sun 7/13 21:37
+    xsoc10 g3p3 :1906 (v6.180) (yamuna/5280 57325), start Mon 7/14 0:49
+    xsoc3 g2v1 :1445 (v6.180) (yamuna/5280 25615), start Mon 7/14 9:48
+    test_session g6v1 :5314 (v6.180) (yamuna/5280 126218), start Mon 7/14 12:15
+    sblr2502cl006 g5p5 :3927 (v6.180) (yamuna/5280 130934), start Mon 7/14 12:22
+    gs4 yamuna :151 (v6.180) (yamuna/5280 55615), start Wed 7/16 10:08
+    sos1 narmada narmada:06 (v6.180) (yamuna/5280 32129), start Mon 7/14 16:28
+    sph2 g11v1 :6908 (v6.180) (yamuna/5280 85393), start Mon 7/14 17:08
+    gft1 g4p4 :534 (v6.180) (yamuna/5280 89023), start Tue 7/15 9:33
+    sumvnrcl002 g14v1 :7725.0 (v6.180) (yamuna/5280 125133), start Tue 7/15 9:52
+    msv4 g8p8 :605 (v6.180) (yamuna/5280 5528), start Tue 7/15 10:25
+    msv2 g8p8 :603 (v6.180) (yamuna/5280 13416), start Tue 7/15 10:35
+    msv5 g8p8 :606 (v6.180) (yamuna/5280 28119), start Tue 7/15 10:55
+    sph7 g11v1 :6913 (v6.180) (yamuna/5280 139309), start Tue 7/15 11:02
+    spt4 g6v1 :5306 (v6.180) (yamuna/5280 140317), start Tue 7/15 11:20
+    prameela indus :1665 (v6.180) (yamuna/5280 134317), start Tue 7/15 11:25
+    sph13 g6p6 :5104 (v6.180) (yamuna/5280 57920), start Tue 7/15 11:42
+    msv3 g8p8 :604 (v6.180) (yamuna/5280 60640), start Tue 7/15 11:54
+    shyd2506cl022 g9v1 :6010 (v6.180) (yamuna/5280 127387), start Tue 7/15 12:14
+    ari2 ganges :1254 (v6.180) (yamuna/5280 49700), start Tue 7/15 12:14
+    shyd2502cl005 g16v2 :8606.0 (v6.180) (yamuna/5280 24490), start Tue 7/15 12:22
+    shyd2504cl001 g17v1 :8801.0 (v6.180) (yamuna/5280 70119), start Tue 7/15 12:22
+    sos11 narmada :16 (v6.180) (yamuna/5280 59699), start Tue 7/15 12:27
+    gs5 yamuna :167 (v6.180) (yamuna/5280 27080), start Tue 7/15 13:43
+    gs6 yamuna :140 (v6.180) (yamuna/5280 135607), start Tue 7/15 13:50
+    gft4 g4v2 :2008 (v6.180) (yamuna/5280 66185), start Tue 7/15 14:51
+    mdc6 g6v1 :5319 (v6.180) (yamuna/5280 82274), start Tue 7/15 14:52
+    shyd2407cl005 g10v4 :6730.0 (v6.180) (yamuna/5280 107137), start Tue 7/15 15:02
+    sos8 narmada :13 (v6.180) (yamuna/5280 94996), start Tue 7/15 15:28
+    gft3 g4v2 :2007 (v6.180) (yamuna/5280 83444), start Tue 7/15 15:30
+    shyd2506cl010 g2v1 :1413 (v6.180) (yamuna/5280 116276), start Tue 7/15 15:34
+    sos7 narmada :12 (v6.180) (yamuna/5280 96800), start Tue 7/15 15:36
+    sumvnrcl005 g14v1 :7728.0 (v6.180) (yamuna/5280 79937), start Tue 7/15 15:58
+    shyd2501cl004 g8v2 :5803 (v6.180) (yamuna/5280 53662), start Tue 7/15 17:56
+    shyd2506cl008 g2v1 :1411 (v6.180) (yamuna/5280 138342), start Tue 7/15 21:44
+    shyd2503cl005 g16v2 :8611.0 (v6.180) (yamuna/5280 75990), start Tue 7/15 22:17
+    shyd2506cl026 g10v1 :6406.0 (v6.180) (yamuna/5280 79640), start Tue 7/15 23:21
+    shyd2506cl031 ganges :1112 (v6.180) (yamuna/5280 38235), start Wed 7/16 6:39
+    sumvnrcl012 g14v2 :7905.0 (v6.180) (yamuna/5280 58748), start Wed 7/16 8:41
+    xsoc6 g3p3 :1930 (v6.180) (yamuna/5280 76602), start Wed 7/16 9:00
+    xsoc13 g3p3 :1919 (v6.180) (yamuna/5280 82163), start Wed 7/16 9:11
+    shyd2506cl007 g2v1 :1410 (v6.180) (yamuna/5280 42166), start Wed 7/16 9:21
+    shyd2506cl006 g2v1 :1405 (v6.180) (yamuna/5280 132815), start Wed 7/16 9:24
+    xsoc9 g3p3 :1905 (v6.180) (yamuna/5280 63960), start Wed 7/16 9:25
+    shyd2506cl004 g3p3 :1940 (v6.180) (yamuna/5280 68185), start Wed 7/16 9:26
+    xsoc8 g3p3 :1904 (v6.180) (yamuna/5280 94817), start Wed 7/16 9:31
+    shyd2504cl007 g17v1 :8807.0 (v6.180) (yamuna/5280 2274), start Wed 7/16 9:32
+    sumvnrcl013 g14v2 :7906.0 (v6.180) (yamuna/5280 6576), start Wed 7/16 9:35
+    shyd2506cl028 g10v1 :6446.0 (v6.180) (yamuna/5280 113601), start Wed 7/16 9:42
+    xsoc11 g3p3 :1907 (v6.180) (yamuna/5280 41227), start Wed 7/16 9:47
+    shyd2410cl018 g14v2 :7924.0 (v6.180) (yamuna/5280 107690), start Wed 7/16 10:05
+    shyd2504cl006 g17v1 :8834.0 (v6.180) (yamuna/5280 87614), start Wed 7/16 10:06
+    pcrao godavari :3067 (v6.180) (yamuna/5280 3763), start Wed 7/16 10:06
+    shyd2504cl004 g17v1 :8804.0 (v6.180) (yamuna/5280 104395), start Wed 7/16 10:07
+    shyd2506cl025 g9v1 :6014 (v6.180) (yamuna/5280 51802), start Wed 7/16 10:07
+    shyd2506cl024 g9v1 :6013 (v6.180) (yamuna/5280 111939), start Wed 7/16 10:12
+    xsoc4 g2v1 :1446 (v6.180) (yamuna/5280 139443), start Wed 7/16 10:14
+    sph5 g11v1 :6911 (v6.180) (yamuna/5280 36736), start Wed 7/16 10:18
+    shyd2502cl003 g16v2 :8604.0 (v6.180) (yamuna/5280 13883), start Wed 7/16 10:24
+    sblr2502cl005 g5p5 :3926 (v6.180) (yamuna/5280 98628), start Wed 7/16 10:25
+    xsoc7 g3p3 :1933 (v6.180) (yamuna/5280 107531), start Wed 7/16 10:27
+    smts6 g5p5 :3922 (v6.180) (yamuna/5280 46245), start Wed 7/16 10:29
+    shyd2412cl003 g8v1 :5702 (v6.180) (yamuna/5280 119530), start Wed 7/16 10:30
+    sph6 g11v1 :6912 (v6.180) (yamuna/5280 90643), start Wed 7/16 10:32
+    mdc3 g6v1 :5335 (v6.180) (yamuna/5280 99911), start Wed 7/16 10:32
+    sos18 narmada :23 (v6.180) (yamuna/5280 72905), start Wed 7/16 12:41
+    shyd2506cl005 g3p3 :1941 (v6.180) (yamuna/5280 65950), start Wed 7/16 12:51
+    techr1 yamuna :88 (v6.180) (yamuna/5280 92234), start Wed 7/16 12:52
+    shyd2506cl014 ganges2 :905 (v6.180) (yamuna/5280 109664), start Wed 7/16 12:52
+    shyd2506cl012 ganges2 :903 (v6.180) (yamuna/5280 91853), start Wed 7/16 12:57
+    sos15 narmada :20 (v6.180) (yamuna/5280 110894), start Wed 7/16 12:58
+    ksm1 g3p3 :1942 (v6.180) (yamuna/5280 14310), start Wed 7/16 13:16
+    suresh g9v1 :6008 (v6.180) (yamuna/5280 10660), start Wed 7/16 13:20
+    sumvnrcl008 g14v2 :7901.0 (v6.180) (yamuna/5280 1795), start Wed 7/16 13:22
+    sph15 g6p6 :5106 (v6.180) (yamuna/5280 81671), start Wed 7/16 13:56
+    sumvnrcl014 g14v2 :7907.0 (v6.180) (yamuna/5280 6694), start Wed 7/16 13:57
+    sumvnrcl010 g14v2 :7903.0 (v6.180) (yamuna/5280 73490), start Wed 7/16 14:04
+    gehani sbvvcn04 sbvvlh02.chipextech.local:7819 (v6.180) (yamuna/5280 103845), start Wed 7/16 14:04
+    sph14 g6p6 :5105 (v6.180) (yamuna/5280 37855), start Wed 7/16 14:08
+    kusuma sbvvcn13.chipextech.local sbvvlh02.chipextech.local:7814 (v6.180) (yamuna/5280 33323), start Wed 7/16 14:08
+    shyd2410cl031 g14v2 :7936.0 (v6.180) (yamuna/5280 43314), start Wed 7/16 14:09
+    sos12 narmada :17 (v6.180) (yamuna/5280 19310), start Wed 7/16 14:10
+
+Users of Virtuoso_Spectre:  (Total of 200 licenses issued;  Total of 1 license in use)
+
+  "Virtuoso_Spectre" v24.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    sameer sbvvcn08 sbvvlh02.chipextech.local:7818 (v21.100) (yamuna/5280 115242), start Wed 7/16 14:03
+
+Users of Virtuoso_Spectre_RF:  (Total of 200 licenses issued;  Total of 2 licenses in use)
+
+  "Virtuoso_Spectre_RF" v24.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    vishals sbvvcn09 sbvvlh02.chipextech.local:7824 (v21.100) (yamuna/5280 134426), start Wed 7/16 14:02
+    sameer sbvvcn08 sbvvlh02.chipextech.local:7818 (v21.100) (yamuna/5280 131901), start Wed 7/16 14:03
+
+Users of Virtuoso_Visual_Analysis_XL:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Voltus_Power_Integrity_Fi_XL:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of Voltus_Power_Integrity_XL:  (Total of 260 licenses issued;  Total of 1 license in use)
+
+  "Voltus_Power_Integrity_XL" v23.1, vendor: cdslmd, expiry: 06-aug-2025
+  vendor_string: J:PERM
+  floating license
+
+    btslc8 g3p3 :1911 (v21.100) (yamuna/5280 31801), start Thu 6/26 16:16
+
+Users of Xcelium_SC_DMS_Option:  (Total of 500 licenses issued;  Total of 0 licenses in use)
+
+Users of Xcelium_Safety_Sim:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of Xcelium_Single_Core:  (Total of 500 licenses issued;  Total of 0 licenses in use)
+
+Users of jasper_advp:  (Total of 40 licenses issued;  Total of 0 licenses in use)
+
+Users of jasper_dao:  (Total of 40 licenses issued;  Total of 0 licenses in use)
+
+Users of jasper_fst:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of jasper_papp:  (Total of 40 licenses issued;  Total of 0 licenses in use)
+
+Users of jasper_pcov:  (Total of 40 licenses issued;  Total of 0 licenses in use)
+
+Users of jasper_pint:  (Total of 40 licenses issued;  Total of 0 licenses in use)
+
+Users of modus_atpg:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of modus_atpg_mcpu:  (Total of 260 licenses issued;  Total of 0 licenses in use)
+
+Users of plotVersa:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of verisium_debug:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of vmanager_client:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of vmanager_project:  (Total of 40 licenses issued;  Total of 0 licenses in use)
+
+Users of vmanager_safety_client:  (Total of 40 licenses issued;  Total of 0 licenses in use)
+
+

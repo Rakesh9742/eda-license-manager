@@ -1,0 +1,41 @@
+{
+  "name": "eda-license-insight",
+  "version": "1.0.0",
+  "description": "A comprehensive License Manager UI for EDA tools (Cadence, Synopsys, Mentor Graphics/Siemens)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "lint": "cd frontend && npm run lint",
+    "clean": "rm -rf backend/node_modules frontend/node_modules backend/package-lock.json frontend/package-lock.json"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "eda",
+    "license",
+    "management",
+    "cadence",
+    "synopsys",
+    "mentor",
+    "siemens",
+    "react",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "EDA License Insight Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/eda-license-insight.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

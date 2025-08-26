@@ -1,0 +1,884 @@
+lmstat - Copyright (c) 1989-2019 Flexera. All Rights Reserved.
+Flexible License Manager status on Tue 8/19/2025 18:23
+
+License server status: 1717@yamuna
+    License file(s) on yamuna: /root/mlic/siemenslm/mlic:
+
+    yamuna: license server UP (MASTER) v11.19.0
+
+Vendor daemon status (on yamuna):
+
+     saltd: UP v11.19.0
+Feature usage info:
+
+     mgcld: UP v11.19.0
+Feature usage info:
+
+Users of admsrfic:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of amssvadvsim_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of amssvsc_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of amssvsim_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of amssvsvx_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of AprisaAPR:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of AprisaBase:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of AprisaFinFET:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of AprisaHier:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of caldesignrev:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of caldfmproperty:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of caleuvda:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calfractureall:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calibreadp:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calibreclmpc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calibredrc:  (Total of 500 licenses issued;  Total of 1 license in use)
+
+  "calibredrc" v2027.10, vendor: mgcld, expiry: 16-nov-2025
+  vendor_string: 820DB93E
+  floating license
+
+    smts3 g6v1 g6v1:532623949_3 (v2021.11) (yamuna/1717 16360), start Tue 8/19 18:23
+
+Users of calibrehdrc:  (Total of 500 licenses issued;  Total of 1 license in use)
+
+  "calibrehdrc" v2027.10, vendor: mgcld, expiry: 16-nov-2025
+  vendor_string: DD6F51CF
+  floating license
+
+    smts3 g6v1 g6v1:532623949_2 (v2021.11) (yamuna/1717 8556), start Tue 8/19 18:23
+
+Users of calibrehlvs:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrehlvsadv:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrelfd:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrelv:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrelvs:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calibreperc:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrepercadv:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrepercsp:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calibreqdb:  (Total of 500 licenses issued;  Total of 65 licenses in use)
+
+  "calibreqdb" v2027.10, vendor: mgcld, expiry: 16-nov-2025
+  vendor_string: A520E708
+  floating license
+
+    shyd2501cl004 g8v2 g8v2:580319366_1 (v2021.11) (yamuna/1717 1001), start Sat 8/9 0:31
+    sumvnrcl006 g14v1 g14v1:7729231149_1 (v2021.11) (yamuna/1717 1501), start Sat 8/9 0:31
+    shyd2407cl006 g10v4 g10v4:67312156928_1 (v2021.05) (yamuna/1717 3301), start Sat 8/9 0:31
+    shyd2502cl004 g16v2 g16v2:86052536186_1 (v2021.11) (yamuna/1717 8001), start Sat 8/9 0:33
+    shyd2501cl002 g8v1 g8v1:571426804_1 (v2021.11) (yamuna/1717 8901), start Sat 8/9 0:33
+    sumvnrcl004 g14v1 g14v1:77271050874_1 (v2021.11) (yamuna/1717 12915), start Mon 8/11 13:00
+    shyd2407cl011 g10v4 g10v4:67362537342_1 (v2021.05) (yamuna/1717 1349), start Tue 8/12 7:29
+    shyd2407cl011 g10v4 g10v4:67362539504_1 (v2021.05) (yamuna/1717 6794), start Tue 8/12 7:58
+    shyd2504cl005 g17v1 g17v1:88052932823_1 (v2021.11) (yamuna/1717 4535), start Wed 8/13 10:06
+    gs5 yamuna yamuna:167113545_1 (v2021.11) (yamuna/1717 4181), start Wed 8/13 15:54
+    kusuma sbvvcn13.chipextech.local sbvvlh02.chipextech.loca17374_1 (v2021.05) (yamuna/1717 11261), start Fri 8/15 14:18
+    licd2 g4v1 g4v1:172019423_1 (v2021.11) (yamuna/1717 9621), start Sat 8/16 12:23
+    shyd2407cl013 g10v4 g10v4:67383005029_1 (v2021.05) (yamuna/1717 5849), start Sat 8/16 12:59
+    shyd2409cl010 g9v3 g9v3:632235738_1 (v2021.05) (yamuna/1717 12755), start Sun 8/17 15:02
+    shyd2410cl026 g14v2 g14v2:79321387524_1 (v2021.11) (yamuna/1717 522), start Sun 8/17 19:37
+    mdc2 g6v1 g6v1:533416290_1 (v2021.11) (yamuna/1717 3060), start Mon 8/18 11:48
+    smts5 g5p5 g5p5:392178904_1 (v2021.11) (yamuna/1717 6113), start Mon 8/18 16:34
+    sos18 narmada narmada:23133040_1 (v2021.11) (yamuna/1717 2876), start Mon 8/18 18:34
+    shyd2412cl002 g5v2 g5v2:560226850_1 (v2021.11) (yamuna/1717 2319), start Mon 8/18 22:18
+    sph20 g11p11 g11p11:68042680383_1 (v2021.05) (yamuna/1717 11792), start Tue 8/19 12:43
+    test_session g6v1 g6v1:531418320_1 (v2021.11) (yamuna/1717 2214), start Tue 8/19 12:50
+    shyd2506cl026 g10v1 g10v1:6406563869_1 (v2021.05) (yamuna/1717 14620), start Tue 8/19 12:59
+    shyd2506cl005 g3p3 g3p3:194131652_1 (v2021.11) (yamuna/1717 7854), start Tue 8/19 13:00
+    shyd2506cl004 g3p3 g3p3:194031858_1 (v2021.11) (yamuna/1717 8646), start Tue 8/19 13:00
+    shyd2506cl017 g5p5 g5p5:390488010_1 (v2021.11) (yamuna/1717 1279), start Tue 8/19 13:01
+    shyd2506cl025 g9v1 g9v1:601420130_1 (v2021.11) (yamuna/1717 12379), start Tue 8/19 13:03
+    shyd2506cl023 g9v1 g9v1:601227750_1 (v2021.11) (yamuna/1717 3849), start Tue 8/19 13:24
+    xsoc7 g3p3 g3p3:193364922_1 (v2021.11) (yamuna/1717 15666), start Tue 8/19 14:22
+    sus32 ganges ganges:113078827_1 (v2021.11) (yamuna/1717 12558), start Tue 8/19 14:29
+    shammask sbvvcn13.chipextech.local sbvvlh02.chipextech.loca39393_1 (v2021.05) (yamuna/1717 16883), start Tue 8/19 14:39
+    shammask sbvvcn13.chipextech.local sbvvlh02.chipextech.loca40159_1 (v2021.05) (yamuna/1717 10513), start Tue 8/19 14:40
+    kusuma sbvvcn13.chipextech.local sbvvlh02.chipextech.loca43969_1 (v2021.05) (yamuna/1717 7158), start Tue 8/19 14:47
+    mld9 ganges ganges:116450135_1 (v2021.11) (yamuna/1717 19012), start Tue 8/19 14:53
+    gft1 g4p4 g4p4:53483379_1 (v2021.11) (yamuna/1717 4070), start Tue 8/19 14:55
+    kusuma sbvvcn13.chipextech.local sbvvlh02.chipextech.loca50477_1 (v2021.05) (yamuna/1717 9219), start Tue 8/19 15:15
+    sph11 g11v1 g11v1:6917714554_1 (v2021.05) (yamuna/1717 7607), start Tue 8/19 15:21
+    gft3 g4v2 g4v2:200710667_1 (v2021.11) (yamuna/1717 16170), start Tue 8/19 15:36
+    techr1 yamuna yamuna:121216462_1 (v2021.11) (yamuna/1717 5582), start Tue 8/19 15:39
+    shyd2507cl001 narmada narmada:61242972_1 (v2021.11) (yamuna/1717 2566), start Tue 8/19 15:50
+    xsoc3 g2v1 g2v1:144527221_1 (v2021.11) (yamuna/1717 12639), start Tue 8/19 15:53
+    gs5 yamuna yamuna:167226722_1 (v2021.11) (yamuna/1717 3583), start Tue 8/19 15:56
+    kusuma sbvvcn13.chipextech.local sbvvlh02.chipextech.loca59457_1 (v2021.05) (yamuna/1717 983), start Tue 8/19 16:02
+    gft2 g4p4 g4p4:53723622_1 (v2021.11) (yamuna/1717 15230), start Tue 8/19 16:07
+    mdc6 g6v1 g6v1:531920312_1 (v2021.11) (yamuna/1717 17883), start Tue 8/19 16:23
+    sos2 narmada narmada:736010_1 (v2021.11) (yamuna/1717 18922), start Tue 8/19 16:23
+    gs1 yamuna yamuna:1433226_1 (v2021.11) (yamuna/1717 18263), start Tue 8/19 16:44
+    licd1 g4v1 g4v1:170910751_1 (v2021.11) (yamuna/1717 8179), start Tue 8/19 16:49
+    shyd2507cl016 g12v2 g12v2:74032679382_1 (v2021.11) (yamuna/1717 16717), start Tue 8/19 16:53
+    mld12 ganges ganges:120181161_1 (v2021.11) (yamuna/1717 5183), start Tue 8/19 16:59
+    shyd2507cl018 g12v2 g12v2:74052684554_1 (v2021.11) (yamuna/1717 9831), start Tue 8/19 17:02
+    sph12 g11v1 g11v1:6918811186_1 (v2021.05) (yamuna/1717 9356), start Tue 8/19 17:15
+    shyd2507cl016 g12v2 g12v2:74032688441_1 (v2021.11) (yamuna/1717 18661), start Tue 8/19 17:16
+    sos15 narmada narmada:2082645_1 (v2021.11) (yamuna/1717 10304), start Tue 8/19 17:28
+    sph16 g6p6 g6p6:510828571_1 (v2021.11) (yamuna/1717 6528), start Tue 8/19 17:30
+    sos7 narmada narmada:1286246_1 (v2021.11) (yamuna/1717 8452), start Tue 8/19 17:33
+    mdc4 g6p6 g6p6:511477889_1 (v2021.11) (yamuna/1717 14463), start Tue 8/19 17:34
+    gs3 yamuna yamuna:14846248_1 (v2021.11) (yamuna/1717 18543), start Tue 8/19 17:36
+    gs4 yamuna yamuna:15148338_1 (v2021.11) (yamuna/1717 4914), start Tue 8/19 17:39
+    mld8 ganges ganges:116395528_1 (v2021.11) (yamuna/1717 12881), start Tue 8/19 17:42
+    shyd2507cl002 narmada narmada:6796991_1 (v2021.11) (yamuna/1717 6072), start Tue 8/19 17:47
+    shyd2507cl004 narmada narmada:64101906_1 (v2021.11) (yamuna/1717 9124), start Tue 8/19 17:52
+    shyd2502cl001 g16v2 g16v2:86024110945_1 (v2021.11) (yamuna/1717 4248), start Tue 8/19 18:08
+    sph2 g11v1 g11v1:6908833283_1 (v2021.05) (yamuna/1717 1768), start Tue 8/19 18:08
+    mld7 ganges ganges:116247961_1 (v2021.11) (yamuna/1717 7065), start Tue 8/19 18:13
+    smts6 g5p5 g5p5:392271254_1 (v2021.11) (yamuna/1717 17044), start Tue 8/19 18:21
+
+Users of calibrexact:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrexact3d:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrexl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrexrc:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calibrexrctoxact:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calinteractive:  (Total of 500 licenses issued;  Total of 80 licenses in use)
+
+  "calinteractive" v2027.10, vendor: mgcld, expiry: 16-nov-2025
+  vendor_string: 6E707CFF
+  floating license
+
+    shyd2501cl002 g8v1 g8v1:571422884_1 (v2021.11) (yamuna/1717 301), start Sat 8/9 0:30
+    shyd2501cl002 g8v1 g8v1:571413764_1 (v2021.11) (yamuna/1717 4701), start Sat 8/9 0:32
+    shyd2502cl004 g16v2 g16v2:86052535582_1 (v2021.11) (yamuna/1717 5601), start Sat 8/9 0:32
+    shyd2501cl004 g8v2 g8v2:58038430_1 (v2021.11) (yamuna/1717 6801), start Sat 8/9 0:32
+    shyd2407cl006 g10v4 g10v4:67312156038_1 (v2021.05) (yamuna/1717 6901), start Sat 8/9 0:32
+    shyd2407cl006 g10v4 g10v4:67312151412_1 (v2021.05) (yamuna/1717 7201), start Sat 8/9 0:32
+    sumvnrcl004 g14v1 g14v1:77271050153_1 (v2021.11) (yamuna/1717 4602), start Mon 8/11 12:59
+    shyd2407cl011 g10v4 g10v4:67362536145_1 (v2021.05) (yamuna/1717 4377), start Tue 8/12 7:27
+    shyd2504cl005 g17v1 g17v1:88052932123_1 (v2021.11) (yamuna/1717 1192), start Wed 8/13 10:05
+    gs5 yamuna yamuna:16784336_1 (v2021.11) (yamuna/1717 11040), start Wed 8/13 15:18
+    sus31 ganges ganges:112932775_1 (v2021.11) (yamuna/1717 11152), start Thu 8/14 10:23
+    shyd2407cl013 g10v4 g10v4:67382994988_1 (v2021.05) (yamuna/1717 13007), start Sat 8/16 12:11
+    licd2 g4v1 g4v1:172016502_1 (v2021.11) (yamuna/1717 652), start Sat 8/16 12:22
+    shyd2409cl010 g9v3 g9v3:632229823_1 (v2021.05) (yamuna/1717 1489), start Sun 8/17 14:39
+    shyd2410cl026 g14v2 g14v2:79321386922_1 (v2021.11) (yamuna/1717 13467), start Sun 8/17 19:37
+    mdc2 g6v1 g6v1:533414321_1 (v2021.11) (yamuna/1717 12137), start Mon 8/18 11:42
+    mdc2 g6v1 g6v1:53348690_1 (v2021.11) (yamuna/1717 5037), start Mon 8/18 12:25
+    shammask sbvvcn13.chipextech.local sbvvlh02.chipextech.loca31086_1 (v2021.05) (yamuna/1717 13217), start Mon 8/18 12:54
+    sos18 narmada narmada:23239570_1 (v2021.11) (yamuna/1717 10019), start Mon 8/18 14:29
+    xsoc7 g3p3 g3p3:193387330_1 (v2021.11) (yamuna/1717 6283), start Mon 8/18 15:26
+    shammask sbvvcn13.chipextech.local sbvvlh02.chipextech.loca3257_1 (v2021.05) (yamuna/1717 16282), start Mon 8/18 15:59
+    shammask sbvvcn13.chipextech.local sbvvlh02.chipextech.loca10290_1 (v2021.05) (yamuna/1717 9081), start Mon 8/18 16:17
+    smts5 g5p5 g5p5:392175219_1 (v2021.11) (yamuna/1717 3116), start Mon 8/18 16:25
+    shyd2412cl002 g5v2 g5v2:560225212_1 (v2021.11) (yamuna/1717 5344), start Mon 8/18 22:13
+    shyd2507cl001 narmada narmada:6151685_1 (v2021.11) (yamuna/1717 3603), start Tue 8/19 8:52
+    gft3 g4v2 g4v2:20071355_1 (v2021.11) (yamuna/1717 1948), start Tue 8/19 10:26
+    gft3 g4v2 g4v2:20079659_1 (v2021.11) (yamuna/1717 11935), start Tue 8/19 11:17
+    gft2 g4p4 g4p4:537762_1 (v2021.11) (yamuna/1717 3265), start Tue 8/19 11:24
+    sph12 g11v1 g11v1:6918590308_1 (v2021.05) (yamuna/1717 1853), start Tue 8/19 11:46
+    mdc4 g6p6 g6p6:51146520_1 (v2021.11) (yamuna/1717 15487), start Tue 8/19 11:58
+    sus30 ganges ganges:11288166_1 (v2021.11) (yamuna/1717 8249), start Tue 8/19 12:02
+    sus32 ganges ganges:113081060_1 (v2021.11) (yamuna/1717 15092), start Tue 8/19 12:24
+    sph20 g11p11 g11p11:68042677828_1 (v2021.05) (yamuna/1717 4421), start Tue 8/19 12:42
+    test_session g6v1 g6v1:531414228_1 (v2021.11) (yamuna/1717 14575), start Tue 8/19 12:43
+    shyd2506cl026 g10v1 g10v1:6406554125_1 (v2021.05) (yamuna/1717 16510), start Tue 8/19 12:48
+    shyd2506cl022 g9v1 g9v1:601036646_1 (v2021.11) (yamuna/1717 13629), start Tue 8/19 12:50
+    shyd2506cl004 g3p3 g3p3:194012199_1 (v2021.11) (yamuna/1717 10986), start Tue 8/19 12:52
+    shyd2506cl017 g5p5 g5p5:390475854_1 (v2021.11) (yamuna/1717 7958), start Tue 8/19 12:53
+    shyd2506cl014 ganges2 ganges2:90548109_1 (v2021.11) (yamuna/1717 14793), start Tue 8/19 12:54
+    shyd2506cl005 g3p3 g3p3:194127647_1 (v2021.11) (yamuna/1717 18104), start Tue 8/19 12:57
+    shyd2506cl023 g9v1 g9v1:60128414_1 (v2021.11) (yamuna/1717 18402), start Tue 8/19 12:59
+    sos7 narmada narmada:12157758_1 (v2021.11) (yamuna/1717 6397), start Tue 8/19 13:02
+    shyd2506cl025 g9v1 g9v1:601418390_1 (v2021.11) (yamuna/1717 7325), start Tue 8/19 13:03
+    shyd2506cl001 g3p3 g3p3:193739975_1 (v2021.11) (yamuna/1717 17720), start Tue 8/19 13:03
+    sph2 g11v1 g11v1:6908662306_1 (v2021.05) (yamuna/1717 17132), start Tue 8/19 13:19
+    gft1 g4p4 g4p4:53472389_1 (v2021.11) (yamuna/1717 5439), start Tue 8/19 14:31
+    sus26 ganges ganges:111827657_1 (v2021.11) (yamuna/1717 14245), start Tue 8/19 14:45
+    mld9 ganges ganges:116446610_1 (v2021.11) (yamuna/1717 3709), start Tue 8/19 14:52
+    gs1 yamuna yamuna:143184237_1 (v2021.11) (yamuna/1717 13935), start Tue 8/19 14:59
+    xsoc3 g2v1 g2v1:14455625_1 (v2021.11) (yamuna/1717 13593), start Tue 8/19 15:12
+    sph11 g11v1 g11v1:6917712979_1 (v2021.05) (yamuna/1717 17654), start Tue 8/19 15:20
+    techr1 yamuna yamuna:121209770_1 (v2021.11) (yamuna/1717 14805), start Tue 8/19 15:33
+    shyd2507cl001 narmada narmada:61240244_1 (v2021.11) (yamuna/1717 9753), start Tue 8/19 15:48
+    gs5 yamuna yamuna:167224357_1 (v2021.11) (yamuna/1717 255), start Tue 8/19 15:52
+    mdc6 g6v1 g6v1:531916786_1 (v2021.11) (yamuna/1717 18733), start Tue 8/19 16:18
+    sos2 narmada narmada:732392_1 (v2021.11) (yamuna/1717 17373), start Tue 8/19 16:19
+    licd1 g4v1 g4v1:17099886_1 (v2021.11) (yamuna/1717 10193), start Tue 8/19 16:48
+    shyd2507cl016 g12v2 g12v2:74032678449_1 (v2021.11) (yamuna/1717 5275), start Tue 8/19 16:50
+    shyd2507cl016 g12v2 g12v2:74032679668_1 (v2021.11) (yamuna/1717 11497), start Tue 8/19 16:54
+    shyd2410cl020 g14v2 g14v2:79261690314_1 (v2021.11) (yamuna/1717 12453), start Tue 8/19 16:55
+    spt4 g6v1 g6v1:530620351_1 (v2021.11) (yamuna/1717 8809), start Tue 8/19 16:58
+    mld12 ganges ganges:120177919_1 (v2021.11) (yamuna/1717 2981), start Tue 8/19 16:58
+    shyd2507cl018 g12v2 g12v2:74052683390_1 (v2021.11) (yamuna/1717 15547), start Tue 8/19 17:01
+    gs3 yamuna yamuna:14817970_1 (v2021.11) (yamuna/1717 11391), start Tue 8/19 17:06
+    mld7 ganges ganges:116238783_1 (v2021.11) (yamuna/1717 15732), start Tue 8/19 17:16
+    sos15 narmada narmada:2070967_1 (v2021.11) (yamuna/1717 17936), start Tue 8/19 17:17
+    sph16 g6p6 g6p6:510848491_1 (v2021.11) (yamuna/1717 10251), start Tue 8/19 17:20
+    sph12 g11v1 g11v1:6918815724_1 (v2021.05) (yamuna/1717 9584), start Tue 8/19 17:26
+    gs4 yamuna yamuna:15139981_1 (v2021.11) (yamuna/1717 14177), start Tue 8/19 17:31
+    mld8 ganges ganges:116377245_1 (v2021.11) (yamuna/1717 8378), start Tue 8/19 17:33
+    mdc4 g6p6 g6p6:511462122_1 (v2021.11) (yamuna/1717 10726), start Tue 8/19 17:34
+    gs3 yamuna yamuna:14844347_1 (v2021.11) (yamuna/1717 7466), start Tue 8/19 17:35
+    shyd2507cl004 narmada narmada:6488714_1 (v2021.11) (yamuna/1717 18332), start Tue 8/19 17:41
+    shyd2507cl002 narmada narmada:6795883_1 (v2021.11) (yamuna/1717 9490), start Tue 8/19 17:46
+    sph18 g6p6 g6p6:511177866_1 (v2021.11) (yamuna/1717 10852), start Tue 8/19 17:55
+    smts6 g5p5 g5p5:392263569_1 (v2021.11) (yamuna/1717 15184), start Tue 8/19 17:58
+    shyd2502cl001 g16v2 g16v2:86024110351_1 (v2021.11) (yamuna/1717 880), start Tue 8/19 18:07
+    jagruth sbvvcn14.chipextech.local sbvvlh01.chipextech.loca61366_1 (v2021.05) (yamuna/1717 7707), start Tue 8/19 18:15
+    smts3 g6v1 g6v1:532621303_1 (v2021.11) (yamuna/1717 13362), start Tue 8/19 18:17
+    sos8 narmada narmada:13109442_1 (v2021.11) (yamuna/1717 6653), start Tue 8/19 18:21
+
+Users of calmdf:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calmdpesvrf:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calmdpmapi:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of calmdpview:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calmpcpro:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calmpcverify:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calmpgold:  (Total of 100 licenses issued;  Total of 1 license in use)
+
+  "calmpgold" v2027.10, vendor: mgcld, expiry: 16-nov-2025
+  vendor_string: CF03A958
+  floating license
+
+    smts3 g6v1 g6v1:532623949_1 (v2021.11) (yamuna/1717 7536), start Tue 8/19 18:23
+
+Users of calmtopcpro:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calnmmpc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calnmopc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calnmopcddl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calnmsraf:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calopcpro:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calopcvclassifyp:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calopcverify:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calpmatch:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calpxopc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calrealtime:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calrealtimedig:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calreconlvs:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calsmo:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of caltdopc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calwaiver:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calworkbench:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of calyieldanalyze:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of calyieldenhance:  (Total of 400 licenses issued;  Total of 1 license in use)
+
+  "calyieldenhance" v2027.10, vendor: mgcld, expiry: 16-nov-2025
+  vendor_string: D5F57F5C
+  floating license
+
+    smts3 g6v1 g6v1:532623949_4 (v2021.11) (yamuna/1717 3982), start Tue 8/19 18:23
+
+Users of calyieldserver:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of CatAIhls4ml_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of CatapultCPC_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of catapultlb_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of catapultlbfarm_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of CatapultUltra_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of CatapultVis_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of developer:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of developerls:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of edsdesign:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of edsleditic:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of edsleditmems:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of edsleditphoto:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of edstspicevams:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of edstspicex:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of eldokernel_c:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of eldopsf:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of eldorfic:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of erdconfig:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of fastscan:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of genieartist:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of hdldesigner_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of leospeclgen:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of leospecliopt:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of leospecls3:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of leospecls3asic:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of leospecls3veri:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of leospecls3vhdl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of msimcdebug:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of msimcompare:  (Total of 700 licenses issued;  Total of 0 licenses in use)
+
+Users of msimcoverage:  (Total of 700 licenses issued;  Total of 0 licenses in use)
+
+Users of msimdataflow:  (Total of 700 licenses issued;  Total of 0 licenses in use)
+
+Users of msimhdlmix:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of msimhdlsim:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of msimpevsim:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of msimpevsimvlog:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of msimprofile:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of msimreguvm:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of msimsystemc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of msimviewer:  (Total of 700 licenses issued;  Total of 0 licenses in use)
+
+Users of mtautogratpg_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mtcellmodgenpl_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mtdefectsim:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mtdefectsimspice:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mtdiagnosis_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mtfastscan_c:  (Total of 100 licenses issued;  Total of 1 license in use)
+
+  "mtfastscan_c" v2027.10, vendor: mgcld, expiry: 16-nov-2025
+  vendor_string: 9F00DF77
+  floating license
+
+    akshatha sbvvcn11 MENTOR_43859.sbvvcn11_tessent_shell.exe (v2021.05) (yamuna/1717 1659), start Mon 8/18 16:23
+
+Users of mtijtag_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mtiverification:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mtmissionmode_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mtnslogicbist_c:  (Total of 100 licenses issued;  Total of 1 license in use)
+
+  "mtnslogicbist_c" v2027.10, vendor: mgcld, expiry: 16-nov-2025
+  vendor_string: 6A578F0B
+  floating license
+
+    gs8 ganges MENTOR_91389.ganges_tessent_shell.exe (v2021.05) (yamuna/1717 6428), start Tue 8/19 16:02
+
+Users of mtscanpro_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mttestkompress_c:  (Total of 100 licenses issued;  Total of 1 license in use)
+
+  "mttestkompress_c" v2027.10, vendor: mgcld, expiry: 16-nov-2025
+  vendor_string: DA585676
+  floating license
+
+    smts4 ganges2 MENTOR_43418.ganges2_tessent_shell.exe (v2021.05) (yamuna/1717 2689), start Mon 8/18 10:08
+
+Users of mttsacjtag_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mttsbscan_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mttsmembrepair_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mttsmemorybist_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mttsmfieldprog_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of mttsminsystem_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvCon:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvCsr:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvCxl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvFda:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvFia:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvFpa:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvFpu:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvGfv:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvOpa:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvPar:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvPve:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvQtf:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvSbd:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvTru:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvVci:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspDvVpi:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspEcAdvSeq:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspEcFpga:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of OspEcFpgaActel:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspEcFpgaAltera:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspEcFpgaLattice:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspEcFpgaXilinx:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspEcSeq:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspHlSyc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of OspL2V:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of peproassertions:  (Total of 600 licenses issued;  Total of 0 licenses in use)
+
+Users of pnrnitro:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of pnrtanner:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of pplscpbpldmgc_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of psyncore:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of psyncpbpldmgc_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of psyndft:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of psynfloorplan:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of psynmxdb:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of psynpower:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of qdbg3p:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qdbgadvanced:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qdbgcovdebug:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qdbgcoverage:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qdbgpa:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qdbgsoc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qdbgtbx:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qdbguvmsvtx:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qdebug:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qpasim:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvip5g_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvipamba_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvipautom_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvipcore_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvipddr_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvipdisplay_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvipethernet_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qviplgcy_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qviplgcyddr_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvipmipi_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvippcie_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvipserial_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvipusb_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvman:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qvrm:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of qxprop:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of reqtracer_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of secureip:  (Total of 600 licenses issued;  Total of 0 licenses in use)
+
+Users of SfApv:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfBase:  (Total of 1500 licenses issued;  Total of 0 licenses in use)
+
+Users of SfCca:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfConn:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfEcAec:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfEcFpga:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfEcRtl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfEcSch:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of SfEngine:  (Total of 1300 licenses issued;  Total of 0 licenses in use)
+
+Users of SfFa:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfFca:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfHlsSysc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfHmc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfInsp:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfOpv:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfPrc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfPrcFpu:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfPrcGfv:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfPrcPrv:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfReg:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfSec:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfTru:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of SfUi:  (Total of 1500 licenses issued;  Total of 0 licenses in use)
+
+Users of SfXprop:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sg_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of signofflec_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptgui:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of spttransformer:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvip1553b:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipace:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipahb:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipahci:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipapb3:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipaxi:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipaxi4:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipcan:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipcec:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipcphy:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipcpri:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipcsi:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipcsi3:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipddr2:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipddr3:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipddr4:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipddrx:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipdfi:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipdgrf:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipdp:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipdphy:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipdsi:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipemmc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipeth:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipeth100m:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipeth10g:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipeth1g:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptviphbm:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptviphdmi:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptviphmc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptviphsi:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipi2c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipi2s:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipi3c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipilkn:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipj204b:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipjtag:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptviplli:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptviplpddr2:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptviplpddr3:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptviplpddr4:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipmphy:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipnvme:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipocp:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipocp22:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvippci:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvippcie:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipsata:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipscard:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipslmb:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipspi:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipspi42:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipspwire:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipsrio:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipuart:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipufs:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipupro:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipusb:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipusb20:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipvby1:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipwideio:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of sptvipwideio2:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of svcanphysi_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of svrnm:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of svsimsvr:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of svverification:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of svwreal:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of testkomp:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of txanalysis:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of verifdataport:  (Total of 500 licenses issued;  Total of 0 licenses in use)
+
+Users of verilogacomp:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of verilogart:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of vhamsdev:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of vhamsmod:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of vhamsrt:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of visbasecdc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of visbaseformal:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of visbasestatic:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of visframework:  (Total of 1600 licenses issued;  Total of 0 licenses in use)
+
+Users of vistaarchitect_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of xcalibrate:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of xcpcb:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of xdesigner051_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of xelga_c:  (Total of 300 licenses issued;  Total of 0 licenses in use)
+
+Users of xpamssv_c:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of yieldaedtdiag:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of yieldascandiag:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znautocheckcomp:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of znautocheckfe:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of zncdcbase:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncdcfv:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncdcfvcomp:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncdcfvmc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncompccl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncompcdc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncompckl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncompcsl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znconfirm:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncovercheck:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of zncw:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncwcompiler:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zncwmbase:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znformal:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znformalbase:  (Total of 500 licenses issued;  Total of 0 licenses in use)
+
+Users of znformalseed:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znfx:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znfxsim:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of zngui:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znhiercdc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znhiercdcilm:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znpacdc:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znprove:  (Total of 400 licenses issued;  Total of 0 licenses in use)
+
+Users of znpsl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znqflamba:  (Total of 600 licenses issued;  Total of 0 licenses in use)
+
+Users of znqlint:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znramgen:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znreplaysim:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znresetcheck:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znsearch:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znsec:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+Users of znsecuritycheck:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znseed:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znsim:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znsva:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znsynthnl:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znview:  (Total of 100 licenses issued;  Total of 0 licenses in use)
+
+Users of znvisualizer:  (Total of 500 licenses issued;  Total of 0 licenses in use)
+
+Users of znxcheck:  (Total of 200 licenses issued;  Total of 0 licenses in use)
+
+
