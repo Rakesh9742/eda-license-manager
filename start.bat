@@ -69,9 +69,9 @@ start "EDA License Frontend" cmd /k "cd /d %~dp0frontend && npm run dev"
 
 echo ✅ Services started successfully!
 echo.
-echo 📊 Backend: http://localhost:8001
-echo 🎨 Frontend: http://localhost:3003
-echo 🔍 Health Check: http://localhost:8001/api/health
+echo 📊 Backend: http://192.168.92.34:8001
+echo 🎨 Frontend: http://192.168.92.34:3003
+echo 🔍 Health Check: http://192.168.92.34:8001/api/health
 echo.
 echo Services are running in separate windows.
 echo Close those windows to stop the services.

@@ -11,19 +11,19 @@ const vendors = {
   cadence: {
     name: 'Cadence',
     color: '#FF6B35',
-    command: 'lmstat -a -c 5280@yamuna',
+    command: 'liccheck --cadence',
     filePath: './files/cadence'
   },
   synopsys: {
     name: 'Synopsys',
     color: '#4A90E2',
-    command: 'lmstat -a -c 27020@yamuna',
+    command: 'liccheck --synopsys',
     filePath: './files/synopsys'
   },
   mgs: {
     name: 'Mentor Graphics (Siemens)',
     color: '#7B68EE',
-    command: 'lmstat -a -c 1717@yamuna',
+    command: 'liccheck --mgs',
     filePath: './files/mgs'
   }
 };
