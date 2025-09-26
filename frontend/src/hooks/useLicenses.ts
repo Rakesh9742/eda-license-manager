@@ -107,17 +107,27 @@ export const useHealthCheck = () => {
     data: health,
     isLoading,
     error,
+    refetch
   } = useQuery({
     queryKey: ['health'],
     queryFn: apiService.getHealth,
-    refetchInterval: 60000, // Check health every minute
+    refetchInterval: false, // Disable automatic health checks
+    enabled: true, // Run once on page load
   });
+
+  console.log('🏥 Health check data:', health);
+  console.log('🏥 Health check error:', error);
 
   return {
     health,
     isLoading,
     error,
+    refetch,
     isHealthy: health?.status === 'OK',
+    systemStatus: health?.systemStatus,
+    isSystemLive: health?.status === 'OK' && health?.systemStatus?.licenseCommands === 'OK',
+    isSystemDegraded: health?.status === 'WARNING',
+    isSystemOffline: health?.status === 'ERROR',
   };
 };
 

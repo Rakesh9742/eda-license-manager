@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Table,
   TableBody,
@@ -29,6 +29,8 @@ import { Search, Filter, Users, Clock, BarChart3, TrendingUp, Monitor, User, Cal
 
 interface LicenseTableProps {
   allLicenses: any;
+  selectedVendorFilter?: string;
+  onVendorFilterChange?: (vendor: string) => void;
 }
 
 interface UserDetail {
@@ -39,9 +41,9 @@ interface UserDetail {
   timestamps: string[];
 }
 
-export const LicenseTable = ({ allLicenses }: LicenseTableProps) => {
+export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilterChange }: LicenseTableProps) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filterVendor, setFilterVendor] = useState<string>("all");
+  const [filterVendor, setFilterVendor] = useState<string>(selectedVendorFilter || "all");
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
   const [isUserModalOpen, setIsUserModalOpen] = useState(false);
   
@@ -84,6 +86,21 @@ export const LicenseTable = ({ allLicenses }: LicenseTableProps) => {
   };
 
   const vendors = Object.keys(allLicenses.vendors);
+
+  // Sync filter state with parent component
+  useEffect(() => {
+    if (selectedVendorFilter && selectedVendorFilter !== filterVendor) {
+      setFilterVendor(selectedVendorFilter);
+    }
+  }, [selectedVendorFilter, filterVendor]);
+
+  // Handle filter change and notify parent
+  const handleFilterChange = (vendor: string) => {
+    setFilterVendor(vendor);
+    if (onVendorFilterChange) {
+      onVendorFilterChange(vendor);
+    }
+  };
 
   const handleFeatureClick = (feature: any) => {
     setSelectedFeature(feature);
@@ -242,7 +259,7 @@ export const LicenseTable = ({ allLicenses }: LicenseTableProps) => {
             </div>
             <div className="flex gap-2 items-center">
               <Filter className="h-4 w-4 text-muted-foreground" />
-              <Select value={filterVendor} onValueChange={setFilterVendor}>
+              <Select value={filterVendor} onValueChange={handleFilterChange}>
                 <SelectTrigger className="w-[200px] premium-button">
                   <SelectValue placeholder="Select tool" />
                 </SelectTrigger>

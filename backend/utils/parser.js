@@ -57,10 +57,10 @@ export function parseLicenseData(rawOutput, vendor) {
       // Parse feature usage
       if (line.includes('Users of') && line.includes('licenses issued')) {
         currentSection = 'features';
-        const featureMatch = line.match(/Users of\s+(\w+):\s*\(Total of\s+(\d+)\s+licenses issued;\s*Total of\s+(\d+)\s+licenses in use\)/);
+        const featureMatch = line.match(/Users of\s+([^:]+):\s*\(Total of\s+(\d+)\s+licenses issued;\s*Total of\s+(\d+)\s+licenses in use\)/);
         if (featureMatch) {
           currentFeature = {
-            name: featureMatch[1],
+            name: featureMatch[1].trim(),
             totalLicenses: parseInt(featureMatch[2]),
             usedLicenses: parseInt(featureMatch[3]),
             availableLicenses: parseInt(featureMatch[2]) - parseInt(featureMatch[3]),
@@ -135,7 +135,7 @@ export function parseLicenseData(rawOutput, vendor) {
         }
         
         // Debug: log lines that don't match any pattern
-        console.log('Unmatched user line:', line);
+        // console.log('Unmatched user line:', line);
       }
     }
 
@@ -150,6 +150,10 @@ export function parseLicenseData(rawOutput, vendor) {
                       parsed.features.reduce((sum, f) => sum + f.totalLicenses, 0)) * 100)
         : 0
     };
+
+    console.log(`📊 Parsed summary for ${vendor}:`, parsed.summary);
+    console.log(`📊 Features count: ${parsed.features.length}`);
+    // Removed sample feature log to avoid showing user data
 
     return parsed;
   } catch (error) {

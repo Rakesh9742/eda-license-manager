@@ -1,4 +1,7 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const SERVER_IP = import.meta.env.VITE_SERVER_IP || 'localhost';
+const BACKEND_PORT = import.meta.env.VITE_BACKEND_PORT || '3001';
+const FRONTEND_PORT = import.meta.env.VITE_FRONTEND_PORT || '3002';
+const API_BASE_URL = import.meta.env.VITE_API_URL || `http://${SERVER_IP}:${BACKEND_PORT}/api`;
 const APP_NAME = import.meta.env.VITE_APP_NAME || 'EDA License Insight';
 const APP_VERSION = import.meta.env.VITE_APP_VERSION || '1.0.0';
 
@@ -121,30 +124,39 @@ class ApiService {
     }
   }
 
-  async getHealth(): Promise<{ status: string; message: string }> {
+  getHealth = async (): Promise<{ 
+    status: string; 
+    message: string;
+    systemStatus?: {
+      backend: string;
+      licenseCommands: string;
+      dataSource: string;
+      timestamp: string;
+    };
+  }> => {
     return this.request('/health');
   }
 
-  async getStatus(): Promise<StatusResponse> {
+  getStatus = async (): Promise<StatusResponse> => {
     return this.request('/status');
   }
 
-  async getAllLicenses(): Promise<AllLicenseData> {
+  getAllLicenses = async (): Promise<AllLicenseData> => {
     return this.request('/licenses');
   }
 
-  async getVendorLicenses(vendor: string): Promise<LicenseData> {
+  getVendorLicenses = async (vendor: string): Promise<LicenseData> => {
     return this.request(`/licenses/${vendor}`);
   }
 
-  async forceRefresh(vendor?: string): Promise<AllLicenseData> {
+  forceRefresh = async (vendor?: string): Promise<AllLicenseData> => {
     return this.request('/licenses/refresh', {
       method: 'POST',
       body: JSON.stringify({ vendor }),
     });
   }
 
-  async testConnections(): Promise<{
+  testConnections = async (): Promise<{
     timestamp: string;
     results: {
       [key: string]: {
@@ -153,7 +165,7 @@ class ApiService {
         output?: string;
       };
     };
-  }> {
+  }> => {
     return this.request('/test-connections');
   }
 }

@@ -23,20 +23,25 @@ import {
 import { useLicenses, useHealthCheck, useDataSourceStatus } from "@/hooks/useLicenses";
 import { useState } from "react";
 import { StatusModal } from "./StatusModal";
+import { useToast } from "@/hooks/use-toast";
 
 export const Dashboard = () => {
+  const { toast } = useToast();
   const { allLicenses, isLoading, error, refreshLicenses, isRefreshing } = useLicenses(
     (type, title, message) => {
-      setStatusModal({
-        isOpen: true,
-        type,
-        title,
-        message
+      // Show toast notification instead of modal
+      toast({
+        title: title,
+        description: message,
+        variant: type === 'success' ? 'default' : type === 'warning' ? 'destructive' : 'destructive',
+        duration: type === 'success' ? 3000 : 5000, // Success messages disappear faster
+        className: type === 'success' ? '!bg-green-500 !border-green-600 !text-white' : '',
       });
     }
   );
-  const { isHealthy } = useHealthCheck();
+  const { isHealthy, isSystemLive, isSystemDegraded, isSystemOffline, systemStatus, refetch: refetchHealth } = useHealthCheck();
   const { dataSources, lastRefreshTime } = useDataSourceStatus();
+  const [selectedVendorFilter, setSelectedVendorFilter] = useState<string>("all");
   const [statusModal, setStatusModal] = useState<{
     isOpen: boolean;
     type: 'success' | 'warning' | 'error' | 'info';
@@ -49,39 +54,67 @@ export const Dashboard = () => {
     message: ''
   });
 
-  // Calculate overall statistics
-  const overallStats = {
-    totalLicenses: 0,
-    totalUsed: 0,
-    totalAvailable: 0,
-    totalFeatures: 0,
-    activeUsers: 0,
-    vendors: 0
+  // Calculate statistics based on selected vendor filter
+  const getFilteredStats = () => {
+    const stats = {
+      totalLicenses: 0,
+      totalUsed: 0,
+      totalAvailable: 0,
+      totalFeatures: 0,
+      activeUsers: 0,
+      vendors: 0
+    };
+
+    if (allLicenses?.vendors) {
+      console.log('🔍 License data for usage calculation:', allLicenses.vendors);
+      
+      Object.entries(allLicenses.vendors).forEach(([vendorKey, vendorData]: [string, any]) => {
+        // Skip if vendor filter is set and doesn't match
+        if (selectedVendorFilter !== "all" && vendorKey !== selectedVendorFilter) {
+          return;
+        }
+        
+        console.log(`📊 Vendor ${vendorData.vendorName} data:`, vendorData.parsed);
+        
+        if (vendorData.parsed?.summary) {
+          console.log(`📈 ${vendorData.vendorName} summary:`, vendorData.parsed.summary);
+          
+          stats.totalLicenses += vendorData.parsed.summary.totalLicenses || 0;
+          stats.totalUsed += vendorData.parsed.summary.totalUsed || 0;
+          stats.totalAvailable += vendorData.parsed.summary.totalAvailable || 0;
+          stats.totalFeatures += vendorData.parsed.summary.totalFeatures || 0;
+          stats.activeUsers += vendorData.parsed.features?.reduce((sum: number, feature: any) => 
+            sum + (feature.users?.length || 0), 0) || 0;
+        } else {
+          console.log(`⚠️ No parsed summary for ${vendorData.vendorName}`);
+        }
+      });
+      
+      // Count vendors based on filter
+      if (selectedVendorFilter === "all") {
+        stats.vendors = Object.keys(allLicenses.vendors).length;
+      } else {
+        stats.vendors = 1; // Only one vendor selected
+      }
+    }
+    
+    return stats;
   };
 
-  if (allLicenses?.vendors) {
-    Object.values(allLicenses.vendors).forEach((vendorData: any) => {
-      if (vendorData.parsed?.summary) {
-        overallStats.totalLicenses += vendorData.parsed.summary.totalLicenses;
-        overallStats.totalUsed += vendorData.parsed.summary.totalUsed;
-        overallStats.totalAvailable += vendorData.parsed.summary.totalAvailable;
-        overallStats.totalFeatures += vendorData.parsed.summary.totalFeatures;
-        overallStats.activeUsers += vendorData.parsed.features?.reduce((sum: number, feature: any) => 
-          sum + feature.users.length, 0) || 0;
-      }
-    });
-    overallStats.vendors = Object.keys(allLicenses.vendors).length;
-  }
+  const overallStats = getFilteredStats();
+
+  console.log('📊 Overall stats calculated:', overallStats);
 
   const overallUsage = overallStats.totalLicenses > 0 
     ? Math.round((overallStats.totalUsed / overallStats.totalLicenses) * 100)
     : 0;
 
   const getSystemHealthStatus = () => {
+    if (isSystemOffline) return { status: 'error', text: 'System Offline', icon: <AlertTriangle className="h-4 w-4 text-destructive" /> };
+    if (isSystemDegraded) return { status: 'warning', text: 'System Degraded', icon: <AlertTriangle className="h-4 w-4 text-warning" /> };
+    if (isSystemLive) return { status: 'success', text: 'System Live', icon: <Shield className="h-4 w-4 text-success" /> };
     if (!isHealthy) return { status: 'error', text: 'Backend Offline', icon: <AlertTriangle className="h-4 w-4 text-destructive" /> };
-    if (overallUsage >= 90) return { status: 'warning', text: 'High Usage', icon: <AlertTriangle className="h-4 w-4 text-warning" /> };
-    if (overallUsage >= 75) return { status: 'warning', text: 'Medium Usage', icon: <TrendingUp className="h-4 w-4 text-warning" /> };
-    return { status: 'success', text: 'Healthy', icon: <Shield className="h-4 w-4 text-success" /> };
+    return { status: 'warning', text: 'Unknown Status', icon: <AlertTriangle className="h-4 w-4 text-warning" /> };
   };
 
   const healthStatus = getSystemHealthStatus();
@@ -146,22 +179,30 @@ export const Dashboard = () => {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-3 text-sm">
                 <div className="premium-status flex items-center gap-2 px-3 py-2 rounded-lg bg-card/50 backdrop-blur-sm border">
-                  <div className={`h-2 w-2 rounded-full ${isHealthy ? 'bg-success' : 'bg-destructive'} animate-pulse`}></div>
-                  <span className="font-medium">{isHealthy ? 'System Online' : 'System Offline'}</span>
+                  <div className={`h-2 w-2 rounded-full ${isSystemLive ? 'bg-success' : isSystemDegraded ? 'bg-warning' : 'bg-destructive'} animate-pulse`}></div>
+                  <span className="font-medium">
+                    {isSystemLive ? 'System Live' : isSystemDegraded ? 'System Degraded' : 'System Offline'}
+                  </span>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => {
-                    setStatusModal({
-                      isOpen: true,
-                      type: 'info',
-                      title: 'Refreshing License Data',
-                      message: 'Fetching latest information from servers...'
+                  onClick={async () => {
+                    // Show toast notification for refresh start
+                    toast({
+                      title: 'Refreshing Data',
+                      description: 'Fetching latest information from servers...',
+                      variant: 'default',
+                      duration: 2000,
                     });
-                    refreshLicenses();
+                    
+                    // Refresh both license data and health status
+                    await Promise.all([
+                      refreshLicenses(),
+                      refetchHealth()
+                    ]);
                   }}
                   disabled={isRefreshing}
                   className="premium-button flex items-center gap-2"
@@ -261,62 +302,6 @@ export const Dashboard = () => {
 
         {allLicenses && (
           <>
-            {/* Data Source Status */}
-            {dataSources && (
-              <Card className="premium-card bg-gradient-to-br from-card to-secondary/20">
-                <CardHeader className="pb-4">
-                  <CardTitle className="flex items-center gap-2 text-xl">
-                    <Database className="h-6 w-6 text-primary" />
-                    Data Sources & Refresh Status
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-success/5 border border-success/10">
-                      <Server className="h-5 w-5 text-success" />
-                      <div>
-                        <span className="text-sm font-medium">Live Sources</span>
-                        <Badge variant="outline" className="ml-2">{dataSources.lmstat?.length || 0}</Badge>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-warning/5 border border-warning/10">
-                      <FileText className="h-5 w-5 text-warning" />
-                      <div>
-                        <span className="text-sm font-medium">File Sources</span>
-                        <Badge variant="outline" className="ml-2">{dataSources.file?.length || 0}</Badge>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-destructive/5 border border-destructive/10">
-                      <AlertTriangle className="h-5 w-5 text-destructive" />
-                      <div>
-                        <span className="text-sm font-medium">Errors</span>
-                        <Badge variant="outline" className="ml-2">{dataSources.error?.length || 0}</Badge>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 border">
-                      <Database className="h-5 w-5 text-muted-foreground" />
-                      <div>
-                        <span className="text-sm font-medium">Total Vendors</span>
-                        <Badge variant="outline" className="ml-2">{overallStats.vendors}</Badge>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 border">
-                      <Clock className="h-5 w-5 text-muted-foreground" />
-                      <div>
-                        <span className="text-sm font-medium">Last Refresh</span>
-                        <span className="text-xs text-muted-foreground block">{formatLastRefreshTime()}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-4 bg-muted/30 rounded-lg border border-muted/50">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      💡 <strong>Tip:</strong> Data is fetched live from license servers using lmstat commands. If commands fail to execute, the system automatically redirects to backup file data. Warning messages appear when command execution fails and fallback data is used. Click "Refresh Data" to get the latest information.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-
             {/* Overview Cards */}
             <div className="premium-grid">
               {Object.entries(allLicenses.vendors).map(([vendorKey, vendorData]: [string, any]) => {
@@ -383,7 +368,10 @@ export const Dashboard = () => {
                 <CardContent>
                   <div className="text-3xl font-bold text-foreground mb-1">{overallStats.totalLicenses}</div>
                   <p className="text-xs text-muted-foreground">
-                    Across {overallStats.vendors} vendors
+                    {selectedVendorFilter === "all" 
+                      ? `Across ${overallStats.vendors} vendors` 
+                      : allLicenses?.vendors?.[selectedVendorFilter]?.vendorName || 'Selected vendor'
+                    }
                   </p>
                 </CardContent>
               </Card>
@@ -444,7 +432,11 @@ export const Dashboard = () => {
 
             {/* Main Content - Only Overview */}
             <div className="space-y-6">
-              <LicenseTable allLicenses={allLicenses} />
+              <LicenseTable 
+                allLicenses={allLicenses} 
+                selectedVendorFilter={selectedVendorFilter}
+                onVendorFilterChange={setSelectedVendorFilter}
+              />
             </div>
           </>
         )}

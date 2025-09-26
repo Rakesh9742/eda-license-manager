@@ -130,12 +130,16 @@ export const LicenseCard = ({ title, total, used, status, icon, onClick, badge, 
                 {expiryStatus && (
                   <Badge 
                     variant={expiryStatus.color as any} 
-                    className="premium-badge text-xs font-medium"
+                    className={`text-xs font-bold ${
+                      expiryStatus.color === 'success' 
+                        ? 'text-black bg-white border shadow-sm' 
+                        : 'premium-badge'
+                    }`}
                   >
                     {expiryStatus.text}
                   </Badge>
                 )}
-                <span className="font-semibold text-foreground text-xs">
+                <span className="font-bold text-black text-xs bg-white px-2 py-1 rounded shadow-sm border">
                   {new Date(expiryDate).toLocaleDateString()}
                 </span>
               </div>

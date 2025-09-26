@@ -48,7 +48,10 @@ if not exist ".env" (
     if exist ".env.example" (
         copy .env.example .env
     ) else (
-        echo VITE_API_URL=http://192.168.92.34:8001/api > .env
+        echo VITE_SERVER_IP=3.110.172.123 > .env
+        echo VITE_BACKEND_PORT=3004 >> .env
+        echo VITE_FRONTEND_PORT=3002 >> .env
+        echo VITE_API_URL=http://3.110.172.123:3004/api >> .env
         echo VITE_APP_NAME=EDA License Insight >> .env
         echo VITE_APP_VERSION=1.0.0 >> .env
     )
@@ -69,9 +72,21 @@ start "EDA License Frontend" cmd /k "cd /d %~dp0frontend && npm run dev"
 
 echo ✅ Services started successfully!
 echo.
-echo 📊 Backend: http://192.168.92.34:8001
-echo 🎨 Frontend: http://192.168.92.34:3003
-echo 🔍 Health Check: http://192.168.92.34:8001/api/health
+REM Read environment variables from .env files
+for /f "tokens=2 delims==" %%a in ('findstr "SERVER_IP=" ..\backend\.env 2^>nul') do set SERVER_IP=%%a
+for /f "tokens=2 delims==" %%a in ('findstr "BACKEND_PORT=" ..\backend\.env 2^>nul') do set BACKEND_PORT=%%a
+for /f "tokens=2 delims==" %%a in ('findstr "VITE_FRONTEND_PORT=" .env 2^>nul') do set FRONTEND_PORT=%%a
+for /f "tokens=2 delims==" %%a in ('findstr "VITE_SERVER_IP=" .env 2^>nul') do set VITE_SERVER_IP=%%a
+
+REM Set defaults if not found
+if not defined SERVER_IP set SERVER_IP=3.110.172.123
+if not defined BACKEND_PORT set BACKEND_PORT=3004
+if not defined FRONTEND_PORT set FRONTEND_PORT=3002
+if not defined VITE_SERVER_IP set VITE_SERVER_IP=3.110.172.123
+
+echo 📊 Backend: http://%SERVER_IP%:%BACKEND_PORT%
+echo 🎨 Frontend: http://%VITE_SERVER_IP%:%FRONTEND_PORT%
+echo 🔍 Health Check: http://%SERVER_IP%:%BACKEND_PORT%/api/health
 echo.
 echo Services are running in separate windows.
 echo Close those windows to stop the services.

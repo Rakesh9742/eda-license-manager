@@ -3,6 +3,15 @@ import { promisify } from 'util';
 import { parseLicenseData } from '../utils/parser.js';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
+import { executeRemoteCommand, testSSHConnection } from './remoteExecutor.js';
+
+// Cache for license data to prevent repeated command execution
+const licenseDataCache = {
+  data: null,
+  timestamp: null,
+  cacheTimeout: 30000, // 30 seconds cache
+  isRefreshing: false
+};
 
 const execAsync = promisify(exec);
 
@@ -11,20 +20,23 @@ const vendors = {
   cadence: {
     name: 'Cadence',
     color: '#FF6B35',
-    command: 'liccheck --cadence',
-    filePath: './files/cadence'
+    command: '/tools/synopsys/v2/lmstat -a',
+    filePath: './files/cadence',
+    env: { LM_LICENSE_FILE: '5280@yamuna' }
   },
   synopsys: {
     name: 'Synopsys',
     color: '#4A90E2',
-    command: 'liccheck --synopsys',
-    filePath: './files/synopsys'
+    command: '/tools/synopsys/v2/lmstat -a',
+    filePath: './files/synopsys',
+    env: { LM_LICENSE_FILE: '27020@yamuna' }
   },
   mgs: {
     name: 'Mentor Graphics (Siemens)',
     color: '#7B68EE',
-    command: 'liccheck --mgs',
-    filePath: './files/mgs'
+    command: '/tools/synopsys/v2/lmstat -a',
+    filePath: './files/mgs',
+    env: { LM_LICENSE_FILE: '1717@yamuna' }
   }
 };
 
@@ -55,7 +67,7 @@ async function readLicenseFile(vendor) {
   }
 }
 
-// Execute lmstat command for a vendor
+// Execute lmstat command for a vendor (local or remote)
 async function executeLmstatCommand(vendor) {
   try {
     const vendorConfig = vendors[vendor];
@@ -65,8 +77,26 @@ async function executeLmstatCommand(vendor) {
 
     console.log(`🔄 Executing lmstat command for ${vendorConfig.name}...`);
     console.log(`📋 Command: ${vendorConfig.command}`);
+    console.log(`🔧 Environment: LM_LICENSE_FILE=${vendorConfig.env?.LM_LICENSE_FILE || 'not set'}`);
     
-    const { stdout, stderr } = await execAsync(vendorConfig.command);
+    let stdout, stderr;
+    
+    // Check if we should use remote execution
+    const useRemote = process.env.USE_VNC_SERVER === 'true' && process.env.VNC_SERVER_HOST;
+    
+    if (useRemote) {
+      console.log(`🌐 Executing command on VNC server: ${process.env.VNC_SERVER_HOST}`);
+      const result = await executeRemoteCommand(vendorConfig.command, vendorConfig.env);
+      stdout = result.stdout;
+      stderr = result.stderr;
+    } else {
+      console.log(`💻 Executing command locally`);
+      const result = await execAsync(vendorConfig.command, {
+        env: { ...process.env, ...vendorConfig.env }
+      });
+      stdout = result.stdout;
+      stderr = result.stderr;
+    }
     
     if (stderr) {
       console.warn(`⚠️ Warning from ${vendor} lmstat command:`, stderr);
@@ -80,7 +110,7 @@ async function executeLmstatCommand(vendor) {
       color: vendorConfig.color,
       rawOutput: stdout,
       timestamp: new Date().toISOString(),
-      dataSource: 'lmstat',
+      dataSource: useRemote ? 'vnc_lmstat' : 'lmstat',
       parsed: parseLicenseData(stdout, vendor)
     };
   } catch (error) {
@@ -142,9 +172,33 @@ async function getVendorLicenseData(vendor) {
 }
 
 // Get license data for all vendors using lmstat commands with fallback
-export async function getAllLicenseData() {
+export async function getAllLicenseData(forceRefresh = false) {
   try {
-    console.log('🔍 Getting license data for all vendors using lmstat commands with fallback...');
+    // Check cache first (unless force refresh is requested)
+    const now = Date.now();
+    if (!forceRefresh && 
+        licenseDataCache.data && 
+        licenseDataCache.timestamp && 
+        (now - licenseDataCache.timestamp) < licenseDataCache.cacheTimeout) {
+      console.log('📋 Returning cached license data');
+      return licenseDataCache.data;
+    }
+
+    // Prevent multiple simultaneous refreshes
+    if (licenseDataCache.isRefreshing) {
+      console.log('⏳ Another refresh is in progress, waiting...');
+      while (licenseDataCache.isRefreshing) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+      if (licenseDataCache.data) {
+        console.log('📋 Returning cached data after waiting');
+        return licenseDataCache.data;
+      }
+    }
+
+    licenseDataCache.isRefreshing = true;
+    console.log('🔍 Getting fresh license data for all vendors using lmstat commands with fallback...');
+    
     const results = {};
     const vendorKeys = Object.keys(vendors);
     console.log(`📋 Processing ${vendorKeys.length} vendors:`, vendorKeys);
@@ -191,8 +245,14 @@ export async function getAllLicenseData() {
       }
     };
     
+    // Update cache
+    licenseDataCache.data = result;
+    licenseDataCache.timestamp = now;
+    licenseDataCache.isRefreshing = false;
+    
     return result;
   } catch (error) {
+    licenseDataCache.isRefreshing = false;
     console.error('❌ Error in getAllLicenseData:', error.message);
     throw error;
   }
@@ -209,6 +269,57 @@ export async function getVendorLicenseDataByVendor(vendor) {
   }
 }
 
+// Lightweight health check that uses cached data or minimal checks
+export async function getSystemHealthStatus() {
+  try {
+    // If we have recent cached data, use it for health check
+    const now = Date.now();
+    if (licenseDataCache.data && 
+        licenseDataCache.timestamp && 
+        (now - licenseDataCache.timestamp) < licenseDataCache.cacheTimeout) {
+      
+      const cachedData = licenseDataCache.data;
+      const hasErrors = Object.values(cachedData.vendors).some((vendor) => 
+        vendor.dataSource === 'error' || vendor.lmstatError
+      );
+      
+      const usingFileFallback = Object.values(cachedData.vendors).some((vendor) => 
+        vendor.dataSource === 'file' && vendor.lmstatError
+      );
+      
+      return {
+        hasErrors,
+        usingFileFallback,
+        dataSource: usingFileFallback ? 'file' : 'lmstat',
+        timestamp: cachedData.timestamp
+      };
+    }
+    
+    // If no recent cache, do a quick test of one vendor
+    console.log('🔍 Quick health check - testing one vendor...');
+    const testVendor = Object.keys(vendors)[0]; // Test first vendor
+    const testResult = await getVendorLicenseData(testVendor);
+    
+    const hasErrors = testResult.dataSource === 'error' || testResult.lmstatError;
+    const usingFileFallback = testResult.dataSource === 'file' && testResult.lmstatError;
+    
+    return {
+      hasErrors,
+      usingFileFallback,
+      dataSource: usingFileFallback ? 'file' : 'lmstat',
+      timestamp: new Date().toISOString()
+    };
+  } catch (error) {
+    console.error('❌ Health check failed:', error.message);
+    return {
+      hasErrors: true,
+      usingFileFallback: false,
+      dataSource: 'unknown',
+      timestamp: new Date().toISOString()
+    };
+  }
+}
+
 // Test connection to all license servers
 export async function testLicenseServerConnections() {
   try {
@@ -216,18 +327,47 @@ export async function testLicenseServerConnections() {
     const results = {};
     const vendorKeys = Object.keys(vendors);
     
+    // First test SSH connection if using VNC server
+    const useRemote = process.env.USE_VNC_SERVER === 'true' && process.env.VNC_SERVER_HOST;
+    if (useRemote) {
+      console.log('🧪 Testing SSH connection to VNC server...');
+      try {
+        const sshTest = await testSSHConnection();
+        results['ssh_connection'] = sshTest;
+        console.log(`✅ SSH connection test: ${sshTest.status}`);
+      } catch (error) {
+        results['ssh_connection'] = {
+          status: 'error',
+          message: `SSH connection failed: ${error.message}`,
+          output: null
+        };
+        console.error(`❌ SSH connection test failed:`, error.message);
+      }
+    }
+    
     const promises = vendorKeys.map(async (vendorKey) => {
       try {
         const vendorConfig = vendors[vendorKey];
         console.log(`🧪 Testing ${vendorConfig.name} connection...`);
         
-        // Use a timeout to prevent hanging
-        const { stdout, stderr } = await Promise.race([
-          execAsync(vendorConfig.command),
-          new Promise((_, reject) => 
-            setTimeout(() => reject(new Error('Command timeout after 10 seconds')), 10000)
-          )
-        ]);
+        let stdout, stderr;
+        
+        if (useRemote) {
+          // Test remote execution
+          const result = await executeRemoteCommand(vendorConfig.command, vendorConfig.env);
+          stdout = result.stdout;
+          stderr = result.stderr;
+        } else {
+          // Test local execution with timeout
+          const result = await Promise.race([
+            execAsync(vendorConfig.command, { env: { ...process.env, ...vendorConfig.env } }),
+            new Promise((_, reject) => 
+              setTimeout(() => reject(new Error('Command timeout after 10 seconds')), 10000)
+            )
+          ]);
+          stdout = result.stdout;
+          stderr = result.stderr;
+        }
         
         results[vendorKey] = {
           status: 'success',
@@ -251,7 +391,8 @@ export async function testLicenseServerConnections() {
     
     return {
       timestamp: new Date().toISOString(),
-      results
+      results,
+      connectionType: useRemote ? 'remote_vnc' : 'local'
     };
   } catch (error) {
     console.error('❌ Error testing license server connections:', error.message);

@@ -2,7 +2,6 @@
 chcp 65001 >nul
 
 echo 🚀 Starting EDA License Insight in PRODUCTION mode...
-echo 📍 VNC Server IP: 192.168.92.34
 
 REM Check if Node.js is installed
 node --version >nul 2>&1
@@ -67,11 +66,23 @@ start "EDA License Frontend (Production)" cmd /k "cd /d %~dp0frontend && npm run
 
 echo ✅ Production services started successfully!
 echo.
-echo 📊 Backend API: http://192.168.92.34:8001
-echo 🎨 Frontend UI: http://192.168.92.34:3003
-echo 🔍 Health Check: http://192.168.92.34:8001/api/health
+REM Read environment variables from .env files
+for /f "tokens=2 delims==" %%a in ('findstr "SERVER_IP=" ..\backend\.env 2^>nul') do set SERVER_IP=%%a
+for /f "tokens=2 delims==" %%a in ('findstr "BACKEND_PORT=" ..\backend\.env 2^>nul') do set BACKEND_PORT=%%a
+for /f "tokens=2 delims==" %%a in ('findstr "VITE_FRONTEND_PORT=" .env 2^>nul') do set FRONTEND_PORT=%%a
+for /f "tokens=2 delims==" %%a in ('findstr "VITE_SERVER_IP=" .env 2^>nul') do set VITE_SERVER_IP=%%a
+
+REM Set defaults if not found
+if not defined SERVER_IP set SERVER_IP=3.110.172.123
+if not defined BACKEND_PORT set BACKEND_PORT=3004
+if not defined FRONTEND_PORT set FRONTEND_PORT=3002
+if not defined VITE_SERVER_IP set VITE_SERVER_IP=3.110.172.123
+
+echo 📊 Backend API: http://%SERVER_IP%:%BACKEND_PORT%
+echo 🎨 Frontend UI: http://%VITE_SERVER_IP%:%FRONTEND_PORT%
+echo 🔍 Health Check: http://%SERVER_IP%:%BACKEND_PORT%/api/health
 echo.
-echo 🌐 Access from other machines using: http://192.168.92.34:3003
+echo 🌐 Access from other machines using: http://%VITE_SERVER_IP%:%FRONTEND_PORT%
 echo.
 echo Services are running in separate windows.
 echo Close those windows to stop the services.
