@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Calendar } from "lucide-react";
+import { memo } from "react";
 
 interface LicenseCardProps {
   title: string;
@@ -14,7 +15,7 @@ interface LicenseCardProps {
   expiryDate?: string;
 }
 
-export const LicenseCard = ({ title, total, used, status, icon, onClick, badge, expiryDate }: LicenseCardProps) => {
+export const LicenseCard = memo(({ title, total, used, status, icon, onClick, badge, expiryDate }: LicenseCardProps) => {
   const percentage = (used / total) * 100;
   
   const getStatusColor = () => {
@@ -64,7 +65,7 @@ export const LicenseCard = ({ title, total, used, status, icon, onClick, badge, 
       onClick={onClick}
     >
       {/* Premium border effect */}
-      <div className={`absolute inset-0 bg-gradient-to-r ${getStatusGradient()} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+      <div className={`absolute inset-0 bg-gradient-to-r ${getStatusGradient()} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
       
       {/* Icon background glow */}
       <div className="absolute top-4 right-4 w-12 h-12 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors duration-300"></div>
@@ -152,4 +153,4 @@ export const LicenseCard = ({ title, total, used, status, icon, onClick, badge, 
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
     </Card>
   );
-};
+});

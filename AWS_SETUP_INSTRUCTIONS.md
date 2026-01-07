@@ -56,9 +56,9 @@ npm run dev
 
 Visit these URLs to test the connection:
 
-1. **VNC Connection Test**: `http://3.110.172.123:3004/api/test-vnc-connection`
-2. **License Commands Test**: `http://3.110.172.123:3004/api/test-connections`
-3. **Health Check**: `http://3.110.172.123:3004/api/health`
+1. **VNC Connection Test**: `http://13.126.19.34:3002/api/test-vnc-connection`
+2. **License Commands Test**: `http://13.126.19.34:3002/api/test-connections`
+3. **Health Check**: `http://13.126.19.34:3002/api/health`
 
 ## Troubleshooting
 

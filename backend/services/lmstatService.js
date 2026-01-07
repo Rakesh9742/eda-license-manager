@@ -9,7 +9,7 @@ import { executeRemoteCommand, testSSHConnection } from './remoteExecutor.js';
 const licenseDataCache = {
   data: null,
   timestamp: null,
-  cacheTimeout: 30000, // 30 seconds cache
+  cacheTimeout: parseInt(process.env.CACHE_TIMEOUT || '300000'), // 5 minutes default (configurable via CACHE_TIMEOUT env var)
   isRefreshing: false
 };
 
@@ -91,9 +91,16 @@ async function executeLmstatCommand(vendor) {
       stderr = result.stderr;
     } else {
       console.log(`💻 Executing command locally`);
-      const result = await execAsync(vendorConfig.command, {
-        env: { ...process.env, ...vendorConfig.env }
-      });
+      // Add timeout for local commands (15 seconds max)
+      const result = await Promise.race([
+        execAsync(vendorConfig.command, {
+          env: { ...process.env, ...vendorConfig.env },
+          timeout: 15000 // 15 second timeout for local commands
+        }),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Local command timeout after 15 seconds')), 15000)
+        )
+      ]);
       stdout = result.stdout;
       stderr = result.stderr;
     }

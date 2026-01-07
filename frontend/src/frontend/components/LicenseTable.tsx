@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   Table,
   TableBody,
@@ -54,24 +54,29 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
   const [userFilterVersion, setUserFilterVersion] = useState("");
   const [selectedUserRow, setSelectedUserRow] = useState<any>(null);
 
-  // Flatten all features from all vendors
-  const allFeatures = Object.entries(allLicenses.vendors).flatMap(([vendorKey, vendorData]: [string, any]) => {
-    if (!vendorData.parsed?.features) return [];
-    
-    return vendorData.parsed.features.map((feature: any) => ({
-      ...feature,
-      vendor: vendorData.vendorName,
-      vendorKey,
-      vendorColor: vendorData.color
-    }));
-  });
+  // Flatten all features from all vendors - memoized for performance
+  const allFeatures = useMemo(() => {
+    return Object.entries(allLicenses?.vendors || {}).flatMap(([vendorKey, vendorData]: [string, any]) => {
+      if (!vendorData.parsed?.features) return [];
+      
+      return vendorData.parsed.features.map((feature: any) => ({
+        ...feature,
+        vendor: vendorData.vendorName,
+        vendorKey,
+        vendorColor: vendorData.color
+      }));
+    });
+  }, [allLicenses]);
 
-  const filteredFeatures = allFeatures.filter(feature => {
-    const matchesSearch = feature.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         feature.vendor.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter = filterVendor === "all" || feature.vendorKey === filterVendor;
-    return matchesSearch && matchesFilter;
-  });
+  // Filter features - memoized for performance
+  const filteredFeatures = useMemo(() => {
+    return allFeatures.filter(feature => {
+      const matchesSearch = feature.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           feature.vendor.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesFilter = filterVendor === "all" || feature.vendorKey === filterVendor;
+      return matchesSearch && matchesFilter;
+    });
+  }, [allFeatures, searchTerm, filterVendor]);
 
   const getStatusVariant = (usagePercentage: number) => {
     if (usagePercentage >= 90) return "destructive";
@@ -235,7 +240,7 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" data-license-table>
       {/* Main Filters */}
       <Card className="premium-card bg-gradient-to-br from-card to-secondary/20">
         <CardHeader className="pb-4">
@@ -683,7 +688,7 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
                   {/* Multiple License Details Modal */}
                   {selectedUserRow && (
                     <Dialog open={!!selectedUserRow} onOpenChange={() => setSelectedUserRow(null)}>
-                      <DialogContent className="max-w-4xl">
+                      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                         <DialogHeader>
                           <DialogTitle className="flex items-center gap-2">
                             <User className="h-5 w-5 text-destructive" />
@@ -693,14 +698,14 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
                         <div className="space-y-4">
                           <Card className="premium-card bg-gradient-to-br from-card to-secondary/20">
                             <CardContent className="p-4">
-                              <div className="rounded-lg border overflow-hidden">
+                              <div className="rounded-lg border overflow-auto max-h-[60vh]">
                                 <Table>
                                   <TableHeader>
-                                                                         <TableRow className="bg-muted/30">
-                                       <TableHead className="font-semibold">Start Time</TableHead>
-                                       <TableHead className="font-semibold">Days Since Opened</TableHead>
-                                       <TableHead className="font-semibold">Version</TableHead>
-                                     </TableRow>
+                                    <TableRow className="bg-muted/30">
+                                      <TableHead className="font-semibold">Start Time</TableHead>
+                                      <TableHead className="font-semibold">Days Since Opened</TableHead>
+                                      <TableHead className="font-semibold">Version</TableHead>
+                                    </TableRow>
                                   </TableHeader>
                                   <TableBody>
                                     {getDetailedUserData(selectedFeature)

@@ -95,7 +95,6 @@ export interface StatusResponse {
 class ApiService {
   private async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
     const url = `${API_BASE_URL}${endpoint}`;
-    console.log(`🌐 Making API request to: ${url}`);
     
     try {
       const response = await fetch(url, {
@@ -106,17 +105,13 @@ class ApiService {
         ...options,
       });
       
-      console.log(`📡 Response status: ${response.status} ${response.statusText}`);
-      
       if (!response.ok) {
         const errorText = await response.text();
-        console.error(`❌ API request failed: ${response.status} ${response.statusText}`);
-        console.error(`❌ Error details: ${errorText}`);
+        console.error(`❌ API request failed: ${response.status} ${response.statusText} - ${errorText}`);
         throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
       }
       
       const data = await response.json();
-      console.log(`✅ API request successful:`, data);
       return data;
     } catch (error) {
       console.error('❌ API request failed:', error);

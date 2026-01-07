@@ -21,7 +21,7 @@ import {
   Gauge
 } from "lucide-react";
 import { useLicenses, useHealthCheck, useDataSourceStatus } from "@/hooks/useLicenses";
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { StatusModal } from "./StatusModal";
 import { useToast } from "@/hooks/use-toast";
 
@@ -54,8 +54,8 @@ export const Dashboard = () => {
     message: ''
   });
 
-  // Calculate statistics based on selected vendor filter
-  const getFilteredStats = () => {
+  // Calculate statistics based on selected vendor filter - memoized for performance
+  const overallStats = useMemo(() => {
     const stats = {
       totalLicenses: 0,
       totalUsed: 0,
@@ -66,27 +66,19 @@ export const Dashboard = () => {
     };
 
     if (allLicenses?.vendors) {
-      console.log('🔍 License data for usage calculation:', allLicenses.vendors);
-      
       Object.entries(allLicenses.vendors).forEach(([vendorKey, vendorData]: [string, any]) => {
         // Skip if vendor filter is set and doesn't match
         if (selectedVendorFilter !== "all" && vendorKey !== selectedVendorFilter) {
           return;
         }
         
-        console.log(`📊 Vendor ${vendorData.vendorName} data:`, vendorData.parsed);
-        
         if (vendorData.parsed?.summary) {
-          console.log(`📈 ${vendorData.vendorName} summary:`, vendorData.parsed.summary);
-          
           stats.totalLicenses += vendorData.parsed.summary.totalLicenses || 0;
           stats.totalUsed += vendorData.parsed.summary.totalUsed || 0;
           stats.totalAvailable += vendorData.parsed.summary.totalAvailable || 0;
           stats.totalFeatures += vendorData.parsed.summary.totalFeatures || 0;
           stats.activeUsers += vendorData.parsed.features?.reduce((sum: number, feature: any) => 
             sum + (feature.users?.length || 0), 0) || 0;
-        } else {
-          console.log(`⚠️ No parsed summary for ${vendorData.vendorName}`);
         }
       });
       
@@ -99,43 +91,23 @@ export const Dashboard = () => {
     }
     
     return stats;
-  };
+  }, [allLicenses, selectedVendorFilter]);
 
-  const overallStats = getFilteredStats();
+  const overallUsage = useMemo(() => {
+    return overallStats.totalLicenses > 0 
+      ? Math.round((overallStats.totalUsed / overallStats.totalLicenses) * 100)
+      : 0;
+  }, [overallStats]);
 
-  console.log('📊 Overall stats calculated:', overallStats);
-
-  const overallUsage = overallStats.totalLicenses > 0 
-    ? Math.round((overallStats.totalUsed / overallStats.totalLicenses) * 100)
-    : 0;
-
-  const getSystemHealthStatus = () => {
+  const healthStatus = useMemo(() => {
     if (isSystemOffline) return { status: 'error', text: 'System Offline', icon: <AlertTriangle className="h-4 w-4 text-destructive" /> };
     if (isSystemDegraded) return { status: 'warning', text: 'System Degraded', icon: <AlertTriangle className="h-4 w-4 text-warning" /> };
     if (isSystemLive) return { status: 'success', text: 'System Live', icon: <Shield className="h-4 w-4 text-success" /> };
     if (!isHealthy) return { status: 'error', text: 'Backend Offline', icon: <AlertTriangle className="h-4 w-4 text-destructive" /> };
     return { status: 'warning', text: 'Unknown Status', icon: <AlertTriangle className="h-4 w-4 text-warning" /> };
-  };
+  }, [isSystemOffline, isSystemDegraded, isSystemLive, isHealthy]);
 
-  const healthStatus = getSystemHealthStatus();
-
-  const getDataSourceIcon = (vendor: string) => {
-    if (!allLicenses?.vendors?.[vendor]) return <Database className="h-4 w-4 text-muted-foreground" />;
-    
-    const dataSource = allLicenses.vendors[vendor].dataSource;
-    switch (dataSource) {
-      case 'file':
-        return <FileText className="h-4 w-4 text-warning" />;
-      case 'lmstat':
-        return <Server className="h-4 w-4 text-success" />;
-      case 'error':
-        return <AlertTriangle className="h-4 w-4 text-destructive" />;
-      default:
-        return <Database className="h-4 w-4 text-muted-foreground" />;
-    }
-  };
-
-  const getDataSourceBadge = (vendor: string) => {
+  const getDataSourceBadge = useCallback((vendor: string) => {
     if (!allLicenses?.vendors?.[vendor]) return null;
     
     const vendorData = allLicenses.vendors[vendor];
@@ -155,7 +127,20 @@ export const Dashboard = () => {
       default:
         return null;
     }
-  };
+  }, [allLicenses]);
+
+  // Memoize the click handler to prevent unnecessary re-renders
+  const handleCardClick = useCallback((vendorKey: string) => {
+    // Filter to show only this vendor's data
+    setSelectedVendorFilter(vendorKey);
+    // Scroll to the table section after a brief delay to ensure DOM is updated
+    setTimeout(() => {
+      const tableElement = document.querySelector('[data-license-table]');
+      if (tableElement) {
+        tableElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  }, []);
 
   const formatLastRefreshTime = () => {
     if (!lastRefreshTime) return 'Never';
@@ -349,6 +334,7 @@ export const Dashboard = () => {
                     icon={getIcon(vendorKey)}
                     badge={getDataSourceBadge(vendorKey)}
                     expiryDate={getEarliestExpiry()}
+                    onClick={() => handleCardClick(vendorKey)}
                   />
                 );
               })}

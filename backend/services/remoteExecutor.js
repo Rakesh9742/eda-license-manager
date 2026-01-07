@@ -13,7 +13,7 @@ const SSH_CONFIG = {
   username: process.env.VNC_SERVER_USERNAME || 'root',
   password: process.env.VNC_SERVER_PASSWORD || '',
   keyPath: process.env.VNC_SERVER_KEY_PATH || '',
-  timeout: parseInt(process.env.VNC_SSH_TIMEOUT || '30000') // 30 seconds
+  timeout: parseInt(process.env.VNC_SSH_TIMEOUT || '10000') // 10 seconds (reduced for faster failure detection)
 };
 
 /**
@@ -28,14 +28,15 @@ export async function executeRemoteCommand(command, env = {}) {
     console.log(`📋 Command: ${command}`);
     
     // Build SSH command with environment variables
-    let sshCommand = `ssh -o ConnectTimeout=${SSH_CONFIG.timeout / 1000} -o StrictHostKeyChecking=no`;
+    const connectTimeout = Math.min(SSH_CONFIG.timeout / 1000, 10); // Max 10 seconds for connection
+    let sshCommand = `ssh -o ConnectTimeout=${connectTimeout} -o StrictHostKeyChecking=no -o ServerAliveInterval=5 -o ServerAliveCountMax=2`;
     
     // Use key authentication if key path is provided, otherwise use password
     if (SSH_CONFIG.keyPath && SSH_CONFIG.keyPath.trim()) {
       sshCommand += ` -i ${SSH_CONFIG.keyPath}`;
     } else {
       // For password authentication, we'll use sshpass
-      sshCommand = `sshpass -p '${SSH_CONFIG.password}' ssh -o ConnectTimeout=${SSH_CONFIG.timeout / 1000} -o StrictHostKeyChecking=no`;
+      sshCommand = `sshpass -p '${SSH_CONFIG.password}' ssh -o ConnectTimeout=${connectTimeout} -o StrictHostKeyChecking=no -o ServerAliveInterval=5 -o ServerAliveCountMax=2`;
     }
     
     sshCommand += ` -p ${SSH_CONFIG.port}`;
@@ -56,8 +57,10 @@ export async function executeRemoteCommand(command, env = {}) {
     
     console.log(`🔧 Full SSH command: ${sshCommand}`);
     
+    // Use a shorter timeout for command execution (max 15 seconds total)
+    const commandTimeout = Math.min(SSH_CONFIG.timeout + 5000, 15000);
     const { stdout, stderr } = await execAsync(sshCommand, {
-      timeout: SSH_CONFIG.timeout
+      timeout: commandTimeout
     });
     
     if (stderr && !stderr.includes('Warning: Permanently added')) {
@@ -85,11 +88,11 @@ export async function testSSHConnection() {
     
     if (SSH_CONFIG.keyPath && SSH_CONFIG.keyPath.trim()) {
       // Use key authentication
-      sshTestCommand = `ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no -o BatchMode=yes`;
+      sshTestCommand = `ssh -o ConnectTimeout=5 -o StrictHostKeyChecking=no -o BatchMode=yes -o ServerAliveInterval=3 -o ServerAliveCountMax=1`;
       sshTestCommand += ` -i ${SSH_CONFIG.keyPath}`;
     } else {
       // Use password authentication
-      sshTestCommand = `sshpass -p '${SSH_CONFIG.password}' ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no`;
+      sshTestCommand = `sshpass -p '${SSH_CONFIG.password}' ssh -o ConnectTimeout=5 -o StrictHostKeyChecking=no -o ServerAliveInterval=3 -o ServerAliveCountMax=1`;
     }
     
     sshTestCommand += ` -p ${SSH_CONFIG.port}`;
@@ -97,7 +100,7 @@ export async function testSSHConnection() {
     sshTestCommand += ` "echo 'SSH connection successful'"`;
     
     const { stdout, stderr } = await execAsync(sshTestCommand, {
-      timeout: 15000
+      timeout: 8000 // Reduced timeout for faster failure detection
     });
     
     console.log(`✅ SSH connection test successful`);

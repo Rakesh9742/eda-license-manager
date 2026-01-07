@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import compression from 'compression';
 import { getAllLicenseData, getVendorLicenseDataByVendor, testLicenseServerConnections } from './services/lmstatService.js';
 
 dotenv.config();
@@ -14,8 +15,25 @@ const BACKEND_PORT = process.env.BACKEND_PORT || PORT;
 const CORS_ORIGIN = process.env.CORS_ORIGIN || 'http://localhost:5173';
 const ALLOWED_ORIGINS = CORS_ORIGIN.split(',').map(origin => origin.trim());
 const API_BASE_PATH = process.env.API_BASE_PATH || '/api';
+const REQUEST_TIMEOUT = parseInt(process.env.REQUEST_TIMEOUT || '60000'); // 60 seconds default
 
 // Middleware
+// Enable compression for faster response times
+app.use(compression());
+
+// Request timeout middleware
+app.use((req, res, next) => {
+  req.setTimeout(REQUEST_TIMEOUT, () => {
+    if (!res.headersSent) {
+      res.status(504).json({ 
+        error: 'Request timeout', 
+        message: 'The request took too long to process' 
+      });
+    }
+  });
+  next();
+});
+
 app.use(cors({
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
@@ -111,7 +129,16 @@ app.get(`${API_BASE_PATH}/status`, (req, res) => {
 // Get license data (initial load from lmstat commands)
 app.get(`${API_BASE_PATH}/licenses`, async (req, res) => {
   try {
-    const licenseData = await getAllLicenseData();
+    // Set a timeout for the entire operation
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('License data fetch timeout')), REQUEST_TIMEOUT - 5000)
+    );
+    
+    const licenseData = await Promise.race([
+      getAllLicenseData(),
+      timeoutPromise
+    ]);
+    
     res.json(licenseData);
   } catch (error) {
     console.error('Error fetching license data:', error);
@@ -125,13 +152,24 @@ app.get(`${API_BASE_PATH}/licenses`, async (req, res) => {
 // Force refresh from lmstat commands (called when user clicks refresh button)
 app.post(`${API_BASE_PATH}/licenses/refresh`, async (req, res) => {
   try {
+    // Set a timeout for the entire operation
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('License data refresh timeout')), REQUEST_TIMEOUT - 5000)
+    );
+    
     const { vendor } = req.body; // Optional: specific vendor to refresh
     if (vendor) {
-      const licenseData = await getVendorLicenseDataByVendor(vendor);
+      const licenseData = await Promise.race([
+        getVendorLicenseDataByVendor(vendor),
+        timeoutPromise
+      ]);
       res.json(licenseData);
     } else {
       // Force refresh by passing true to bypass cache
-      const licenseData = await getAllLicenseData(true);
+      const licenseData = await Promise.race([
+        getAllLicenseData(true),
+        timeoutPromise
+      ]);
       res.json(licenseData);
     }
   } catch (error) {
@@ -146,8 +184,16 @@ app.post(`${API_BASE_PATH}/licenses/refresh`, async (req, res) => {
 // Get license data for specific vendor
 app.get(`${API_BASE_PATH}/licenses/:vendor`, async (req, res) => {
   try {
+    // Set a timeout for the entire operation
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Vendor license data fetch timeout')), REQUEST_TIMEOUT - 5000)
+    );
+    
     const { vendor } = req.params;
-    const licenseData = await getVendorLicenseDataByVendor(vendor);
+    const licenseData = await Promise.race([
+      getVendorLicenseDataByVendor(vendor),
+      timeoutPromise
+    ]);
     res.json(licenseData);
   } catch (error) {
     console.error(`Error fetching ${req.params.vendor} license data:`, error);

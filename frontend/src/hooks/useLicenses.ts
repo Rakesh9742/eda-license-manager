@@ -12,10 +12,8 @@ export const useLicenses = (onStatusUpdate?: (type: 'success' | 'warning' | 'err
   } = useQuery({
     queryKey: ['licenses'],
     queryFn: async () => {
-      console.log('🔄 Making initial license data request...');
       try {
         const data = await apiService.getAllLicenses();
-        console.log('✅ Initial license data request successful:', data);
         return data;
       } catch (error) {
         console.error('❌ Initial license data request failed:', error);
@@ -23,16 +21,15 @@ export const useLicenses = (onStatusUpdate?: (type: 'success' | 'warning' | 'err
       }
     },
     refetchInterval: false, // Disable auto-refresh, only manual refresh
-    staleTime: 0, // Always consider data stale to force fresh requests
+    staleTime: 5 * 60 * 1000, // 5 minutes - matches backend cache timeout
+    gcTime: 10 * 60 * 1000, // Keep in cache for 10 minutes
     retry: 1, // Only retry once
   });
 
   const refreshMutation = useMutation({
     mutationFn: async () => {
-      console.log('🔄 Making refresh license data request...');
       try {
         const data = await apiService.forceRefresh();
-        console.log('✅ Refresh license data request successful:', data);
         return data;
       } catch (error) {
         console.error('❌ Refresh license data request failed:', error);
@@ -115,8 +112,6 @@ export const useHealthCheck = () => {
     enabled: true, // Run once on page load
   });
 
-  console.log('🏥 Health check data:', health);
-  console.log('🏥 Health check error:', error);
 
   return {
     health,
@@ -139,7 +134,8 @@ export const useDataSourceStatus = () => {
   } = useQuery({
     queryKey: ['status'],
     queryFn: apiService.getStatus,
-    refetchInterval: 10000, // Check status every 10 seconds
+    refetchInterval: 60000, // Check status every 60 seconds (reduced frequency for better performance)
+    staleTime: 30000, // Consider data fresh for 30 seconds
   });
 
   return {
