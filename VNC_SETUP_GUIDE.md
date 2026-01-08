@@ -25,14 +25,35 @@ Edit `backend/.env` file:
 ```bash
 # VNC Server Configuration (for remote license command execution)
 USE_VNC_SERVER=true
-VNC_SERVER_HOST=your-vnc-server-ip-or-hostname
+VNC_SERVER_HOST=192.168.92.34
 VNC_SERVER_PORT=22
-VNC_SERVER_USERNAME=your-username
-VNC_SERVER_KEY_PATH=/path/to/your/ssh/private/key
+VNC_SERVER_USERNAME=sashi
+VNC_SERVER_PASSWORD=your-password-here
+# Leave VNC_SERVER_KEY_PATH empty to use password authentication
+VNC_SERVER_KEY_PATH=
 VNC_SSH_TIMEOUT=30000
 ```
 
-### 2. SSH Key Setup (Recommended)
+**Important**: Replace `your-password-here` with your actual SSH password.
+
+### 2. Authentication Method
+
+You can use either SSH key authentication (recommended) or password authentication:
+
+#### Option A: Password Authentication (Current Setup)
+
+1. Set `VNC_SERVER_PASSWORD` in `.env` with your SSH password
+2. Leave `VNC_SERVER_KEY_PATH` empty
+3. **Note**: You need `sshpass` installed on your AWS server:
+   ```bash
+   # On Ubuntu/Debian
+   sudo apt-get install sshpass
+   
+   # On CentOS/RHEL
+   sudo yum install sshpass
+   ```
+
+#### Option B: SSH Key Setup (Recommended for Production)
 
 #### Option A: Use Existing SSH Key
 1. Copy your private key to the AWS server
@@ -45,17 +66,31 @@ VNC_SSH_TIMEOUT=30000
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/vnc_server_key
 
 # Copy public key to VNC server
-ssh-copy-id -i ~/.ssh/vnc_server_key.pub your-username@your-vnc-server-ip
+ssh-copy-id -i ~/.ssh/vnc_server_key.pub sashi@192.168.92.34
 
 # Update .env
 VNC_SERVER_KEY_PATH=~/.ssh/vnc_server_key
+VNC_SERVER_PASSWORD=  # Leave empty when using key
 ```
 
 ### 3. Test SSH Connection
 
 Test the SSH connection manually first:
+
+**For Password Authentication:**
 ```bash
-ssh -i /path/to/your/ssh/private/key your-username@your-vnc-server-ip
+# Install sshpass if not already installed
+sudo apt-get install sshpass  # Ubuntu/Debian
+# or
+sudo yum install sshpass     # CentOS/RHEL
+
+# Test connection
+sshpass -p 'your-password' ssh sashi@192.168.92.34 "echo 'Connection successful'"
+```
+
+**For SSH Key Authentication:**
+```bash
+ssh -i /path/to/your/ssh/private/key sashi@192.168.92.34
 ```
 
 ### 4. Verify License Commands on VNC Server
@@ -106,10 +141,12 @@ This will test all license server connections and show:
 ### Common Issues
 
 #### 1. SSH Connection Failed
-- **Check**: SSH key permissions (`chmod 600`)
-- **Check**: VNC server IP/hostname is correct
+- **Check**: `sshpass` is installed (for password authentication): `which sshpass`
+- **Check**: SSH key permissions (`chmod 600`) if using key authentication
+- **Check**: VNC server IP/hostname is correct (192.168.92.34)
 - **Check**: SSH service is running on VNC server
 - **Check**: Firewall allows SSH connections
+- **Check**: Password is correct in `.env` file
 
 #### 2. License Commands Not Found
 - **Check**: License tools are installed on VNC server
@@ -129,8 +166,15 @@ This will test all license server connections and show:
 ### Debug Commands
 
 #### Test SSH Connection
+
+**For Password Authentication:**
 ```bash
-ssh -v -i /path/to/key your-username@your-vnc-server-ip
+sshpass -p 'your-password' ssh -v sashi@192.168.92.34 "echo 'Test successful'"
+```
+
+**For SSH Key Authentication:**
+```bash
+ssh -v -i /path/to/key sashi@192.168.92.34
 ```
 
 #### Test License Commands Manually
@@ -161,8 +205,9 @@ tail -f backend/logs/app.log
 | `USE_VNC_SERVER` | Enable/disable VNC server usage | `false` | `true` |
 | `VNC_SERVER_HOST` | VNC server IP or hostname | - | `192.168.1.100` |
 | `VNC_SERVER_PORT` | SSH port on VNC server | `22` | `22` |
-| `VNC_SERVER_USERNAME` | SSH username | - | `root` |
-| `VNC_SERVER_KEY_PATH` | Path to SSH private key | - | `~/.ssh/id_rsa` |
+| `VNC_SERVER_USERNAME` | SSH username | - | `sashi` |
+| `VNC_SERVER_PASSWORD` | SSH password (if using password auth) | - | `your-password` |
+| `VNC_SERVER_KEY_PATH` | Path to SSH private key (leave empty for password auth) | - | `~/.ssh/id_rsa` |
 | `VNC_SSH_TIMEOUT` | SSH connection timeout (ms) | `30000` | `60000` |
 
 ## API Endpoints

@@ -86,7 +86,14 @@ async function executeLmstatCommand(vendor) {
     
     if (useRemote) {
       console.log(`🌐 Executing command on VNC server: ${process.env.VNC_SERVER_HOST}`);
-      const result = await executeRemoteCommand(vendorConfig.command, vendorConfig.env);
+      // Add timeout for remote commands (20 seconds max)
+      const REMOTE_TIMEOUT = 20000;
+      const result = await Promise.race([
+        executeRemoteCommand(vendorConfig.command, vendorConfig.env),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Remote command timeout after 20 seconds')), REMOTE_TIMEOUT)
+        )
+      ]);
       stdout = result.stdout;
       stderr = result.stderr;
     } else {
@@ -211,10 +218,22 @@ export async function getAllLicenseData(forceRefresh = false) {
     console.log(`📋 Processing ${vendorKeys.length} vendors:`, vendorKeys);
     
     // Execute all commands in parallel for better performance
+    // Add individual timeout for each vendor (20 seconds max per vendor)
+    const VENDOR_TIMEOUT = 20000; // 20 seconds per vendor
     const promises = vendorKeys.map(async (vendorKey) => {
       try {
         console.log(`📄 Processing vendor: ${vendorKey}`);
-        const result = await getVendorLicenseData(vendorKey);
+        
+        // Wrap in timeout to prevent hanging
+        const timeoutPromise = new Promise((_, reject) => 
+          setTimeout(() => reject(new Error(`Vendor ${vendorKey} timeout after ${VENDOR_TIMEOUT}ms`)), VENDOR_TIMEOUT)
+        );
+        
+        const result = await Promise.race([
+          getVendorLicenseData(vendorKey),
+          timeoutPromise
+        ]);
+        
         console.log(`✅ Successfully processed ${vendorKey}`);
         return { vendorKey, result };
       } catch (error) {
@@ -223,8 +242,8 @@ export async function getAllLicenseData(forceRefresh = false) {
           vendorKey,
           result: {
             vendor: vendorKey,
-            vendorName: vendors[vendorKey].name,
-            color: vendors[vendorKey].color,
+            vendorName: vendors[vendorKey]?.name || vendorKey,
+            color: vendors[vendorKey]?.color || '#666666',
             error: error.message,
             timestamp: new Date().toISOString(),
             dataSource: 'error'
@@ -233,10 +252,32 @@ export async function getAllLicenseData(forceRefresh = false) {
       }
     });
     
-    const vendorResults = await Promise.all(promises);
+    // Use Promise.allSettled to ensure all vendors are processed even if some fail
+    const vendorResults = await Promise.allSettled(promises);
+    
+    // Extract results from settled promises
+    const processedResults = vendorResults.map((settled, index) => {
+      if (settled.status === 'fulfilled') {
+        return settled.value;
+      } else {
+        const vendorKey = vendorKeys[index];
+        console.error(`❌ Promise rejected for ${vendorKey}:`, settled.reason);
+        return {
+          vendorKey,
+          result: {
+            vendor: vendorKey,
+            vendorName: vendors[vendorKey]?.name || vendorKey,
+            color: vendors[vendorKey]?.color || '#666666',
+            error: settled.reason?.message || 'Unknown error',
+            timestamp: new Date().toISOString(),
+            dataSource: 'error'
+          }
+        };
+      }
+    });
     
     // Convert array to object
-    vendorResults.forEach(({ vendorKey, result }) => {
+    processedResults.forEach(({ vendorKey, result }) => {
       results[vendorKey] = result;
     });
     

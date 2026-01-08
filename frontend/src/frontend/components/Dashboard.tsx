@@ -39,8 +39,13 @@ export const Dashboard = () => {
       });
     }
   );
-  const { isHealthy, isSystemLive, isSystemDegraded, isSystemOffline, systemStatus, refetch: refetchHealth } = useHealthCheck();
-  const { dataSources, lastRefreshTime } = useDataSourceStatus();
+  const { isHealthy, isSystemLive, isSystemDegraded, isSystemOffline, systemStatus, refetch: refetchHealth, isLoading: isHealthLoading } = useHealthCheck();
+  const { dataSources, lastRefreshTime, isLoading: isStatusLoading } = useDataSourceStatus();
+  
+  // Determine if we should show full-page loading (block UI until ready)
+  // Show loading screen until we have license data (or error) AND health check is done
+  const isInitialLoading = (isLoading && !allLicenses && !error) || (isHealthLoading && !error);
+  const shouldShowLoading = isInitialLoading;
   const [selectedVendorFilter, setSelectedVendorFilter] = useState<string>("all");
   const [statusModal, setStatusModal] = useState<{
     isOpen: boolean;
@@ -147,6 +152,35 @@ export const Dashboard = () => {
     return new Date(lastRefreshTime).toLocaleString();
   };
 
+  // Show full-page loading screen until all critical data is ready
+  // This blocks all interaction until the page is fully responsive
+  if (shouldShowLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/10 flex items-center justify-center fixed inset-0 z-50 pointer-events-auto">
+        <div className="flex flex-col items-center gap-6">
+          {/* Animated Logo/Icon */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+            <div className="relative bg-card/50 backdrop-blur-sm p-8 rounded-2xl border shadow-lg">
+              <RefreshCw className="h-12 w-12 animate-spin text-primary" />
+            </div>
+          </div>
+          
+          {/* Loading Text */}
+          <div className="text-center space-y-2">
+            <h2 className="text-2xl font-bold premium-title">EDA License Manager</h2>
+            <p className="text-muted-foreground">Loading license data from servers...</p>
+            <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="h-2 w-2 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+              <div className="h-2 w-2 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+              <div className="h-2 w-2 bg-primary rounded-full animate-bounce"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/10">
       {/* Premium Header */}
@@ -202,20 +236,27 @@ export const Dashboard = () => {
       </header>
 
       <main className="container mx-auto px-6 py-8 space-y-8">
-        {isLoading && (
-          <div className="premium-loading flex items-center justify-center py-16">
-            <div className="flex items-center gap-3 bg-card/50 backdrop-blur-sm px-6 py-4 rounded-lg border">
-              <RefreshCw className="h-6 w-6 animate-spin text-primary" />
-              <span className="font-medium">Loading license data from servers...</span>
-            </div>
-          </div>
-        )}
-
         {error && (
           <div className="premium-card bg-destructive/5 border-destructive/20 rounded-xl p-6">
-            <div className="flex items-center gap-3 text-destructive">
-              <AlertTriangle className="h-5 w-5" />
-              <span className="font-medium">Failed to load license data. Please check your connection and try again.</span>
+            <div className="flex flex-col gap-3 text-destructive">
+              <div className="flex items-center gap-3">
+                <AlertTriangle className="h-5 w-5" />
+                <span className="font-medium">Failed to load license data</span>
+              </div>
+              <p className="text-sm text-muted-foreground ml-8">
+                {error instanceof Error ? error.message : 'Please check your connection and try again.'}
+              </p>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  window.location.reload();
+                }}
+                className="ml-8 w-fit"
+              >
+                <RefreshCw className="h-4 w-4 mr-2" />
+                Reload Page
+              </Button>
             </div>
           </div>
         )}

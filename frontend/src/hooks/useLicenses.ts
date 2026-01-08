@@ -24,6 +24,9 @@ export const useLicenses = (onStatusUpdate?: (type: 'success' | 'warning' | 'err
     staleTime: 5 * 60 * 1000, // 5 minutes - matches backend cache timeout
     gcTime: 10 * 60 * 1000, // Keep in cache for 10 minutes
     retry: 1, // Only retry once
+    retryDelay: 2000, // Wait 2 seconds before retry
+    refetchOnWindowFocus: false, // Don't refetch on window focus to prevent hanging
+    refetchOnReconnect: false, // Don't auto-refetch on reconnect
   });
 
   const refreshMutation = useMutation({
@@ -110,6 +113,10 @@ export const useHealthCheck = () => {
     queryFn: apiService.getHealth,
     refetchInterval: false, // Disable automatic health checks
     enabled: true, // Run once on page load
+    retry: 1, // Only retry once
+    retryDelay: 1000, // Wait 1 second before retry
+    refetchOnWindowFocus: false, // Don't refetch on window focus
+    refetchOnReconnect: false, // Don't auto-refetch on reconnect
   });
 
 
@@ -136,6 +143,9 @@ export const useDataSourceStatus = () => {
     queryFn: apiService.getStatus,
     refetchInterval: 60000, // Check status every 60 seconds (reduced frequency for better performance)
     staleTime: 30000, // Consider data fresh for 30 seconds
+    retry: 1, // Only retry once
+    retryDelay: 2000, // Wait 2 seconds before retry
+    refetchOnWindowFocus: false, // Don't refetch on window focus
   });
 
   return {

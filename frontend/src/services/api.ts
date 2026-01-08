@@ -93,8 +93,17 @@ export interface StatusResponse {
 }
 
 class ApiService {
-  private async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
+  // Default timeout: 30 seconds for most requests, 60 seconds for license data
+  private readonly DEFAULT_TIMEOUT = 30000;
+  private readonly LICENSE_TIMEOUT = 60000;
+
+  private async request<T>(endpoint: string, options?: RequestInit & { timeout?: number }): Promise<T> {
     const url = `${API_BASE_URL}${endpoint}`;
+    const timeout = options?.timeout || this.DEFAULT_TIMEOUT;
+    
+    // Create AbortController for timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
     
     try {
       const response = await fetch(url, {
@@ -102,8 +111,11 @@ class ApiService {
           'Content-Type': 'application/json',
           ...options?.headers,
         },
+        signal: controller.signal,
         ...options,
       });
+      
+      clearTimeout(timeoutId);
       
       if (!response.ok) {
         const errorText = await response.text();
@@ -113,7 +125,14 @@ class ApiService {
       
       const data = await response.json();
       return data;
-    } catch (error) {
+    } catch (error: any) {
+      clearTimeout(timeoutId);
+      
+      if (error.name === 'AbortError') {
+        console.error(`❌ API request timeout after ${timeout}ms: ${url}`);
+        throw new Error(`Request timeout: The server took too long to respond (${timeout}ms)`);
+      }
+      
       console.error('❌ API request failed:', error);
       throw error;
     }
@@ -137,17 +156,18 @@ class ApiService {
   }
 
   getAllLicenses = async (): Promise<AllLicenseData> => {
-    return this.request('/licenses');
+    return this.request('/licenses', { timeout: this.LICENSE_TIMEOUT });
   }
 
   getVendorLicenses = async (vendor: string): Promise<LicenseData> => {
-    return this.request(`/licenses/${vendor}`);
+    return this.request(`/licenses/${vendor}`, { timeout: this.LICENSE_TIMEOUT });
   }
 
   forceRefresh = async (vendor?: string): Promise<AllLicenseData> => {
     return this.request('/licenses/refresh', {
       method: 'POST',
       body: JSON.stringify({ vendor }),
+      timeout: this.LICENSE_TIMEOUT,
     });
   }
 
