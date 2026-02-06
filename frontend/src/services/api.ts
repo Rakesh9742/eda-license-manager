@@ -117,13 +117,27 @@ class ApiService {
       
       clearTimeout(timeoutId);
       
+      const text = await response.text();
+      const contentType = response.headers.get('content-type') || '';
+
       if (!response.ok) {
-        const errorText = await response.text();
-        console.error(`❌ API request failed: ${response.status} ${response.statusText} - ${errorText}`);
-        throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
+        console.error(`❌ API request failed: ${response.status} ${response.statusText} - ${text.slice(0, 200)}`);
+        throw new Error(`HTTP error! status: ${response.status} - ${text.slice(0, 200)}`);
       }
-      
-      const data = await response.json();
+
+      // Server returned HTML instead of JSON (e.g. SPA fallback or wrong URL)
+      if (text.trimStart().startsWith('<') || contentType.includes('text/html')) {
+        console.error('❌ API request failed: server returned HTML instead of JSON. Check that the backend is running and VITE_API_URL points to the API (e.g. http://host:3002/api).');
+        throw new Error('API returned HTML instead of JSON. Is the backend running on this URL?');
+      }
+
+      let data: T;
+      try {
+        data = JSON.parse(text) as T;
+      } catch {
+        console.error('❌ API request failed: response is not valid JSON:', text.slice(0, 200));
+        throw new Error('Invalid JSON from API');
+      }
       return data;
     } catch (error: any) {
       clearTimeout(timeoutId);

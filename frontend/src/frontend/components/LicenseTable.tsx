@@ -25,7 +25,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Search, Filter, Users, Clock, BarChart3, TrendingUp, Monitor, User, Calendar, Server, Package, CheckCircle, AlertCircle, XCircle, Activity } from "lucide-react";
+import { Search, Filter, Users, Clock, BarChart3, TrendingUp, Monitor, User, Calendar, Server, Package, CheckCircle, AlertCircle, XCircle, Activity, ArrowUpDown, ArrowUp, ArrowDown } from "lucide-react";
 
 interface LicenseTableProps {
   allLicenses: any;
@@ -47,12 +47,38 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
   const [isUserModalOpen, setIsUserModalOpen] = useState(false);
   
+  // Sorting state for main table
+  const [sortColumn, setSortColumn] = useState<string | null>(null);
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
+  
+  // Sorting state for user details table
+  const [userSortColumn, setUserSortColumn] = useState<string | null>(null);
+  const [userSortDirection, setUserSortDirection] = useState<"asc" | "desc">("asc");
+  
   // User details modal filters
   const [userFilterUsername, setUserFilterUsername] = useState("");
   const [userFilterUsageCount, setUserFilterUsageCount] = useState("");
   const [userFilterDays, setUserFilterDays] = useState("");
   const [userFilterVersion, setUserFilterVersion] = useState("");
   const [selectedUserRow, setSelectedUserRow] = useState<any>(null);
+
+  // Helper function to get unique user count
+  const getUniqueUserCount = (feature: any): number => {
+    if (!feature || !feature.users || !Array.isArray(feature.users)) {
+      return 0;
+    }
+    
+    const userMap = new Map<string, boolean>();
+    
+    feature.users.forEach((user: any) => {
+      if (user && user.username && user.hostname) {
+        const key = `${user.username}@${user.hostname}`;
+        userMap.set(key, true);
+      }
+    });
+    
+    return userMap.size;
+  };
 
   // Flatten all features from all vendors - memoized for performance
   const allFeatures = useMemo(() => {
@@ -68,15 +94,52 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
     });
   }, [allLicenses]);
 
-  // Filter features - memoized for performance
+  // Filter and sort features - memoized for performance
   const filteredFeatures = useMemo(() => {
-    return allFeatures.filter(feature => {
+    let filtered = allFeatures.filter(feature => {
       const matchesSearch = feature.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            feature.vendor.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesFilter = filterVendor === "all" || feature.vendorKey === filterVendor;
       return matchesSearch && matchesFilter;
     });
-  }, [allFeatures, searchTerm, filterVendor]);
+    
+    // Apply sorting if a column is selected
+    if (sortColumn) {
+      filtered = [...filtered].sort((a, b) => {
+        let aValue: number;
+        let bValue: number;
+        
+        switch (sortColumn) {
+          case "totalLicenses":
+            aValue = a.totalLicenses || 0;
+            bValue = b.totalLicenses || 0;
+            break;
+          case "usedLicenses":
+            aValue = a.usedLicenses || 0;
+            bValue = b.usedLicenses || 0;
+            break;
+          case "availableLicenses":
+            aValue = a.availableLicenses || 0;
+            bValue = b.availableLicenses || 0;
+            break;
+          case "userCount":
+            aValue = getUniqueUserCount(a);
+            bValue = getUniqueUserCount(b);
+            break;
+          default:
+            return 0;
+        }
+        
+        if (sortDirection === "asc") {
+          return aValue - bValue;
+        } else {
+          return bValue - aValue;
+        }
+      });
+    }
+    
+    return filtered;
+  }, [allFeatures, searchTerm, filterVendor, sortColumn, sortDirection]);
 
   const getStatusVariant = (usagePercentage: number) => {
     if (usagePercentage >= 90) return "destructive";
@@ -115,6 +178,9 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
     setUserFilterUsageCount("");
     setUserFilterDays("");
     setUserFilterVersion("");
+    // Reset user table sorting
+    setUserSortColumn(null);
+    setUserSortDirection("asc");
   };
 
   const getUserDetails = (feature: any): UserDetail[] => {
@@ -145,23 +211,6 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
     });
     
     return Array.from(userMap.values()).sort((a, b) => b.usageCount - a.usageCount);
-  };
-
-  const getUniqueUserCount = (feature: any): number => {
-    if (!feature || !feature.users || !Array.isArray(feature.users)) {
-      return 0;
-    }
-    
-    const userMap = new Map<string, boolean>();
-    
-    feature.users.forEach((user: any) => {
-      if (user && user.username && user.hostname) {
-        const key = `${user.username}@${user.hostname}`;
-        userMap.set(key, true);
-      }
-    });
-    
-    return userMap.size;
   };
 
   // Calculate days since license was opened
@@ -213,11 +262,11 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
     }));
   };
 
-  // Filter detailed user data
+  // Filter and sort detailed user data
   const getFilteredUserData = (feature: any): any[] => {
     const userData = getDetailedUserData(feature);
     
-    return userData.filter(user => {
+    let filtered = userData.filter(user => {
       // Calculate usage count for this specific user
       const userUsageCount = userData.filter(u => 
         u.username === user.username && u.hostname === user.hostname
@@ -237,6 +286,85 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
       
       return matchesUsername && matchesUsageCount && matchesDays && matchesVersion;
     });
+    
+    // Apply sorting if a column is selected
+    if (userSortColumn) {
+      filtered = [...filtered].sort((a, b) => {
+        let aValue: number;
+        let bValue: number;
+        
+        switch (userSortColumn) {
+          case "usageCount":
+            const aUsageCount = userData.filter(u => 
+              u.username === a.username && u.hostname === a.hostname
+            ).length;
+            const bUsageCount = userData.filter(u => 
+              u.username === b.username && u.hostname === b.hostname
+            ).length;
+            aValue = aUsageCount;
+            bValue = bUsageCount;
+            break;
+          case "daysSince":
+            aValue = a.daysSince || 0;
+            bValue = b.daysSince || 0;
+            break;
+          default:
+            return 0;
+        }
+        
+        if (userSortDirection === "asc") {
+          return aValue - bValue;
+        } else {
+          return bValue - aValue;
+        }
+      });
+    }
+    
+    return filtered;
+  };
+  
+  // Handle main table column sort
+  const handleSort = (column: string) => {
+    if (sortColumn === column) {
+      // Toggle direction if same column
+      setSortDirection(sortDirection === "asc" ? "desc" : "asc");
+    } else {
+      // Set new column and default to ascending
+      setSortColumn(column);
+      setSortDirection("asc");
+    }
+  };
+  
+  // Handle user details table column sort
+  const handleUserSort = (column: string) => {
+    if (userSortColumn === column) {
+      // Toggle direction if same column
+      setUserSortDirection(userSortDirection === "asc" ? "desc" : "asc");
+    } else {
+      // Set new column and default to ascending
+      setUserSortColumn(column);
+      setUserSortDirection("asc");
+    }
+  };
+  
+  // Get sort icon for main table
+  const getSortIcon = (column: string) => {
+    if (sortColumn !== column) {
+      return <ArrowUpDown className="h-4 w-4 opacity-50" />;
+    }
+    return sortDirection === "asc" ? 
+      <ArrowUp className="h-4 w-4" /> : 
+      <ArrowDown className="h-4 w-4" />;
+  };
+  
+  // Get sort icon for user details table
+  const getUserSortIcon = (column: string) => {
+    if (userSortColumn !== column) {
+      return <ArrowUpDown className="h-4 w-4 opacity-50" />;
+    }
+    return userSortDirection === "asc" ? 
+      <ArrowUp className="h-4 w-4" /> : 
+      <ArrowDown className="h-4 w-4" />;
   };
 
   return (
@@ -307,28 +435,44 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
                       Expiry
                     </div>
                   </TableHead>
-                  <TableHead className="font-semibold text-foreground">
+                  <TableHead 
+                    className="font-semibold text-foreground cursor-pointer hover:bg-muted/50 transition-colors"
+                    onClick={() => handleSort("totalLicenses")}
+                  >
                     <div className="flex items-center gap-2">
                       <BarChart3 className="h-4 w-4" />
                       Total Licenses
+                      {getSortIcon("totalLicenses")}
                     </div>
                   </TableHead>
-                  <TableHead className="font-semibold text-foreground">
+                  <TableHead 
+                    className="font-semibold text-foreground cursor-pointer hover:bg-muted/50 transition-colors"
+                    onClick={() => handleSort("usedLicenses")}
+                  >
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4" />
                       License in Use
+                      {getSortIcon("usedLicenses")}
                     </div>
                   </TableHead>
-                  <TableHead className="font-semibold text-foreground">
+                  <TableHead 
+                    className="font-semibold text-foreground cursor-pointer hover:bg-muted/50 transition-colors"
+                    onClick={() => handleSort("availableLicenses")}
+                  >
                     <div className="flex items-center gap-2">
                       <AlertCircle className="h-4 w-4" />
                       License Available
+                      {getSortIcon("availableLicenses")}
                     </div>
                   </TableHead>
-                  <TableHead className="font-semibold text-foreground">
+                  <TableHead 
+                    className="font-semibold text-foreground cursor-pointer hover:bg-muted/50 transition-colors"
+                    onClick={() => handleSort("userCount")}
+                  >
                     <div className="flex items-center gap-2">
                       <Users className="h-4 w-4" />
                       User Count
+                      {getSortIcon("userCount")}
                     </div>
                   </TableHead>
                 </TableRow>
@@ -580,10 +724,14 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
                               Username
                             </div>
                           </TableHead>
-                          <TableHead className="font-semibold">
+                          <TableHead 
+                            className="font-semibold cursor-pointer hover:bg-muted/50 transition-colors"
+                            onClick={() => handleUserSort("usageCount")}
+                          >
                             <div className="flex items-center gap-2">
                               <BarChart3 className="h-4 w-4" />
                               Usage Count
+                              {getUserSortIcon("usageCount")}
                             </div>
                           </TableHead>
                           <TableHead className="font-semibold">
@@ -598,10 +746,14 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
                               Start Time
                             </div>
                           </TableHead>
-                          <TableHead className="font-semibold">
+                          <TableHead 
+                            className="font-semibold cursor-pointer hover:bg-muted/50 transition-colors"
+                            onClick={() => handleUserSort("daysSince")}
+                          >
                             <div className="flex items-center gap-2">
                               <Clock className="h-4 w-4" />
                               Days Since Opened
+                              {getUserSortIcon("daysSince")}
                             </div>
                           </TableHead>
                           <TableHead className="font-semibold">

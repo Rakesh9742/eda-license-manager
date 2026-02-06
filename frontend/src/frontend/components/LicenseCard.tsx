@@ -57,6 +57,14 @@ export const LicenseCard = memo(({ title, total, used, status, icon, onClick, ba
     return { status: 'valid', text: `${daysUntilExpiry} days`, color: 'success' };
   };
 
+  const formatDate = (dateString: string): string => {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = String(date.getFullYear()).slice(-2);
+    return `${day}/${month}/${year}`;
+  };
+
   const expiryStatus = getExpiryStatus();
 
   return (
@@ -141,7 +149,7 @@ export const LicenseCard = memo(({ title, total, used, status, icon, onClick, ba
                   </Badge>
                 )}
                 <span className="font-bold text-black text-xs bg-white px-2 py-1 rounded shadow-sm border">
-                  {new Date(expiryDate).toLocaleDateString()}
+                  {formatDate(expiryDate)}
                 </span>
               </div>
             </div>
