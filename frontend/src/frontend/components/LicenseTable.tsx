@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Fragment } from "react";
 import {
   Table,
   TableBody,
@@ -25,7 +25,19 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+  PaginationEllipsis,
+} from "@/components/ui/pagination";
 import { Search, Filter, Users, Clock, BarChart3, TrendingUp, Monitor, User, Calendar, Server, Package, CheckCircle, AlertCircle, XCircle, Activity, ArrowUpDown, ArrowUp, ArrowDown } from "lucide-react";
+
+const PAGE_SIZE_OPTIONS = [10, 25, 50, 100];
+const DEFAULT_PAGE_SIZE = 25;
 
 interface LicenseTableProps {
   allLicenses: any;
@@ -46,6 +58,10 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
   const [filterVendor, setFilterVendor] = useState<string>(selectedVendorFilter || "all");
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
   const [isUserModalOpen, setIsUserModalOpen] = useState(false);
+  
+  // Pagination state for license overview table
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(DEFAULT_PAGE_SIZE);
   
   // Sorting state for main table
   const [sortColumn, setSortColumn] = useState<string | null>(null);
@@ -140,6 +156,24 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
     
     return filtered;
   }, [allFeatures, searchTerm, filterVendor, sortColumn, sortDirection]);
+
+  // Pagination: slice of filtered features for current page
+  const totalFiltered = filteredFeatures.length;
+  const totalPages = Math.max(1, Math.ceil(totalFiltered / pageSize));
+  const paginatedFeatures = useMemo(() => {
+    const start = (currentPage - 1) * pageSize;
+    return filteredFeatures.slice(start, start + pageSize);
+  }, [filteredFeatures, currentPage, pageSize]);
+
+  // Reset to page 1 when search or vendor filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, filterVendor]);
+
+  // Clamp current page if it's out of range (e.g. after changing page size)
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+  }, [currentPage, totalPages]);
 
   const getStatusVariant = (usagePercentage: number) => {
     if (usagePercentage >= 90) return "destructive";
@@ -489,7 +523,7 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
                     </TableCell>
                   </TableRow>
                 ) : (
-                  filteredFeatures.map((feature, index) => (
+                  paginatedFeatures.map((feature, index) => (
                     <TableRow 
                       key={`${feature.vendorKey}-${feature.name}-${index}`} 
                       className="hover:bg-muted/30 transition-all duration-200 group cursor-pointer border-l-4 border-l-transparent hover:border-l-primary/20"
@@ -569,23 +603,104 @@ export const LicenseTable = ({ allLicenses, selectedVendorFilter, onVendorFilter
             </Table>
           </div>
           
-          {/* Summary footer */}
-          <div className="p-4 bg-muted/20 border-t">
-            <div className="flex items-center justify-between text-sm">
-              <div className="flex items-center gap-4">
-                <span className="text-muted-foreground">Showing {filteredFeatures.length} of {allFeatures.length} features</span>
+          {/* Summary footer with pagination */}
+          <div className="p-4 bg-muted/20 border-t space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex flex-wrap items-center gap-4 text-sm">
+                <span className="text-muted-foreground">
+                  Showing {totalFiltered === 0 ? 0 : (currentPage - 1) * pageSize + 1}–{Math.min(currentPage * pageSize, totalFiltered)} of {totalFiltered} features
+                  {totalFiltered !== allFeatures.length && ` (${allFeatures.length} total)`}
+                </span>
                 {searchTerm && (
-                  <span className="text-primary font-medium">Filtered by: "{searchTerm}"</span>
+                  <span className="text-primary font-medium">Filtered by: &quot;{searchTerm}&quot;</span>
                 )}
                 {filterVendor !== "all" && (
                   <span className="text-primary font-medium">
                     Tool: {allLicenses.vendors[filterVendor]?.vendorName}
                   </span>
                 )}
+                <div className="flex items-center gap-2">
+                  <span className="text-muted-foreground whitespace-nowrap">Rows per page</span>
+                  <Select
+                    value={String(pageSize)}
+                    onValueChange={(v) => {
+                      setPageSize(Number(v));
+                      setCurrentPage(1);
+                    }}
+                  >
+                    <SelectTrigger className="w-[70px] h-8 premium-button">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {PAGE_SIZE_OPTIONS.map((size) => (
+                        <SelectItem key={size} value={String(size)}>
+                          {size}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Users className="h-4 w-4" />
-                <span>Total active users: {allFeatures.reduce((sum, feature) => sum + getUniqueUserCount(feature), 0)}</span>
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                  <Users className="h-4 w-4" />
+                  <span>Total active users: {allFeatures.reduce((sum, feature) => sum + getUniqueUserCount(feature), 0)}</span>
+                </div>
+                {totalPages > 1 && (
+                  <Pagination>
+                    <PaginationContent>
+                      <PaginationItem>
+                        <PaginationPrevious
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setCurrentPage((p) => Math.max(1, p - 1));
+                          }}
+                          className={currentPage <= 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                        />
+                      </PaginationItem>
+                      {Array.from({ length: totalPages }, (_, i) => i + 1)
+                        .filter((p) => {
+                          if (totalPages <= 7) return true;
+                          if (p === 1 || p === totalPages) return true;
+                          if (Math.abs(p - currentPage) <= 1) return true;
+                          return false;
+                        })
+                        .map((p, i, arr) => (
+                          <Fragment key={p}>
+                            {i > 0 && arr[i - 1] !== p - 1 && (
+                              <PaginationItem>
+                                <PaginationEllipsis />
+                              </PaginationItem>
+                            )}
+                            <PaginationItem>
+                              <PaginationLink
+                                href="#"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setCurrentPage(p);
+                                }}
+                                isActive={currentPage === p}
+                                className="cursor-pointer"
+                              >
+                                {p}
+                              </PaginationLink>
+                            </PaginationItem>
+                          </Fragment>
+                        ))}
+                      <PaginationItem>
+                        <PaginationNext
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setCurrentPage((p) => Math.min(totalPages, p + 1));
+                          }}
+                          className={currentPage >= totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                        />
+                      </PaginationItem>
+                    </PaginationContent>
+                  </Pagination>
+                )}
               </div>
             </div>
           </div>
