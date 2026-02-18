@@ -15,28 +15,25 @@ const licenseDataCache = {
 
 const execAsync = promisify(exec);
 
-// Vendor configurations with lmstat commands
+// Vendor configurations with lmstat commands (full command string including LM_LICENSE_FILE)
 const vendors = {
   cadence: {
     name: 'Cadence',
     color: '#FF6B35',
-    command: '/tools/synopsys/v2/lmstat -a',
-    filePath: './files/cadence',
-    env: { LM_LICENSE_FILE: '5280@yamuna' }
+    command: 'LM_LICENSE_FILE=5280@yamuna; /tools/synopsys/v2/lmstat -a',
+    filePath: './files/cadence'
   },
   synopsys: {
     name: 'Synopsys',
     color: '#4A90E2',
-    command: '/tools/synopsys/v2/lmstat -a',
-    filePath: './files/synopsys',
-    env: { LM_LICENSE_FILE: '27020@yamuna' }
+    command: 'LM_LICENSE_FILE=27020@yamuna; /tools/synopsys/v2/lmstat -a',
+    filePath: './files/synopsys'
   },
   mgs: {
     name: 'Mentor Graphics (Siemens)',
     color: '#7B68EE',
-    command: '/tools/synopsys/v2/lmstat -a',
-    filePath: './files/mgs',
-    env: { LM_LICENSE_FILE: '1717@yamuna' }
+    command: 'LM_LICENSE_FILE=1717@yamuna; /tools/synopsys/v2/lmstat -a',
+    filePath: './files/mgs'
   }
 };
 
@@ -77,7 +74,6 @@ async function executeLmstatCommand(vendor) {
 
     console.log(`🔄 Executing lmstat command for ${vendorConfig.name}...`);
     console.log(`📋 Command: ${vendorConfig.command}`);
-    console.log(`🔧 Environment: LM_LICENSE_FILE=${vendorConfig.env?.LM_LICENSE_FILE || 'not set'}`);
     
     let stdout, stderr;
     
@@ -86,11 +82,11 @@ async function executeLmstatCommand(vendor) {
     
     if (useRemote) {
       console.log(`🌐 Executing command on VNC server: ${process.env.VNC_SERVER_HOST}`);
-      // Add timeout for remote commands (20 seconds max)
+      // Full command string (includes LM_LICENSE_FILE); no separate env
       const REMOTE_TIMEOUT = 20000;
       const result = await Promise.race([
-        executeRemoteCommand(vendorConfig.command, vendorConfig.env),
-        new Promise((_, reject) => 
+        executeRemoteCommand(vendorConfig.command, {}),
+        new Promise((_, reject) =>
           setTimeout(() => reject(new Error('Remote command timeout after 20 seconds')), REMOTE_TIMEOUT)
         )
       ]);
@@ -98,13 +94,13 @@ async function executeLmstatCommand(vendor) {
       stderr = result.stderr;
     } else {
       console.log(`💻 Executing command locally`);
-      // Add timeout for local commands (15 seconds max)
+      // Full command string (includes LM_LICENSE_FILE); run in shell
       const result = await Promise.race([
         execAsync(vendorConfig.command, {
-          env: { ...process.env, ...vendorConfig.env },
+          env: process.env,
           timeout: 15000 // 15 second timeout for local commands
         }),
-        new Promise((_, reject) => 
+        new Promise((_, reject) =>
           setTimeout(() => reject(new Error('Local command timeout after 15 seconds')), 15000)
         )
       ]);
@@ -401,15 +397,15 @@ export async function testLicenseServerConnections() {
         let stdout, stderr;
         
         if (useRemote) {
-          // Test remote execution
-          const result = await executeRemoteCommand(vendorConfig.command, vendorConfig.env);
+          // Test remote execution (full command string includes LM_LICENSE_FILE)
+          const result = await executeRemoteCommand(vendorConfig.command, {});
           stdout = result.stdout;
           stderr = result.stderr;
         } else {
-          // Test local execution with timeout
+          // Test local execution with timeout (full command string includes LM_LICENSE_FILE)
           const result = await Promise.race([
-            execAsync(vendorConfig.command, { env: { ...process.env, ...vendorConfig.env } }),
-            new Promise((_, reject) => 
+            execAsync(vendorConfig.command, { env: process.env }),
+            new Promise((_, reject) =>
               setTimeout(() => reject(new Error('Command timeout after 10 seconds')), 10000)
             )
           ]);
